@@ -94,7 +94,7 @@
             // 
             // pbActualizaDistribu
             // 
-            this.pbActualizaDistribu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbActualizaDistribu.BackColor = System.Drawing.Color.SteelBlue;
             this.pbActualizaDistribu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizaDistribu.Image = ((System.Drawing.Image)(resources.GetObject("pbActualizaDistribu.Image")));
             this.pbActualizaDistribu.Location = new System.Drawing.Point(374, 15);
@@ -109,7 +109,7 @@
             // 
             // pbAgregaDis
             // 
-            this.pbAgregaDis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbAgregaDis.BackColor = System.Drawing.Color.SteelBlue;
             this.pbAgregaDis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAgregaDis.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregaDis.Image")));
             this.pbAgregaDis.Location = new System.Drawing.Point(490, 15);
@@ -125,7 +125,6 @@
             // 
             this.gvDistribuidor.AllowUserToAddRows = false;
             this.gvDistribuidor.AllowUserToDeleteRows = false;
-            this.gvDistribuidor.AllowUserToOrderColumns = true;
             this.gvDistribuidor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gvDistribuidor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.gvDistribuidor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -163,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(628, 483);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);

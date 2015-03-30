@@ -44,11 +44,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbGuardarCjero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCancelar)).BeginInit();
             this.SuspendLayout();
-            
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.DodgerBlue;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(14, 37);
@@ -118,7 +117,7 @@
             // 
             // pbGuardarCjero
             // 
-            this.pbGuardarCjero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbGuardarCjero.BackColor = System.Drawing.Color.DodgerBlue;
             this.pbGuardarCjero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbGuardarCjero.Image = ((System.Drawing.Image)(resources.GetObject("pbGuardarCjero.Image")));
             this.pbGuardarCjero.Location = new System.Drawing.Point(388, 366);
@@ -132,7 +131,7 @@
             // 
             // pbCancelar
             // 
-            this.pbCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbCancelar.BackColor = System.Drawing.Color.DodgerBlue;
             this.pbCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("pbCancelar.Image")));
             this.pbCancelar.Location = new System.Drawing.Point(290, 366);
@@ -166,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(480, 441);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -187,17 +186,6 @@
             this.Name = "frmAgregarBitacora";
             this.Text = "Agregar Bitácora";
             this.Load += new System.EventHandler(this.frmAgregarBitacora_Load);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.lblCodigoBita, 0);
-            this.Controls.SetChildIndex(this.lblEvento, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.txtCodigo, 0);
-            this.Controls.SetChildIndex(this.txtEvento, 0);
-            this.Controls.SetChildIndex(this.txtCajero, 0);
-            this.Controls.SetChildIndex(this.pbGuardarCjero, 0);
-            this.Controls.SetChildIndex(this.pbCancelar, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuardarCjero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCancelar)).EndInit();

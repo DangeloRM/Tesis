@@ -16,7 +16,7 @@ namespace FacturacionMinisuper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new pbBitacora());
+            Application.Run(new frmPrincipal());
         }
     }
 }

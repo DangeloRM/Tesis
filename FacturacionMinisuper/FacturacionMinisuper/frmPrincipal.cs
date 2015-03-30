@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FacturacionMinisuper
 {
-    public partial class pbBitacora : Form
+    public partial class frmPrincipal : Form
     {
-        public pbBitacora()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
@@ -50,6 +50,11 @@ namespace FacturacionMinisuper
         {
             frmFacturar objFactura = new frmFacturar();
             objFactura.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
 
 

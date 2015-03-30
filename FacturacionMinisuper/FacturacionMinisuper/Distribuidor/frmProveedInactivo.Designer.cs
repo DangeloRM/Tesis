@@ -41,7 +41,6 @@
             // 
             this.gvDistribuidor.AllowUserToAddRows = false;
             this.gvDistribuidor.AllowUserToDeleteRows = false;
-            this.gvDistribuidor.AllowUserToOrderColumns = true;
             this.gvDistribuidor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvDistribuidor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gvDistribuidor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -67,7 +66,7 @@
             // 
             // pbActualizaDistribu
             // 
-            this.pbActualizaDistribu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbActualizaDistribu.BackColor = System.Drawing.Color.SteelBlue;
             this.pbActualizaDistribu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizaDistribu.Image = ((System.Drawing.Image)(resources.GetObject("pbActualizaDistribu.Image")));
             this.pbActualizaDistribu.Location = new System.Drawing.Point(457, 2);
@@ -92,8 +91,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(567, 344);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(567, 360);
             this.Controls.Add(this.lblSeleccionado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbActualizaDistribu);

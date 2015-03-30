@@ -51,7 +51,7 @@
             this.rptReporteFactura.ShowRefreshButton = false;
             this.rptReporteFactura.ShowTextSearchButton = false;
             this.rptReporteFactura.ShowZoomButton = false;
-            this.rptReporteFactura.Size = new System.Drawing.Size(618, 353);
+            this.rptReporteFactura.Size = new System.Drawing.Size(615, 353);
             this.rptReporteFactura.TabIndex = 0;
             this.rptReporteFactura.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.rptReporteFactura.Load += new System.EventHandler(this.crystalReportViewer1_Load);
@@ -60,13 +60,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(671, 405);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(668, 405);
             this.Controls.Add(this.rptReporteFactura);
             this.Font = new System.Drawing.Font("Footlight MT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ReporteFactura";

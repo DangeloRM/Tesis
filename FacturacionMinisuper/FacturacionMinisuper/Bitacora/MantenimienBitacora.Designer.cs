@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimienBitacora));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbreporte = new System.Windows.Forms.PictureBox();
             this.pbAgregar = new System.Windows.Forms.PictureBox();
             this.lblSeleccionado = new System.Windows.Forms.Label();
             this.gvBitacora = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbreporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
@@ -59,6 +59,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento Bitácora";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(510, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Agregar";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -71,7 +80,7 @@
             // 
             // pbreporte
             // 
-            this.pbreporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbreporte.BackColor = System.Drawing.Color.SteelBlue;
             this.pbreporte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbreporte.Image = ((System.Drawing.Image)(resources.GetObject("pbreporte.Image")));
             this.pbreporte.Location = new System.Drawing.Point(31, 325);
@@ -84,7 +93,7 @@
             // 
             // pbAgregar
             // 
-            this.pbAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbAgregar.BackColor = System.Drawing.Color.SteelBlue;
             this.pbAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAgregar.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregar.Image")));
             this.pbAgregar.Location = new System.Drawing.Point(500, 16);
@@ -119,21 +128,12 @@
             this.gvBitacora.TabIndex = 0;
             this.gvBitacora.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBitacora_CellContentClick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(510, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 18);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Agregar";
-            // 
             // MantenimienBitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(666, 461);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Footlight MT Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
