@@ -16,7 +16,7 @@ namespace Logica
         public double Precio { get; set; }
         public int Cantidad { get; set; }
         public int CodDistribuidor { get; set; }
-
+        public double SubTotal { get; set; }
         
 
         #endregion Prop
@@ -30,17 +30,6 @@ namespace Logica
         public Producto(int codproducto)
         {
             this.CodProducto = codproducto;
-        }
-
-        public Producto(int codproducto, string nombre, string estado, double precio,int cantidad, int coddistribuidor)
-        {
-            this.CodProducto = codproducto;
-            this.Nombre = nombre;
-            this.Precio = precio;
-            this.Cantidad = cantidad;
-            this.CodDistribuidor = coddistribuidor;
-
-            
         }
 
         public Producto(int codproducto, string nombre, double precio, int cantidad, int coddistribuidor)

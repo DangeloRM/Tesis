@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuDistribuidor));
             this.bdManteDistri = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblSeleccionado = new System.Windows.Forms.Label();
             this.pbActualizaDistribu = new System.Windows.Forms.PictureBox();
             this.pbAgregaDis = new System.Windows.Forms.PictureBox();
             this.gvDistribuidor = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bdManteDistri.SuspendLayout();
@@ -63,6 +63,24 @@
             this.bdManteDistri.TabStop = false;
             this.bdManteDistri.Text = "Mantenimiento Proveedor";
             this.bdManteDistri.Enter += new System.EventHandler(this.bdManteDistri_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(494, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Agregar";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(394, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 18);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Editar";
             // 
             // lblSeleccionado
             // 
@@ -107,8 +125,7 @@
             // 
             this.gvDistribuidor.AllowUserToAddRows = false;
             this.gvDistribuidor.AllowUserToDeleteRows = false;
-            this.gvDistribuidor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvDistribuidor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gvDistribuidor.AllowUserToOrderColumns = true;
             this.gvDistribuidor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gvDistribuidor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.gvDistribuidor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -116,29 +133,10 @@
             this.gvDistribuidor.Margin = new System.Windows.Forms.Padding(4);
             this.gvDistribuidor.Name = "gvDistribuidor";
             this.gvDistribuidor.ReadOnly = true;
-            this.gvDistribuidor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gvDistribuidor.Size = new System.Drawing.Size(545, 233);
             this.gvDistribuidor.TabIndex = 0;
             this.gvDistribuidor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDistribuidor_CellContentClick);
             this.gvDistribuidor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gvDistribuidor_MouseClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(494, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 18);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Agregar";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(394, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 18);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Editar";
             // 
             // label3
             // 

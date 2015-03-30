@@ -41,6 +41,7 @@
             // 
             this.gvDistribuidor.AllowUserToAddRows = false;
             this.gvDistribuidor.AllowUserToDeleteRows = false;
+            this.gvDistribuidor.AllowUserToOrderColumns = true;
             this.gvDistribuidor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvDistribuidor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gvDistribuidor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -50,7 +51,6 @@
             this.gvDistribuidor.Margin = new System.Windows.Forms.Padding(5);
             this.gvDistribuidor.Name = "gvDistribuidor";
             this.gvDistribuidor.ReadOnly = true;
-            this.gvDistribuidor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gvDistribuidor.Size = new System.Drawing.Size(523, 240);
             this.gvDistribuidor.TabIndex = 1;
             this.gvDistribuidor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDistribuidor_CellContentClick);

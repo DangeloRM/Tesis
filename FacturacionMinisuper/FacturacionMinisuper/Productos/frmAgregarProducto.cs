@@ -49,7 +49,7 @@ namespace FacturacionMinisuper.Productos
 
         private void pbAgregar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCodProdu.Text) && !string.IsNullOrEmpty(txtNombProduct.Text)  && !string.IsNullOrEmpty(txtPrecio.Text) && !string.IsNullOrEmpty(txtCodDistribui.Text))
+            if (!string.IsNullOrEmpty(txtCodProdu.Text) && !string.IsNullOrEmpty(txtNombProduct.Text)  && !string.IsNullOrEmpty(txtPrecio.Text) && !string.IsNullOrEmpty(txtCodDistribui.Text) && !string.IsNullOrEmpty(txtNombProduct.Text))
             {
 
                 Logica.Gestor objGestor = new Logica.Gestor();

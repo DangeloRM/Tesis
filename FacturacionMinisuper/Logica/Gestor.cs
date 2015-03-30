@@ -233,5 +233,11 @@ namespace Logica
 
         #endregion Producto
 
+         public ResultadoFacturacion Facturar(Factura pFactura)
+         {
+             ProcesoFacturacion objFacturacion = new ProcesoFacturacion();
+             return objFacturacion.Facturar(pFactura);
+         }
+
     }
 }

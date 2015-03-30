@@ -108,6 +108,7 @@
             // 
             this.gvProductos.AllowUserToAddRows = false;
             this.gvProductos.AllowUserToDeleteRows = false;
+            this.gvProductos.AllowUserToOrderColumns = true;
             this.gvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gvProductos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;

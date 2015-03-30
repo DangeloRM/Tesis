@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManteniCajero));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblSeleccionado = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbAgregarCajero = new System.Windows.Forms.PictureBox();
             this.gvCajero = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregarCajero)).BeginInit();
@@ -59,6 +59,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento Cajero";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(464, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Agregar";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(364, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 18);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Editar";
             // 
             // lblSeleccionado
             // 
@@ -99,6 +117,7 @@
             // 
             this.gvCajero.AllowUserToAddRows = false;
             this.gvCajero.AllowUserToDeleteRows = false;
+            this.gvCajero.AllowUserToOrderColumns = true;
             this.gvCajero.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvCajero.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gvCajero.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -107,29 +126,10 @@
             this.gvCajero.Location = new System.Drawing.Point(17, 102);
             this.gvCajero.Name = "gvCajero";
             this.gvCajero.ReadOnly = true;
-            this.gvCajero.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gvCajero.Size = new System.Drawing.Size(531, 262);
             this.gvCajero.TabIndex = 0;
             this.gvCajero.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCajero_CellContentClick);
             this.gvCajero.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gvCajero_MouseClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(464, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 18);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Agregar";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 18);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Editar";
             // 
             // ManteniCajero
             // 

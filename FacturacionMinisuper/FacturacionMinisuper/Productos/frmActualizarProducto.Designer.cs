@@ -71,7 +71,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.lblPrecio);
-            this.groupBox2.Location = new System.Drawing.Point(26, 39);
+            this.groupBox2.Location = new System.Drawing.Point(30, 39);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -97,6 +97,7 @@
             this.txtNuevaCantidad.Name = "txtNuevaCantidad";
             this.txtNuevaCantidad.Size = new System.Drawing.Size(205, 24);
             this.txtNuevaCantidad.TabIndex = 4;
+            this.txtNuevaCantidad.TextChanged += new System.EventHandler(this.txtNuevaCantidad_TextChanged);
             this.txtNuevaCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNuevaCantidad_KeyPress);
             // 
             // label3
@@ -107,6 +108,7 @@
             this.label3.Size = new System.Drawing.Size(133, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Cantidad Entrante:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pbBuscarProd
             // 
@@ -124,9 +126,9 @@
             // 
             this.txtDistri.Location = new System.Drawing.Point(216, 188);
             this.txtDistri.Name = "txtDistri";
-            this.txtDistri.ReadOnly = true;
             this.txtDistri.Size = new System.Drawing.Size(205, 24);
             this.txtDistri.TabIndex = 13;
+            this.txtDistri.TextChanged += new System.EventHandler(this.txtDistri_TextChanged);
             // 
             // label2
             // 
@@ -136,6 +138,7 @@
             this.label2.Size = new System.Drawing.Size(91, 18);
             this.label2.TabIndex = 12;
             this.label2.Text = "Distribuidor:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtPrecio
             // 
@@ -155,6 +158,7 @@
             this.txtCantidad.ReadOnly = true;
             this.txtCantidad.Size = new System.Drawing.Size(205, 24);
             this.txtCantidad.TabIndex = 10;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // txtNombProduct
             // 
@@ -164,6 +168,7 @@
             this.txtNombProduct.Name = "txtNombProduct";
             this.txtNombProduct.Size = new System.Drawing.Size(205, 24);
             this.txtNombProduct.TabIndex = 2;
+            this.txtNombProduct.TextChanged += new System.EventHandler(this.txtNombProduct_TextChanged);
             // 
             // txtCodProdu
             // 
@@ -173,6 +178,7 @@
             this.txtCodProdu.Name = "txtCodProdu";
             this.txtCodProdu.Size = new System.Drawing.Size(205, 24);
             this.txtCodProdu.TabIndex = 1;
+            this.txtCodProdu.TextChanged += new System.EventHandler(this.txtCodProdu_TextChanged);
             // 
             // label6
             // 
@@ -183,6 +189,7 @@
             this.label6.Size = new System.Drawing.Size(58, 18);
             this.label6.TabIndex = 6;
             this.label6.Text = "Código:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
@@ -193,6 +200,7 @@
             this.label1.Size = new System.Drawing.Size(71, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Producto:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label5
             // 
@@ -203,6 +211,7 @@
             this.label5.Size = new System.Drawing.Size(47, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "Stock:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblPrecio
             // 
@@ -213,12 +222,13 @@
             this.lblPrecio.Size = new System.Drawing.Size(102, 18);
             this.lblPrecio.TabIndex = 3;
             this.lblPrecio.Text = "Precio unidad:";
+            this.lblPrecio.Click += new System.EventHandler(this.lblPrecio_Click);
             // 
             // pbActualizar
             // 
             this.pbActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizar.Image = ((System.Drawing.Image)(resources.GetObject("pbActualizar.Image")));
-            this.pbActualizar.Location = new System.Drawing.Point(577, 333);
+            this.pbActualizar.Location = new System.Drawing.Point(581, 333);
             this.pbActualizar.Name = "pbActualizar";
             this.pbActualizar.Size = new System.Drawing.Size(64, 48);
             this.pbActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -230,7 +240,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(474, 333);
+            this.pictureBox1.Location = new System.Drawing.Point(478, 333);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -246,6 +256,7 @@
             this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 16;
             this.label4.Text = "Guardar";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label7
             // 
@@ -255,6 +266,7 @@
             this.label7.Size = new System.Drawing.Size(67, 18);
             this.label7.TabIndex = 15;
             this.label7.Text = "Cancelar";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // frmActualizarProducto
             // 
@@ -300,7 +312,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.TextBox txtDistri;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbBuscarProd;
         private System.Windows.Forms.TextBox txtNuevaCantidad;
@@ -310,6 +321,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtDistri;
 
     }
 }

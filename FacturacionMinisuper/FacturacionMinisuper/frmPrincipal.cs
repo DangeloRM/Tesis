@@ -41,6 +41,17 @@ namespace FacturacionMinisuper
             objProducto.ShowDialog();
         }
 
+        private void pbSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmFacturar objFactura = new frmFacturar();
+            objFactura.ShowDialog();
+        }
+
 
     }
 }
