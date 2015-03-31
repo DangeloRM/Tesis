@@ -44,6 +44,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSize = true;
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -55,15 +56,15 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(22, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(568, 383);
+            this.groupBox1.Size = new System.Drawing.Size(818, 387);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Mantenimiento Cajero";
+            this.groupBox1.Text = "Cajeros";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(464, 80);
+            this.label2.Location = new System.Drawing.Point(726, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 18);
             this.label2.TabIndex = 18;
@@ -72,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 80);
+            this.label1.Location = new System.Drawing.Point(626, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 18);
             this.label1.TabIndex = 17;
@@ -92,7 +93,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(348, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(610, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(81, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -105,7 +106,7 @@
             this.pbAgregarCajero.BackColor = System.Drawing.Color.SteelBlue;
             this.pbAgregarCajero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAgregarCajero.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregarCajero.Image")));
-            this.pbAgregarCajero.Location = new System.Drawing.Point(451, 14);
+            this.pbAgregarCajero.Location = new System.Drawing.Point(713, 13);
             this.pbAgregarCajero.Name = "pbAgregarCajero";
             this.pbAgregarCajero.Size = new System.Drawing.Size(87, 58);
             this.pbAgregarCajero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,7 +126,7 @@
             this.gvCajero.Location = new System.Drawing.Point(17, 102);
             this.gvCajero.Name = "gvCajero";
             this.gvCajero.ReadOnly = true;
-            this.gvCajero.Size = new System.Drawing.Size(531, 262);
+            this.gvCajero.Size = new System.Drawing.Size(782, 262);
             this.gvCajero.TabIndex = 0;
             this.gvCajero.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCajero_CellContentClick);
             this.gvCajero.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gvCajero_MouseClick);
@@ -134,8 +135,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(613, 430);
+            this.ClientSize = new System.Drawing.Size(862, 430);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -152,6 +154,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregarCajero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCajero)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

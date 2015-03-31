@@ -150,7 +150,7 @@ namespace Logica
         public DataTable ConsultaMasivaCajero()
         {
             DataTable dtCajero = new DataTable();
-            string consulta = string.Format("select IDCajero, NombreAcceso, Contrasena, Nombre, Apellido, Telefono, Estado, IDTipoAcceso from Cajero ");
+            string consulta = string.Format("select IDCajero as Código, NombreAcceso as Usuario, Contrasena as Contraseña, Nombre, Apellido, Telefono as Teléfono, Estado, IDTipoAcceso as Tipo_Acceso from Cajero ");
             Conexion.Conexion objDatos = new Conexion.Conexion();
 
             try

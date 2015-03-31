@@ -38,11 +38,14 @@
             this.gvDistribuidor = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.bdManteDistri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizaDistribu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregaDis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDistribuidor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bdManteDistri
@@ -58,16 +61,16 @@
             this.bdManteDistri.Margin = new System.Windows.Forms.Padding(4);
             this.bdManteDistri.Name = "bdManteDistri";
             this.bdManteDistri.Padding = new System.Windows.Forms.Padding(4);
-            this.bdManteDistri.Size = new System.Drawing.Size(591, 356);
+            this.bdManteDistri.Size = new System.Drawing.Size(502, 356);
             this.bdManteDistri.TabIndex = 0;
             this.bdManteDistri.TabStop = false;
-            this.bdManteDistri.Text = "Mantenimiento Proveedor";
+            this.bdManteDistri.Text = "Proveedores";
             this.bdManteDistri.Enter += new System.EventHandler(this.bdManteDistri_Enter);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(494, 82);
+            this.label2.Location = new System.Drawing.Point(403, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 18);
             this.label2.TabIndex = 18;
@@ -76,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(394, 82);
+            this.label1.Location = new System.Drawing.Point(303, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 18);
             this.label1.TabIndex = 17;
@@ -97,7 +100,7 @@
             this.pbActualizaDistribu.BackColor = System.Drawing.Color.SteelBlue;
             this.pbActualizaDistribu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizaDistribu.Image = ((System.Drawing.Image)(resources.GetObject("pbActualizaDistribu.Image")));
-            this.pbActualizaDistribu.Location = new System.Drawing.Point(374, 15);
+            this.pbActualizaDistribu.Location = new System.Drawing.Point(283, 14);
             this.pbActualizaDistribu.Margin = new System.Windows.Forms.Padding(4);
             this.pbActualizaDistribu.Name = "pbActualizaDistribu";
             this.pbActualizaDistribu.Size = new System.Drawing.Size(81, 63);
@@ -112,7 +115,7 @@
             this.pbAgregaDis.BackColor = System.Drawing.Color.SteelBlue;
             this.pbAgregaDis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAgregaDis.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregaDis.Image")));
-            this.pbAgregaDis.Location = new System.Drawing.Point(490, 15);
+            this.pbAgregaDis.Location = new System.Drawing.Point(399, 14);
             this.pbAgregaDis.Margin = new System.Windows.Forms.Padding(4);
             this.pbAgregaDis.Name = "pbAgregaDis";
             this.pbAgregaDis.Size = new System.Drawing.Size(81, 63);
@@ -132,7 +135,7 @@
             this.gvDistribuidor.Margin = new System.Windows.Forms.Padding(4);
             this.gvDistribuidor.Name = "gvDistribuidor";
             this.gvDistribuidor.ReadOnly = true;
-            this.gvDistribuidor.Size = new System.Drawing.Size(545, 233);
+            this.gvDistribuidor.Size = new System.Drawing.Size(455, 233);
             this.gvDistribuidor.TabIndex = 0;
             this.gvDistribuidor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDistribuidor_CellContentClick);
             this.gvDistribuidor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gvDistribuidor_MouseClick);
@@ -140,7 +143,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 464);
+            this.label3.Location = new System.Drawing.Point(3, 448);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 18);
             this.label3.TabIndex = 1;
@@ -150,20 +153,43 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(66, 399);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 402);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(71, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(436, 399);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(71, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(433, 445);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 18);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Refrescar";
             // 
             // MenuDistribuidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(628, 483);
+            this.ClientSize = new System.Drawing.Size(545, 483);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bdManteDistri);
@@ -183,6 +209,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregaDis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDistribuidor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +226,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
     }
 }
