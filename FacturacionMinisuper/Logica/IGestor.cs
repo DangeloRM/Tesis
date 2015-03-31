@@ -22,6 +22,7 @@ namespace Logica
         MovInventario ConsultarMovInventario(int codinventario);
         Producto ConsultarProducto(int codproducto);
         ResultadoFacturacion Facturar(Factura pFactura);
+        int GenerarBitacora(int pId, string pAccion, int IdCajero);
         Cajero IniciaSession(string pCajero);
     }
 }

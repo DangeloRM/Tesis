@@ -174,5 +174,12 @@ namespace Logica
              return objFacturacion.Facturar(pFactura);
          }
 
+         Bitacora myBit = null;
+         public int GenerarBitacora(int pId, string pAccion, int IdCajero)
+         {
+             myBit = new Bitacora(pId, pAccion, IdCajero);
+             return myBit.AgregarBitacora();
+         }
+
     }
 }

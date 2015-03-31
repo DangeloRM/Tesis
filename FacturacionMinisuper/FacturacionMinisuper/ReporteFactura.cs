@@ -20,11 +20,6 @@ namespace FacturacionMinisuper
             InitializeComponent();
         }
 
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void ReporteFactura_Load(object sender, EventArgs e)
         {
             ReportDocument reporte = new ReportDocument();
@@ -37,7 +32,7 @@ namespace FacturacionMinisuper
             arregloParametros.Add(codFactura);
             this.rptReporteFactura.ParameterFieldInfo = arregloParametros;
             reporte.Load(@"C:\Reportes\ReporteFactura.rpt");
-            reporte.SetDatabaseLogon("sa", "123", "DANGELO-PC", "DBFacturacionM");
+            reporte.SetDatabaseLogon("sa", "falling20", "WILLIAM\\DESARROLLO", "DBFacturacionM");
             this.rptReporteFactura.ReportSource = reporte;
         }
     }

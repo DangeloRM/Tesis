@@ -149,6 +149,7 @@ namespace FacturacionMinisuper
                  objFactura.Detalle = listaLineas;
                  Logica.Gestor objGestor = new Logica.Gestor();
                  ResultadoFacturacion respuesta = objGestor.Facturar(objFactura);
+                 objGestor.GenerarBitacora(0, "El cajero "+myCajero.NombreAcceso+" ha generado una nueva factura con un monto de: "+objFactura.Total+" a las: "+DateTime.Today.TimeOfDay, myCajero.IDCajero);
                  objGestor = null;
                  if (respuesta.CodigoError != 0)
                  {
