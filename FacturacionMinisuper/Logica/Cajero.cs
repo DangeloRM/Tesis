@@ -19,10 +19,12 @@ namespace Logica
         public string Contrasena { get; set; }
         public bool Estado { get; set; }
         public int IDTipoAcceso { get; set; }
+        public bool Rol { get; set; }
 
         #endregion Prop
 
         #region Contruc
+        public Cajero() { }
 
          public Cajero(int idcajero)
          {
@@ -48,6 +50,19 @@ namespace Logica
             this.Apellido = pApellido;
             this.Telefono = pTelefono;
             this.Estado = pEstado;
+        }
+
+        public Cajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso, bool pRol)
+        {
+            this.IDCajero = pId;
+            this.NombreAcceso = pAcceso;
+            this.Contrasena = pPass;
+            this.Nombre = pNombre;
+            this.Apellido = pApellido;
+            this.Telefono = pTelefono;
+            this.Estado = pEstado;
+            this.IDTipoAcceso = pIdAcceso;
+            this.Rol = pRol;
         }
         #endregion Contruc
 
@@ -95,8 +110,7 @@ namespace Logica
         public Cajero InicioSesion(string Usuario)
         {
             Cajero objCajero = null;
-            string consulta = string.Format("select c.IDCajero, c.NombreAcceso, c.Contrasena, c.Nombre, c.Apellido, c.Telefono, " + "c.Estado, c.IDTipoAcceso from Cajero c"
-                                           + "where c.NombreAcceso = '{0}'", Usuario.Trim());
+            string consulta = string.Format("exec Acceso '{0}'", Usuario);
             Conexion.Conexion objDatos = new Conexion.Conexion();
             try
             {
@@ -111,9 +125,11 @@ namespace Logica
                         string nomb = dtResultado.Rows[0][3].ToString();
                         string apelli = dtResultado.Rows[0][4].ToString();
                         string telf = dtResultado.Rows[0][5].ToString();
-                        bool estad = Convert.ToBoolean(dtResultado.Rows[0][6]);
+                        bool estad = Convert.ToBoolean(dtResultado.Rows[0][6].ToString());
                         int idacceso = Convert.ToInt32(dtResultado.Rows[0][7]);
-                        objCajero = new Cajero(codCajer, acceso, contrase, nomb, apelli, telf, estad, idacceso);
+                        string rol = dtResultado.Rows[0][8].ToString();
+                        bool r = (rol == "1");
+                        objCajero = new Cajero(codCajer, acceso, contrase, nomb, apelli, telf, estad, idacceso, r);
                     }
                     objDatos.CerrarConexion();
                 }
@@ -126,6 +142,7 @@ namespace Logica
             GC.Collect();
             return objCajero;
         }
+
         /// <summary>
         /// Consulta Masiva Cajeros
         /// </summary>

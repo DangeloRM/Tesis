@@ -41,9 +41,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
-            this.txtCajero = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbFacturación.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -63,9 +61,7 @@
             this.gbFacturación.Controls.Add(this.groupBox2);
             this.gbFacturación.Controls.Add(this.groupBox1);
             this.gbFacturación.Controls.Add(this.txtCodProducto);
-            this.gbFacturación.Controls.Add(this.txtCajero);
             this.gbFacturación.Controls.Add(this.label2);
-            this.gbFacturación.Controls.Add(this.label1);
             this.gbFacturación.Location = new System.Drawing.Point(27, 29);
             this.gbFacturación.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbFacturación.Name = "gbFacturación";
@@ -87,11 +83,11 @@
             // lblCajero
             // 
             this.lblCajero.AutoSize = true;
-            this.lblCajero.Location = new System.Drawing.Point(571, 40);
+            this.lblCajero.Location = new System.Drawing.Point(552, 43);
             this.lblCajero.Name = "lblCajero";
-            this.lblCajero.Size = new System.Drawing.Size(47, 15);
+            this.lblCajero.Size = new System.Drawing.Size(76, 15);
             this.lblCajero.TabIndex = 10;
-            this.lblCajero.Text = "Cajero";
+            this.lblCajero.Text = "Cajero_ON";
             // 
             // pbFacturar
             // 
@@ -135,7 +131,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gvFacturar);
-            this.groupBox2.Location = new System.Drawing.Point(25, 294);
+            this.groupBox2.Location = new System.Drawing.Point(25, 275);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(593, 172);
             this.groupBox2.TabIndex = 5;
@@ -146,19 +142,21 @@
             // 
             this.gvFacturar.AllowUserToAddRows = false;
             this.gvFacturar.AllowUserToDeleteRows = false;
+            this.gvFacturar.AllowUserToOrderColumns = true;
             this.gvFacturar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gvFacturar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvFacturar.Location = new System.Drawing.Point(16, 20);
             this.gvFacturar.Name = "gvFacturar";
+            this.gvFacturar.ReadOnly = true;
             this.gvFacturar.Size = new System.Drawing.Size(562, 140);
             this.gvFacturar.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.gvProductos);
-            this.groupBox1.Location = new System.Drawing.Point(25, 114);
+            this.groupBox1.Location = new System.Drawing.Point(25, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(593, 165);
+            this.groupBox1.Size = new System.Drawing.Size(593, 186);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista Producto";
@@ -167,47 +165,32 @@
             // 
             this.gvProductos.AllowUserToAddRows = false;
             this.gvProductos.AllowUserToDeleteRows = false;
+            this.gvProductos.AllowUserToOrderColumns = true;
             this.gvProductos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvProductos.Location = new System.Drawing.Point(16, 22);
             this.gvProductos.Name = "gvProductos";
-            this.gvProductos.Size = new System.Drawing.Size(562, 127);
+            this.gvProductos.ReadOnly = true;
+            this.gvProductos.Size = new System.Drawing.Size(562, 150);
             this.gvProductos.TabIndex = 0;
             this.gvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProductos_CellContentClick);
             // 
             // txtCodProducto
             // 
-            this.txtCodProducto.Location = new System.Drawing.Point(166, 76);
+            this.txtCodProducto.Location = new System.Drawing.Point(166, 40);
             this.txtCodProducto.Name = "txtCodProducto";
             this.txtCodProducto.Size = new System.Drawing.Size(189, 23);
             this.txtCodProducto.TabIndex = 3;
             this.txtCodProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProducto_KeyPress);
             // 
-            // txtCajero
-            // 
-            this.txtCajero.Location = new System.Drawing.Point(166, 40);
-            this.txtCajero.Name = "txtCajero";
-            this.txtCajero.Size = new System.Drawing.Size(189, 23);
-            this.txtCajero.TabIndex = 2;
-            this.txtCajero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCajero_KeyPress);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 79);
+            this.label2.Location = new System.Drawing.Point(22, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Código Producto:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cedúla Cajero:";
             // 
             // frmFacturar
             // 
@@ -241,11 +224,9 @@
 
         private System.Windows.Forms.GroupBox gbFacturación;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView gvProductos;
         private System.Windows.Forms.TextBox txtCodProducto;
-        private System.Windows.Forms.TextBox txtCajero;
         private System.Windows.Forms.PictureBox pbFacturar;
         private System.Windows.Forms.Label lblMonto;
         private System.Windows.Forms.Label lblTotal;

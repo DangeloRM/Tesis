@@ -12,6 +12,7 @@ namespace FacturacionMinisuper
 {
     public partial class frmPrincipal : Form
     {
+        public Logica.Cajero CajeroConectado { get; set; }
         public frmPrincipal()
         {
             InitializeComponent();
@@ -29,12 +30,6 @@ namespace FacturacionMinisuper
             objCajer.ShowDialog();
         }
 
-        private void pbBita_Click(object sender, EventArgs e)
-        {
-            Bitacora.MantenimienBitacora objBitacora = new Bitacora.MantenimienBitacora();
-            objBitacora.ShowDialog();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Productos.MantenimiProducto objProducto = new Productos.MantenimiProducto();
@@ -49,6 +44,7 @@ namespace FacturacionMinisuper
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             frmFacturar objFactura = new frmFacturar();
+            objFactura.myCajero = this.CajeroConectado;
             objFactura.ShowDialog();
         }
 

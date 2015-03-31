@@ -182,6 +182,21 @@ namespace Logica
             return registrosafectados;
         }
 
+        public int ReducirStock(int pId, int pCant)
+        {
+            int less = 0;
+            Conexion.Conexion objDatos = new Conexion.Conexion();
+            string cmd = string.Format("exec ReducirStock {0}, {1}", pId, pCant);
+            if (objDatos.AbrirConexion())
+            {
+                less = objDatos.OperacionesHit(cmd);
+                objDatos.CerrarConexion();
+            }
+            objDatos = null;
+            GC.Collect();
+            return less;
+        }
+
         #endregion Operaciones Hit
 
         #region Destructor

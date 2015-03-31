@@ -26,34 +26,34 @@ namespace FacturacionMinisuper.Cajero
             txtApellido.Text = CajeroModifi.Apellido;
             txtTelefo.Text = CajeroModifi.Telefono;
             txtContrasena.Text = CajeroModifi.Contrasena;
-            txtEstado.Text = CajeroModifi.Estado;
+            //txtEstado.Text = CajeroModifi.Estado;
 
         }
 
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNombr.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelefo.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtIdca.Text) && !string.IsNullOrEmpty(txtEstado.Text))
-            {
-                Gestor objGestor = new Gestor();
-                int registrosAfectados = objGestor.ActualizarCajero(txtNombr.Text, txtApellido.Text, txtTelefo.Text, txtContrasena.Text, txtEstado.Text, Convert.ToInt32(txtIdca.Text));
+            //if (!string.IsNullOrEmpty(txtNombr.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelefo.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtIdca.Text) && !string.IsNullOrEmpty(txtEstado.Text))
+            //{
+            //    Gestor objGestor = new Gestor();
+            //    int registrosAfectados = objGestor.ActualizarCajero(txtNombr.Text, txtApellido.Text, txtTelefo.Text, txtContrasena.Text, txtEstado.Text, Convert.ToInt32(txtIdca.Text));
 
-                if (registrosAfectados >= 0)
-                {
-                    MessageBox.Show("Distribuidor Agregado correctamente!", "Distribuidor Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+            //    if (registrosAfectados >= 0)
+            //    {
+            //        MessageBox.Show("Distribuidor Agregado correctamente!", "Distribuidor Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
 
-                else
-                {
-                    MessageBox.Show("No se pudo Agregar el Distribuidor", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                objGestor = null;
-                DialogResult = System.Windows.Forms.DialogResult.OK;
-            }
+            //    else
+            //    {
+            //        MessageBox.Show("No se pudo Agregar el Distribuidor", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    }
+            //    objGestor = null;
+            //    DialogResult = System.Windows.Forms.DialogResult.OK;
+            //}
 
-            else
-            {
-                MessageBox.Show("Por favor complete todos los espacios", "Espacios en incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            //else
+            //{
+            //    MessageBox.Show("Por favor complete todos los espacios", "Espacios en incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
         }
 
         private void txtNombr_KeyPress(object sender, KeyPressEventArgs e)

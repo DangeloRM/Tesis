@@ -34,8 +34,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblBitácoras = new System.Windows.Forms.Label();
-            this.pbBita = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pbCajero = new System.Windows.Forms.PictureBox();
@@ -47,7 +45,6 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCajero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDistribuidor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).BeginInit();
@@ -61,8 +58,6 @@
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.lblBitácoras);
-            this.groupBox1.Controls.Add(this.pbBita);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pbCajero);
@@ -73,7 +68,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(222, 731);
+            this.groupBox1.Size = new System.Drawing.Size(222, 611);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Administración";
@@ -81,7 +76,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(78, 669);
+            this.label7.Location = new System.Drawing.Point(72, 550);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 20);
             this.label7.TabIndex = 13;
@@ -91,7 +86,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(51, 587);
+            this.pictureBox2.Location = new System.Drawing.Point(51, 454);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(127, 79);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +97,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 525);
+            this.label5.Location = new System.Drawing.Point(72, 410);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 20);
             this.label5.TabIndex = 11;
@@ -112,34 +107,13 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 447);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 322);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // lblBitácoras
-            // 
-            this.lblBitácoras.AutoSize = true;
-            this.lblBitácoras.Location = new System.Drawing.Point(72, 389);
-            this.lblBitácoras.Name = "lblBitácoras";
-            this.lblBitácoras.Size = new System.Drawing.Size(81, 20);
-            this.lblBitácoras.TabIndex = 9;
-            this.lblBitácoras.Text = "Bitácoras";
-            // 
-            // pbBita
-            // 
-            this.pbBita.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbBita.Image = ((System.Drawing.Image)(resources.GetObject("pbBita.Image")));
-            this.pbBita.Location = new System.Drawing.Point(51, 311);
-            this.pbBita.Name = "pbBita";
-            this.pbBita.Size = new System.Drawing.Size(127, 75);
-            this.pbBita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbBita.TabIndex = 8;
-            this.pbBita.TabStop = false;
-            this.pbBita.Click += new System.EventHandler(this.pbBita_Click);
             // 
             // label4
             // 
@@ -214,7 +188,7 @@
             this.pbSalir.BackColor = System.Drawing.Color.Transparent;
             this.pbSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbSalir.Image")));
-            this.pbSalir.Location = new System.Drawing.Point(878, 652);
+            this.pbSalir.Location = new System.Drawing.Point(882, 538);
             this.pbSalir.Name = "pbSalir";
             this.pbSalir.Size = new System.Drawing.Size(100, 63);
             this.pbSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -228,7 +202,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(862, 718);
+            this.label6.Location = new System.Drawing.Point(863, 604);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 26);
             this.label6.TabIndex = 8;
@@ -240,14 +214,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1017, 742);
+            this.ClientSize = new System.Drawing.Size(1017, 639);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pbSalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Footlight MT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -260,7 +234,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBita)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCajero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDistribuidor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).EndInit();
@@ -278,8 +251,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbCajero;
-        private System.Windows.Forms.PictureBox pbBita;
-        private System.Windows.Forms.Label lblBitácoras;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbSalir;

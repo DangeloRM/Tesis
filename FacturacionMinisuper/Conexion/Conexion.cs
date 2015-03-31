@@ -91,8 +91,16 @@ namespace Conexion
         public int OperacionesHit(string consulta)
         {
             int registrosAfectados = 0;
-            SqlCommand comando = new SqlCommand(consulta, cnx);
-            registrosAfectados = comando.ExecuteNonQuery();
+            try
+            {
+                SqlCommand comando = new SqlCommand(consulta, cnx);
+                registrosAfectados = comando.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+           
             return registrosAfectados;
         }
 

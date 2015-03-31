@@ -59,11 +59,11 @@ namespace FacturacionMinisuper.Cajero
                 string telefon = gvCajero.CurrentRow.Cells[3].Value.ToString();
                 string contrasena = gvCajero.CurrentRow.Cells[4].Value.ToString();
                 string estado = gvCajero.CurrentRow.Cells[5].Value.ToString();
-                Logica.Cajero objCajero = new Logica.Cajero(idcajer,nombre,apellido,telefon,contrasena,estado);
+                //Logica.Cajero objCajero = new Logica.Cajero(idcajer,nombre,apellido,telefon,contrasena,estado);
 
                 frmActualizarCajero objActualizarCarj = new frmActualizarCajero();
-                objActualizarCarj.CajeroModifi = objCajero;
-                objActualizarCarj.ShowDialog();
+                //objActualizarCarj.CajeroModifi = objCajero;
+                //objActualizarCarj.ShowDialog();
 
                 if (objActualizarCarj.DialogResult == System.Windows.Forms.DialogResult.OK)
                 {

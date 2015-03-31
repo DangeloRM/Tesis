@@ -45,12 +45,13 @@
             this.pbIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbIngresar.Image = ((System.Drawing.Image)(resources.GetObject("pbIngresar.Image")));
             this.pbIngresar.Location = new System.Drawing.Point(286, 124);
-            this.pbIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.pbIngresar.Name = "pbIngresar";
             this.pbIngresar.Size = new System.Drawing.Size(58, 33);
             this.pbIngresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbIngresar.TabIndex = 0;
             this.pbIngresar.TabStop = false;
+            this.pbIngresar.Click += new System.EventHandler(this.pbIngresar_Click);
             // 
             // label1
             // 
@@ -75,7 +76,7 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(198, 30);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(124, 23);
             this.txtUser.TabIndex = 3;
@@ -83,18 +84,18 @@
             // txtContrasena
             // 
             this.txtContrasena.Location = new System.Drawing.Point(198, 85);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(124, 23);
             this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(10, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(95, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

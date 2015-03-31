@@ -81,23 +81,11 @@
     <Compile Include="Admin\frmManteAdmin.Designer.cs">
       <DependentUpon>frmManteAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bitacora\frmAgregarBitacora.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bitacora\frmAgregarBitacora.Designer.cs">
-      <DependentUpon>frmAgregarBitacora.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bitacora\frmReporteBitacora.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bitacora\frmReporteBitacora.Designer.cs">
       <DependentUpon>frmReporteBitacora.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Bitacora\MantenimienBitacora.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bitacora\MantenimienBitacora.Designer.cs">
-      <DependentUpon>MantenimienBitacora.cs</DependentUpon>
     </Compile>
     <Compile Include="Cajero\frmActualizarCajero.cs">
       <SubType>Form</SubType>
@@ -198,14 +186,8 @@
       <DependentUpon>ReporteFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="ValidacionTextBox.cs" />
-    <EmbeddedResource Include="Bitacora\frmAgregarBitacora.resx">
-      <DependentUpon>frmAgregarBitacora.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bitacora\frmReporteBitacora.resx">
       <DependentUpon>frmReporteBitacora.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Bitacora\MantenimienBitacora.resx">
-      <DependentUpon>MantenimienBitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cajero\frmActualizarCajero.resx">
       <DependentUpon>frmActualizarCajero.cs</DependentUpon>

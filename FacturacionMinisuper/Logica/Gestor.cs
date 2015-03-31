@@ -13,15 +13,15 @@ namespace Logica
         #region Cajero
 
         Cajero objCajero = null;
-        public int ActualizarCajero(string nombre, string apellido, string telefono, string contrasena, string estado, int idcajero)
+        public int ActualizarCajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
         {
-            objCajero = new Cajero(idcajero,nombre,apellido,telefono,contrasena,estado);
+            objCajero = new Cajero(pId, pAcceso,pPass,pNombre,pApellido, pTelefono, pEstado, pIdAcceso);
             return objCajero.ActualizarCajero();
         }
 
-        public int AgregarCajero(int idcajero,string nombre, string apellido, string telefono, string contrasena, string estado)
+        public int AgregarCajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
         {
-            objCajero = new Cajero(idcajero, nombre, apellido, telefono, contrasena, estado);
+            objCajero = new Cajero(pId, pAcceso, pPass, pNombre, pApellido, pTelefono, pEstado, pIdAcceso);
             return objCajero.AgregarCajero();
         }
 
@@ -31,12 +31,11 @@ namespace Logica
             return objCajero.ConsultarCajero(idcajero);
         }
 
-        public Cajero ConsultarCajeroBita(int idcajero)
+       public Cajero IniciaSession(string pCajero)
         {
             objCajero = new Cajero();
-            return objCajero.ConsultarCajeroBita(idcajero);
+            return objCajero.InicioSesion(pCajero);
         }
-
         public DataTable ConsultaMasivaCajero()
         {
             objCajero = new Cajero();

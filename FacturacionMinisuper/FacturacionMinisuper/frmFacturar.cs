@@ -13,7 +13,8 @@ namespace FacturacionMinisuper
 {
     public partial class frmFacturar : Form
     {
-
+        public Logica.Cajero myCajero { get; set; }
+        public Logica.Producto myProducto { get; set; }
         public DataTable CarroCompras { get; set; }
         public double MontoTotal { get; set; }
         public frmFacturar()
@@ -23,6 +24,7 @@ namespace FacturacionMinisuper
 
         private void frmFacturar_Load(object sender, EventArgs e)
         {
+            lblCajero.Text = myCajero.NombreAcceso;
             CarroCompras = new DataTable("CarroCompras");
             DataColumn colCodProducto = new DataColumn("Codigo", typeof(int));
             colCodProducto.Caption = "Código";
@@ -38,43 +40,23 @@ namespace FacturacionMinisuper
             CarroCompras.Columns.Add(colSubTotal);
         }
 
-        private void SolicitarCantidad(Logica.Producto objProducto)
-        {
-            Productos.frmProductoCantidad Cantidad = new Productos.frmProductoCantidad();
-            Cantidad.Producto = objProducto;
-            Cantidad.ShowDialog();
-            if (Cantidad.DialogResult == System.Windows.Forms.DialogResult.OK)
-            {
-                DataRow nuevo = CarroCompras.NewRow();
-                nuevo["Codigo"] = Cantidad.Producto.CodProducto;
-                nuevo["Nombre"] = Cantidad.Producto.Nombre;
-                nuevo["Precio"] = Cantidad.Producto.Precio;
-                nuevo["Cantidad"] = Cantidad.Producto.Cantidad;
-                nuevo["SubTotal"] = Cantidad.Producto.SubTotal;
-                MontoTotal = MontoTotal + Cantidad.Producto.SubTotal;
-                lblMonto.Text = MontoTotal.ToString();
-                CarroCompras.Rows.Add(nuevo);
-                this.gvFacturar.DataSource = CarroCompras;
-            }
-        }
-
-        private void txtCajero_KeyPress(object sender, KeyPressEventArgs e)
-        {
-             if (e.KeyChar == (Char)Keys.Enter)
-            {
-                Logica.Gestor objGestor = new Logica.Gestor();
-                Logica.Cajero objCajero = null;
-                objCajero = objGestor.ConsultarCajero(Convert.ToInt32(txtCajero.Text));
-                if (objCajero != null)
-                {
-                    lblDatos.Text = objCajero.IDCajero+ " " + objCajero.Nombre + " " + objCajero.Apellido;
-                    lblCajero.Text= objCajero.IDCajero.ToString();
-                }
-                objGestor = null;
-                txtCajero.Clear();
-                e.Handled = true;
-            }
-        }
+        //private void txtCajero_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //     if (e.KeyChar == (Char)Keys.Enter)
+        //    {
+        //        Logica.Gestor objGestor = new Logica.Gestor();
+        //        Logica.Cajero objCajero = null;
+        //        objCajero = objGestor.ConsultarCajero(Convert.ToInt32(txtCajero.Text));
+        //        if (objCajero != null)
+        //        {
+        //            lblDatos.Text = objCajero.IDCajero+ " " + objCajero.Nombre + " " + objCajero.Apellido;
+        //            lblCajero.Text= objCajero.IDCajero.ToString();
+        //        }
+        //        objGestor = null;
+        //        txtCajero.Clear();
+        //        e.Handled = true;
+        //    }
+        //}
 
          private void txtCodProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -104,6 +86,26 @@ namespace FacturacionMinisuper
             }
         }
 
+         private void SolicitarCantidad(Logica.Producto objProducto)
+         {
+             Productos.frmProductoCantidad Cantidad = new Productos.frmProductoCantidad();
+             Cantidad.Producto = objProducto;
+             Cantidad.ShowDialog();
+             if (Cantidad.DialogResult == System.Windows.Forms.DialogResult.OK)
+             {
+                 DataRow nuevo = CarroCompras.NewRow();
+                 nuevo["Codigo"] = Cantidad.Producto.CodProducto;
+                 nuevo["Nombre"] = Cantidad.Producto.Nombre;
+                 nuevo["Precio"] = Cantidad.Producto.Precio;
+                 nuevo["Cantidad"] = Cantidad.Producto.Cantidad;
+                 nuevo["SubTotal"] = Cantidad.Producto.SubTotal;
+                 MontoTotal = MontoTotal + Cantidad.Producto.SubTotal;
+                 lblMonto.Text = MontoTotal.ToString();
+                 CarroCompras.Rows.Add(nuevo);
+                 this.gvFacturar.DataSource = CarroCompras;
+             }
+         }
+
          private void gvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
          {
              if (gvProductos.CurrentRow != null)
@@ -115,7 +117,7 @@ namespace FacturacionMinisuper
                  double preci = Convert.ToDouble(actual.Cells[2].Value);
                  int cantidad = Convert.ToInt32(actual.Cells[3].Value.ToString());
 
-                 objProducto = new Logica.Producto(codpro,nomb,preci,cantidad);
+                 objProducto = new Logica.Producto(codpro,nomb,preci,cantidad);               
                  SolicitarCantidad(objProducto);
              }
          }
@@ -127,11 +129,12 @@ namespace FacturacionMinisuper
                  Logica.Factura objFactura = new Logica.Factura();
                  objFactura.Total = Convert.ToInt32(lblMonto.Text);
                  objFactura.Fecha = DateTime.Now;
-                 objFactura.myCajero = lblCajero.Text;
+                 objFactura.myCajero = myCajero;
                  List<Logica.DetalleFactura> listaLineas = new List<Logica.DetalleFactura>();
                  foreach (DataRow linea in CarroCompras.Rows)
                  {
                      int idP = Convert.ToInt32(linea[0].ToString());
+                     Logica.Producto p = new Producto(idP);
                      string des = linea[1].ToString();
                      int precio = Convert.ToInt32(linea[2]);
                      int cant = Convert.ToInt32(linea[3]);
@@ -140,7 +143,7 @@ namespace FacturacionMinisuper
                      objDetalle.Cantidad = cant;
                      objDetalle.Precio = precio;
                      objDetalle.SubTotal = subTotal;
-                     objDetalle.myProducto.CodProducto = idP;
+                     objDetalle.myProducto = p;
                      listaLineas.Add(objDetalle);
                  }
                  objFactura.Detalle = listaLineas;
