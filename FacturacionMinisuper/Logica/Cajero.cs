@@ -217,7 +217,7 @@ namespace Logica
             int registrosafectados = 0;
             Conexion.Conexion objDatos = new Conexion.Conexion();
 
-            string consulta = string.Format("exce SP_Cajero {0},'{1}','{2}', '{3}','{4}','{5}',1,2",IDCajero,NombreAcceso,Contrasena,Nombre,Apellido,Telefono,Estado,IDTipoAcceso);
+            string consulta = string.Format("exec SP_Cajero {0},'{1}','{2}', '{3}','{4}','{5}',1,2",IDCajero,NombreAcceso,Contrasena,Nombre,Apellido,Telefono,Estado,IDTipoAcceso);
             if (objDatos.AbrirConexion())
             {
                registrosafectados = objDatos.OperacionesHit(consulta);
