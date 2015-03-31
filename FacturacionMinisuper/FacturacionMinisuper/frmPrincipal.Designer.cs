@@ -33,7 +33,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbProductos = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pbCajero = new System.Windows.Forms.PictureBox();
@@ -44,7 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCajero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDistribuidor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).BeginInit();
@@ -57,7 +57,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.pbProductos);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pbCajero);
@@ -103,17 +103,17 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Productos";
             // 
-            // pictureBox1
+            // pbProductos
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 322);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbProductos.Image = ((System.Drawing.Image)(resources.GetObject("pbProductos.Image")));
+            this.pbProductos.Location = new System.Drawing.Point(51, 322);
+            this.pbProductos.Name = "pbProductos";
+            this.pbProductos.Size = new System.Drawing.Size(127, 75);
+            this.pbProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProductos.TabIndex = 10;
+            this.pbProductos.TabStop = false;
+            this.pbProductos.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label4
             // 
@@ -233,7 +233,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCajero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDistribuidor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).EndInit();
@@ -252,7 +252,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbCajero;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbProductos;
         private System.Windows.Forms.PictureBox pbSalir;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;

@@ -38,7 +38,16 @@ namespace FacturacionMinisuper
 
         private void pbSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login myLogin = new Login();
+            this.Dispose();
+            myLogin.ShowDialog();
+            if (myLogin.DialogResult == DialogResult.OK)
+            {
+                frmPrincipal frm = new frmPrincipal();
+                frm.CajeroConectado = myLogin.myCajero;
+                myLogin.Dispose();
+                frm.ShowDialog();
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -50,9 +59,10 @@ namespace FacturacionMinisuper
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+            //Permisos del Formulario principal
+            pbCajero.Enabled = CajeroConectado.Rol;
+            pbDistribuidor.Enabled = CajeroConectado.Rol;
+            pbProductos.Enabled = CajeroConectado.Rol;
         }
-
-
     }
 }
