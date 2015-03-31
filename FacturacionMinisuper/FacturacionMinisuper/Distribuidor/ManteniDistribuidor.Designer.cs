@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuDistribuidor));
             this.bdManteDistri = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblSeleccionado = new System.Windows.Forms.Label();
             this.pbActualizaDistribu = new System.Windows.Forms.PictureBox();
             this.pbAgregaDis = new System.Windows.Forms.PictureBox();
             this.gvDistribuidor = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bdManteDistri.SuspendLayout();
@@ -64,64 +64,6 @@
             this.bdManteDistri.Text = "Mantenimiento Proveedor";
             this.bdManteDistri.Enter += new System.EventHandler(this.bdManteDistri_Enter);
             // 
-            // lblSeleccionado
-            // 
-            this.lblSeleccionado.AutoSize = true;
-            this.lblSeleccionado.Location = new System.Drawing.Point(54, 339);
-            this.lblSeleccionado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSeleccionado.Name = "lblSeleccionado";
-            this.lblSeleccionado.Size = new System.Drawing.Size(0, 18);
-            this.lblSeleccionado.TabIndex = 3;
-            this.lblSeleccionado.Visible = false;
-            // 
-            // pbActualizaDistribu
-            // 
-            this.pbActualizaDistribu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pbActualizaDistribu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbActualizaDistribu.Image = ((System.Drawing.Image)(resources.GetObject("pbActualizaDistribu.Image")));
-            this.pbActualizaDistribu.Location = new System.Drawing.Point(374, 15);
-            this.pbActualizaDistribu.Margin = new System.Windows.Forms.Padding(4);
-            this.pbActualizaDistribu.Name = "pbActualizaDistribu";
-            this.pbActualizaDistribu.Size = new System.Drawing.Size(81, 63);
-            this.pbActualizaDistribu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbActualizaDistribu.TabIndex = 2;
-            this.pbActualizaDistribu.TabStop = false;
-            this.pbActualizaDistribu.Click += new System.EventHandler(this.pbActualizaDistribu_Click);
-            this.pbActualizaDistribu.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pbActualizaDistribu_ControlAdded);
-            // 
-            // pbAgregaDis
-            // 
-            this.pbAgregaDis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pbAgregaDis.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbAgregaDis.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregaDis.Image")));
-            this.pbAgregaDis.Location = new System.Drawing.Point(490, 15);
-            this.pbAgregaDis.Margin = new System.Windows.Forms.Padding(4);
-            this.pbAgregaDis.Name = "pbAgregaDis";
-            this.pbAgregaDis.Size = new System.Drawing.Size(81, 63);
-            this.pbAgregaDis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAgregaDis.TabIndex = 1;
-            this.pbAgregaDis.TabStop = false;
-            this.pbAgregaDis.Click += new System.EventHandler(this.pbAgregaDis_Click);
-            // 
-            // gvDistribuidor
-            // 
-            this.gvDistribuidor.AllowUserToAddRows = false;
-            this.gvDistribuidor.AllowUserToDeleteRows = false;
-            this.gvDistribuidor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvDistribuidor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.gvDistribuidor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gvDistribuidor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.gvDistribuidor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvDistribuidor.Location = new System.Drawing.Point(26, 102);
-            this.gvDistribuidor.Margin = new System.Windows.Forms.Padding(4);
-            this.gvDistribuidor.Name = "gvDistribuidor";
-            this.gvDistribuidor.ReadOnly = true;
-            this.gvDistribuidor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.gvDistribuidor.Size = new System.Drawing.Size(545, 233);
-            this.gvDistribuidor.TabIndex = 0;
-            this.gvDistribuidor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDistribuidor_CellContentClick);
-            this.gvDistribuidor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gvDistribuidor_MouseClick);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -139,6 +81,61 @@
             this.label1.Size = new System.Drawing.Size(47, 18);
             this.label1.TabIndex = 17;
             this.label1.Text = "Editar";
+            // 
+            // lblSeleccionado
+            // 
+            this.lblSeleccionado.AutoSize = true;
+            this.lblSeleccionado.Location = new System.Drawing.Point(54, 339);
+            this.lblSeleccionado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSeleccionado.Name = "lblSeleccionado";
+            this.lblSeleccionado.Size = new System.Drawing.Size(0, 18);
+            this.lblSeleccionado.TabIndex = 3;
+            this.lblSeleccionado.Visible = false;
+            // 
+            // pbActualizaDistribu
+            // 
+            this.pbActualizaDistribu.BackColor = System.Drawing.Color.SteelBlue;
+            this.pbActualizaDistribu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbActualizaDistribu.Image = ((System.Drawing.Image)(resources.GetObject("pbActualizaDistribu.Image")));
+            this.pbActualizaDistribu.Location = new System.Drawing.Point(374, 15);
+            this.pbActualizaDistribu.Margin = new System.Windows.Forms.Padding(4);
+            this.pbActualizaDistribu.Name = "pbActualizaDistribu";
+            this.pbActualizaDistribu.Size = new System.Drawing.Size(81, 63);
+            this.pbActualizaDistribu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbActualizaDistribu.TabIndex = 2;
+            this.pbActualizaDistribu.TabStop = false;
+            this.pbActualizaDistribu.Click += new System.EventHandler(this.pbActualizaDistribu_Click);
+            this.pbActualizaDistribu.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pbActualizaDistribu_ControlAdded);
+            // 
+            // pbAgregaDis
+            // 
+            this.pbAgregaDis.BackColor = System.Drawing.Color.SteelBlue;
+            this.pbAgregaDis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAgregaDis.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregaDis.Image")));
+            this.pbAgregaDis.Location = new System.Drawing.Point(490, 15);
+            this.pbAgregaDis.Margin = new System.Windows.Forms.Padding(4);
+            this.pbAgregaDis.Name = "pbAgregaDis";
+            this.pbAgregaDis.Size = new System.Drawing.Size(81, 63);
+            this.pbAgregaDis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAgregaDis.TabIndex = 1;
+            this.pbAgregaDis.TabStop = false;
+            this.pbAgregaDis.Click += new System.EventHandler(this.pbAgregaDis_Click);
+            // 
+            // gvDistribuidor
+            // 
+            this.gvDistribuidor.AllowUserToAddRows = false;
+            this.gvDistribuidor.AllowUserToDeleteRows = false;
+            this.gvDistribuidor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gvDistribuidor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.gvDistribuidor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvDistribuidor.Location = new System.Drawing.Point(26, 102);
+            this.gvDistribuidor.Margin = new System.Windows.Forms.Padding(4);
+            this.gvDistribuidor.Name = "gvDistribuidor";
+            this.gvDistribuidor.ReadOnly = true;
+            this.gvDistribuidor.Size = new System.Drawing.Size(545, 233);
+            this.gvDistribuidor.TabIndex = 0;
+            this.gvDistribuidor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDistribuidor_CellContentClick);
+            this.gvDistribuidor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gvDistribuidor_MouseClick);
             // 
             // label3
             // 
@@ -165,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(628, 483);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);

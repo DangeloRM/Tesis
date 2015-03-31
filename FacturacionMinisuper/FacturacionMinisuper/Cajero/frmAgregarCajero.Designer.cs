@@ -54,7 +54,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(45, 54);
+            this.lblID.Location = new System.Drawing.Point(45, 50);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(58, 18);
@@ -74,7 +74,7 @@
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Location = new System.Drawing.Point(45, 141);
+            this.lblApellidos.Location = new System.Drawing.Point(45, 151);
             this.lblApellidos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(72, 18);
@@ -84,7 +84,7 @@
             // lbltelefono
             // 
             this.lbltelefono.AutoSize = true;
-            this.lbltelefono.Location = new System.Drawing.Point(45, 175);
+            this.lbltelefono.Location = new System.Drawing.Point(45, 194);
             this.lbltelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltelefono.Name = "lbltelefono";
             this.lbltelefono.Size = new System.Drawing.Size(72, 18);
@@ -94,7 +94,7 @@
             // lblContrasena
             // 
             this.lblContrasena.AutoSize = true;
-            this.lblContrasena.Location = new System.Drawing.Point(45, 211);
+            this.lblContrasena.Location = new System.Drawing.Point(45, 245);
             this.lblContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.Size = new System.Drawing.Size(88, 18);
@@ -104,7 +104,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(45, 249);
+            this.lblEstado.Location = new System.Drawing.Point(45, 300);
             this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 18);
@@ -117,7 +117,7 @@
             this.txtIDCajero.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDCajero.MaxLength = 12;
             this.txtIDCajero.Name = "txtIDCajero";
-            this.txtIDCajero.Size = new System.Drawing.Size(148, 24);
+            this.txtIDCajero.Size = new System.Drawing.Size(179, 24);
             this.txtIDCajero.TabIndex = 1;
             this.txtIDCajero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDCajero_KeyPress);
             // 
@@ -127,44 +127,44 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 25;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(148, 24);
+            this.txtNombre.Size = new System.Drawing.Size(179, 24);
             this.txtNombre.TabIndex = 2;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(147, 135);
+            this.txtApellido.Location = new System.Drawing.Point(147, 145);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.MaxLength = 30;
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(148, 24);
+            this.txtApellido.Size = new System.Drawing.Size(179, 24);
             this.txtApellido.TabIndex = 3;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtTelef
             // 
-            this.txtTelef.Location = new System.Drawing.Point(147, 170);
+            this.txtTelef.Location = new System.Drawing.Point(147, 189);
             this.txtTelef.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelef.MaxLength = 15;
             this.txtTelef.Name = "txtTelef";
-            this.txtTelef.Size = new System.Drawing.Size(148, 24);
+            this.txtTelef.Size = new System.Drawing.Size(179, 24);
             this.txtTelef.TabIndex = 4;
             this.txtTelef.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelef_KeyPress);
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(147, 206);
+            this.txtContrasena.Location = new System.Drawing.Point(147, 240);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.MaxLength = 20;
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(148, 24);
+            this.txtContrasena.Size = new System.Drawing.Size(179, 24);
             this.txtContrasena.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(313, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(347, 50);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 109);
@@ -179,17 +179,17 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(147, 242);
+            this.txtEstado.Location = new System.Drawing.Point(147, 293);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(148, 26);
+            this.txtEstado.Size = new System.Drawing.Size(179, 26);
             this.txtEstado.TabIndex = 6;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(261, 303);
+            this.btnCancelar.Location = new System.Drawing.Point(294, 344);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(64, 48);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +201,7 @@
             // 
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(366, 303);
+            this.btnAgregar.Location = new System.Drawing.Point(400, 344);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(64, 48);
             this.btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +212,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(366, 354);
+            this.label2.Location = new System.Drawing.Point(400, 395);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 106;
@@ -221,7 +221,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(258, 354);
+            this.label1.Location = new System.Drawing.Point(291, 395);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 105;
@@ -231,8 +231,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(452, 392);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(490, 422);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregar);

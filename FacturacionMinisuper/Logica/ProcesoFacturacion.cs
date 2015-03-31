@@ -12,7 +12,7 @@ namespace Logica
         public ResultadoFacturacion Facturar(Factura myFactura)
         {
             ResultadoFacturacion rf = new ResultadoFacturacion();
-            string cmd = string.Format("exec SP_Factura '{0}',{1},{2},1", myFactura.Fecha, myFactura.Total, myFactura.myCajero.IDCajero);
+            string cmd = string.Format("exec SP_Factura '{0}',{1},{2},1", myFactura.Fecha.ToString("yyyy-MM-dd"), myFactura.Total, myFactura.myCajero.IDCajero);
             Conexion.Conexion cnx = new Conexion.Conexion();
             if (cnx.AbrirConexion())
             {
@@ -26,8 +26,10 @@ namespace Logica
                         int pId = Convert.ToInt32(dt.Rows[0][0]);
                         foreach (DetalleFactura Detalle in myFactura.Detalle)
                         {
-                            string comm = string.Format("exec SP_Detalle {0},{1},{2},{3},{4};", Detalle.idFactura, Detalle.myProducto.CodProducto, Detalle.Cantidad, Detalle.Precio, Detalle.SubTotal);
-                            cnx.OperacionesHit(cmd);
+                            Producto pr = new Producto();
+                            string comm = string.Format("exec SP_Detalle {0},{1},{2},{3},{4};", pId, Detalle.myProducto.CodProducto, Detalle.Cantidad, Detalle.Precio, Detalle.SubTotal);
+                            cnx.OperacionesHit(comm);
+                            pr.ReducirStock(Detalle.myProducto.CodProducto, Detalle.Cantidad);
                         }
                         rf.idFactura = pId;
                         rf.CodigoError = 0;
@@ -51,7 +53,7 @@ namespace Logica
                 rf.CodigoError = 1;
                 rf.MensajeError = "Error de conexion a la base de datos";
             }
-            rf = null;
+            cnx = null;
             return rf;
         }
     }

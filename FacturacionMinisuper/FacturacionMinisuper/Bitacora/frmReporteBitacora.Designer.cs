@@ -57,10 +57,11 @@
             this.rptReporteBitacora.ShowRefreshButton = false;
             this.rptReporteBitacora.ShowTextSearchButton = false;
             this.rptReporteBitacora.ShowZoomButton = false;
-            this.rptReporteBitacora.Size = new System.Drawing.Size(799, 412);
+            this.rptReporteBitacora.Size = new System.Drawing.Size(623, 412);
             this.rptReporteBitacora.TabIndex = 1;
             this.rptReporteBitacora.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.rptReporteBitacora.ToolPanelWidth = 233;
+            this.rptReporteBitacora.Load += new System.EventHandler(this.rptReporteBitacora_Load);
             // 
             // pbGenerarReporte
             // 
@@ -88,13 +89,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(850, 547);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(674, 547);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbGenerarReporte);
             this.Controls.Add(this.rptReporteBitacora);
             this.Font = new System.Drawing.Font("Footlight MT Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmReporteBitacora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Bitácora";

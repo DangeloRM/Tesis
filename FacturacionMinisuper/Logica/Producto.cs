@@ -16,7 +16,7 @@ namespace Logica
         public double Precio { get; set; }
         public int Cantidad { get; set; }
         public int CodDistribuidor { get; set; }
-
+        public double SubTotal { get; set; }
         
 
         #endregion Prop
@@ -30,17 +30,6 @@ namespace Logica
         public Producto(int codproducto)
         {
             this.CodProducto = codproducto;
-        }
-
-        public Producto(int codproducto, string nombre, string estado, double precio,int cantidad, int coddistribuidor)
-        {
-            this.CodProducto = codproducto;
-            this.Nombre = nombre;
-            this.Precio = precio;
-            this.Cantidad = cantidad;
-            this.CodDistribuidor = coddistribuidor;
-
-            
         }
 
         public Producto(int codproducto, string nombre, double precio, int cantidad, int coddistribuidor)
@@ -191,6 +180,21 @@ namespace Logica
             objDatos = null;
             GC.Collect();
             return registrosafectados;
+        }
+
+        public int ReducirStock(int pId, int pCant)
+        {
+            int less = 0;
+            Conexion.Conexion objDatos = new Conexion.Conexion();
+            string cmd = string.Format("exec ReducirStock {0}, {1}", pId, pCant);
+            if (objDatos.AbrirConexion())
+            {
+                less = objDatos.OperacionesHit(cmd);
+                objDatos.CerrarConexion();
+            }
+            objDatos = null;
+            GC.Collect();
+            return less;
         }
 
         #endregion Operaciones Hit

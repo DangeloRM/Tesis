@@ -50,7 +50,6 @@
             this.gvDistribuidor.Margin = new System.Windows.Forms.Padding(5);
             this.gvDistribuidor.Name = "gvDistribuidor";
             this.gvDistribuidor.ReadOnly = true;
-            this.gvDistribuidor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gvDistribuidor.Size = new System.Drawing.Size(523, 240);
             this.gvDistribuidor.TabIndex = 1;
             this.gvDistribuidor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDistribuidor_CellContentClick);
@@ -67,7 +66,7 @@
             // 
             // pbActualizaDistribu
             // 
-            this.pbActualizaDistribu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbActualizaDistribu.BackColor = System.Drawing.Color.SteelBlue;
             this.pbActualizaDistribu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizaDistribu.Image = ((System.Drawing.Image)(resources.GetObject("pbActualizaDistribu.Image")));
             this.pbActualizaDistribu.Location = new System.Drawing.Point(457, 2);
@@ -92,8 +91,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(567, 344);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(567, 360);
             this.Controls.Add(this.lblSeleccionado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbActualizaDistribu);

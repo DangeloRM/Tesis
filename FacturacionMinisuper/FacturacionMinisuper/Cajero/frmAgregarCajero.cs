@@ -20,30 +20,30 @@ namespace FacturacionMinisuper.Cajero
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtIDCajero.Text) && !string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelef.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtEstado.Text))
-            {
-                Logica.Gestor objGestor = new Logica.Gestor();
+            //if (!string.IsNullOrEmpty(txtIDCajero.Text) && !string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelef.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtEstado.Text))
+            //{
+            //    Logica.Gestor objGestor = new Logica.Gestor();
 
-                int registrosAfectados = objGestor.AgregarCajero(Convert.ToInt32(txtIDCajero.Text), txtNombre.Text, txtApellido.Text, txtTelef.Text, txtContrasena.Text, txtEstado.Text);
+            //    int registrosAfectados = objGestor.AgregarCajero(Convert.ToInt32(txtIDCajero.Text), txtNombre.Text, txtApellido.Text, txtTelef.Text, txtContrasena.Text, txtEstado.Text);
 
-                if (registrosAfectados > 0)
-                {
-                    MessageBox.Show("Cajero Agregado correctamente!", "Cajero Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+            //    if (registrosAfectados > 0)
+            //    {
+            //        MessageBox.Show("Cajero Agregado correctamente!", "Cajero Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
 
-                else
-                {
-                    MessageBox.Show("No se pudo Agregar el Cajero", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+            //    else
+            //    {
+            //        MessageBox.Show("No se pudo Agregar el Cajero", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    }
 
-                objGestor = null;
-                DialogResult = System.Windows.Forms.DialogResult.OK;
-            }
+            //    objGestor = null;
+            //    DialogResult = System.Windows.Forms.DialogResult.OK;
+            //}
 
-            else
-            {
-                MessageBox.Show("Por favor complete todos los espacios", "Espacios en incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            //else
+            //{
+            //    MessageBox.Show("Por favor complete todos los espacios", "Espacios en incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
         }
         
         private void txtIDCajero_KeyPress(object sender, KeyPressEventArgs e)

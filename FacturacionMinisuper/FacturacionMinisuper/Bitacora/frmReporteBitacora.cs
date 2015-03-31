@@ -30,5 +30,10 @@ namespace FacturacionMinisuper.Bitacora
             report.Refresh();
             this.rptReporteBitacora.ReportSource = report;
         }
+
+        private void rptReporteBitacora_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

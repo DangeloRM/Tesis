@@ -7,82 +7,21 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-   public class Gestor : Logica.IGestor 
+   public class Gestor : Logica.IGestor
     {
-
-        #region Usuario
-
-        Usuario objUsuario= null;
-
-        public int ActualizarUsuario(string nombreusuario, string password, int idtipousuario)
-        {
-             if ((new Usuario().ConsultarUsuario(password) != null))
-            { 
-            objUsuario = new Usuario(password,nombreusuario,idtipousuario);
-            return objUsuario.ActualizarUser();
-            }
-             else
-             {
-                 return -1;
-             }
-        }
-
-        public Usuario ConsultarUsuario(string password)
-        {
-            objUsuario = new Usuario();
-            return objUsuario.ConsultarUsuario(password);
-        }
-
-        #endregion
-
-        #region Bitacora
-
-        Bitacora objBitacora = null;
-
-        public int AgregarBitacora(int codbitacora, string evento, int idcajero)
-        {
-            objCajero = new Cajero(idcajero);
-            if (objCajero.ConsultarCajeroBita(idcajero) != null)
-            {
-                idcajero = objCajero.IDCajero;
-            }
-            
-            objBitacora = new Bitacora(codbitacora, evento, objCajero.IDCajero);
-            if (objBitacora.ConsultarBitacora(codbitacora) == null)
-            {
-             return objBitacora.AgregarBitacora();
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        public Bitacora ConsultarBitacora(int codbitacora)
-        {
-            objBitacora = new Bitacora();
-            return objBitacora.ConsultarBitacora(codbitacora);
-        }
-
-        public DataTable ConsultaMasivaBitacora()
-        {
-            objBitacora = new Bitacora();
-            return objBitacora.ConsultaMasivaBitacora();
-        }
-
-        #endregion Bitacora
 
         #region Cajero
 
         Cajero objCajero = null;
-        public int ActualizarCajero(string nombre, string apellido, string telefono, string contrasena, string estado, int idcajero)
+        public int ActualizarCajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
         {
-            objCajero = new Cajero(idcajero,nombre,apellido,telefono,contrasena,estado);
+            objCajero = new Cajero(pId, pAcceso,pPass,pNombre,pApellido, pTelefono, pEstado, pIdAcceso);
             return objCajero.ActualizarCajero();
         }
 
-        public int AgregarCajero(int idcajero,string nombre, string apellido, string telefono, string contrasena, string estado)
+        public int AgregarCajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
         {
-            objCajero = new Cajero(idcajero, nombre, apellido, telefono, contrasena, estado);
+            objCajero = new Cajero(pId, pAcceso, pPass, pNombre, pApellido, pTelefono, pEstado, pIdAcceso);
             return objCajero.AgregarCajero();
         }
 
@@ -92,12 +31,11 @@ namespace Logica
             return objCajero.ConsultarCajero(idcajero);
         }
 
-        public Cajero ConsultarCajeroBita(int idcajero)
+       public Cajero IniciaSession(string pCajero)
         {
             objCajero = new Cajero();
-            return objCajero.ConsultarCajeroBita(idcajero);
+            return objCajero.InicioSesion(pCajero);
         }
-
         public DataTable ConsultaMasivaCajero()
         {
             objCajero = new Cajero();
@@ -144,9 +82,6 @@ namespace Logica
             return objDistrib.ConsultaMasivaDistribuidoresInactivos();
         }
         #endregion Distrib
-
-     
-
 
         #region MovInventario
 
@@ -232,6 +167,19 @@ namespace Logica
         }
 
         #endregion Producto
+
+         public ResultadoFacturacion Facturar(Factura pFactura)
+         {
+             ProcesoFacturacion objFacturacion = new ProcesoFacturacion();
+             return objFacturacion.Facturar(pFactura);
+         }
+
+         Bitacora myBit = null;
+         public int GenerarBitacora(int pId, string pAccion, int IdCajero)
+         {
+             myBit = new Bitacora(pId, pAccion, IdCajero);
+             return myBit.AgregarBitacora();
+         }
 
     }
 }

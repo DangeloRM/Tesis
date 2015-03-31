@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace FacturacionMinisuper
 {
-    public partial class pbBitacora : Form
+    public partial class frmPrincipal : Form
     {
-        public pbBitacora()
+        public Logica.Cajero CajeroConectado { get; set; }
+        public frmPrincipal()
         {
             InitializeComponent();
         }
@@ -29,18 +30,39 @@ namespace FacturacionMinisuper
             objCajer.ShowDialog();
         }
 
-        private void pbBita_Click(object sender, EventArgs e)
-        {
-            Bitacora.MantenimienBitacora objBitacora = new Bitacora.MantenimienBitacora();
-            objBitacora.ShowDialog();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Productos.MantenimiProducto objProducto = new Productos.MantenimiProducto();
             objProducto.ShowDialog();
         }
 
+        private void pbSalir_Click(object sender, EventArgs e)
+        {
+            Login myLogin = new Login();
+            this.Dispose();
+            myLogin.ShowDialog();
+            if (myLogin.DialogResult == DialogResult.OK)
+            {
+                frmPrincipal frm = new frmPrincipal();
+                frm.CajeroConectado = myLogin.myCajero;
+                myLogin.Dispose();
+                frm.ShowDialog();
+            }
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmFacturar objFactura = new frmFacturar();
+            objFactura.myCajero = this.CajeroConectado;
+            objFactura.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            //Permisos del Formulario principal
+            pbCajero.Enabled = CajeroConectado.Rol;
+            pbDistribuidor.Enabled = CajeroConectado.Rol;
+            pbProductos.Enabled = CajeroConectado.Rol;
+        }
     }
 }

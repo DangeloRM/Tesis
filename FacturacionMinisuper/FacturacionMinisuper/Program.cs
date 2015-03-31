@@ -16,7 +16,15 @@ namespace FacturacionMinisuper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new pbBitacora());
+            Login myLogin = new Login();
+            myLogin.ShowDialog();
+            if (myLogin.DialogResult == DialogResult.OK)
+            {
+                frmPrincipal frm = new frmPrincipal();
+                frm.CajeroConectado = myLogin.myCajero;
+                myLogin.Dispose();
+                frm.ShowDialog();
+            }
         }
     }
 }
