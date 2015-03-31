@@ -140,7 +140,7 @@ namespace FacturacionMinisuper
                      objDetalle.Cantidad = cant;
                      objDetalle.Precio = precio;
                      objDetalle.SubTotal = subTotal;
-                     objDetalle.myProducto = idP;
+                     objDetalle.myProducto.CodProducto = idP;
                      listaLineas.Add(objDetalle);
                  }
                  objFactura.Detalle = listaLineas;

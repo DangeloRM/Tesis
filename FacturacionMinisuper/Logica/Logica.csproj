@@ -45,7 +45,6 @@
     <Compile Include="IGestor.cs" />
     <Compile Include="ProcesoFacturacion.cs" />
     <Compile Include="ResultadoFacturacion.cs" />
-    <Compile Include="Usuario.cs" />
     <Compile Include="Bitacora.cs" />
     <Compile Include="Cajero.cs" />
     <Compile Include="DetalleFactura.cs" />

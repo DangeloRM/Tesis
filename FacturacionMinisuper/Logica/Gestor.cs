@@ -7,69 +7,8 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-   public class Gestor : Logica.IGestor 
+   public class Gestor : Logica.IGestor
     {
-
-        #region Usuario
-
-        Usuario objUsuario= null;
-
-        public int ActualizarUsuario(string nombreusuario, string password, int idtipousuario)
-        {
-             if ((new Usuario().ConsultarUsuario(password) != null))
-            { 
-            objUsuario = new Usuario(password,nombreusuario,idtipousuario);
-            return objUsuario.ActualizarUser();
-            }
-             else
-             {
-                 return -1;
-             }
-        }
-
-        public Usuario ConsultarUsuario(string password)
-        {
-            objUsuario = new Usuario();
-            return objUsuario.ConsultarUsuario(password);
-        }
-
-        #endregion
-
-        #region Bitacora
-
-        Bitacora objBitacora = null;
-
-        public int AgregarBitacora(int codbitacora, string evento, int idcajero)
-        {
-            objCajero = new Cajero(idcajero);
-            if (objCajero.ConsultarCajeroBita(idcajero) != null)
-            {
-                idcajero = objCajero.IDCajero;
-            }
-            
-            objBitacora = new Bitacora(codbitacora, evento, objCajero.IDCajero);
-            if (objBitacora.ConsultarBitacora(codbitacora) == null)
-            {
-             return objBitacora.AgregarBitacora();
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        public Bitacora ConsultarBitacora(int codbitacora)
-        {
-            objBitacora = new Bitacora();
-            return objBitacora.ConsultarBitacora(codbitacora);
-        }
-
-        public DataTable ConsultaMasivaBitacora()
-        {
-            objBitacora = new Bitacora();
-            return objBitacora.ConsultaMasivaBitacora();
-        }
-
-        #endregion Bitacora
 
         #region Cajero
 
@@ -144,9 +83,6 @@ namespace Logica
             return objDistrib.ConsultaMasivaDistribuidoresInactivos();
         }
         #endregion Distrib
-
-     
-
 
         #region MovInventario
 
