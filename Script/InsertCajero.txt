@@ -1,0 +1,13 @@
+create procedure [dbo].[SP_Cajero]
+	@idCajer int,
+	@NombAcce varchar(50),
+	@Contrase varchar(20),
+	@Nomb varchar(25),
+	@Apelli varchar(30),
+	@Telef varchar(15),
+	@Estado bit,
+	@IDTipoAcceso int
+as
+begin
+	insert into Cajero(NombreAcceso, Contrasena, Nombre,Apellido,Telefono, Estado , IDTipoAcceso) values (@NombAcce, @Contrase, @Nomb, @Apelli,@Telef,@Estado, @IDTipoAcceso );
+end
