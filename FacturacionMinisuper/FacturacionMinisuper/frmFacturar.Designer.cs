@@ -38,16 +38,19 @@
             this.lblDatos = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gvFacturar = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gvProductos = new System.Windows.Forms.DataGridView();
+            this.pbrefresh = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbFacturación.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvFacturar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbrefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFacturación
@@ -66,7 +69,7 @@
             this.gbFacturación.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbFacturación.Name = "gbFacturación";
             this.gbFacturación.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.gbFacturación.Size = new System.Drawing.Size(644, 589);
+            this.gbFacturación.Size = new System.Drawing.Size(644, 607);
             this.gbFacturación.TabIndex = 0;
             this.gbFacturación.TabStop = false;
             this.gbFacturación.Text = "Facturación";
@@ -74,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(541, 567);
+            this.label3.Location = new System.Drawing.Point(541, 589);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 15);
             this.label3.TabIndex = 11;
@@ -93,7 +96,7 @@
             // 
             this.pbFacturar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbFacturar.Image = ((System.Drawing.Image)(resources.GetObject("pbFacturar.Image")));
-            this.pbFacturar.Location = new System.Drawing.Point(530, 499);
+            this.pbFacturar.Location = new System.Drawing.Point(530, 521);
             this.pbFacturar.Name = "pbFacturar";
             this.pbFacturar.Size = new System.Drawing.Size(73, 65);
             this.pbFacturar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -104,7 +107,7 @@
             // lblMonto
             // 
             this.lblMonto.AutoSize = true;
-            this.lblMonto.Location = new System.Drawing.Point(541, 469);
+            this.lblMonto.Location = new System.Drawing.Point(317, 521);
             this.lblMonto.Name = "lblMonto";
             this.lblMonto.Size = new System.Drawing.Size(47, 15);
             this.lblMonto.TabIndex = 8;
@@ -113,7 +116,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(494, 469);
+            this.lblTotal.Location = new System.Drawing.Point(270, 521);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(41, 15);
             this.lblTotal.TabIndex = 7;
@@ -122,7 +125,7 @@
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
-            this.lblDatos.Location = new System.Drawing.Point(22, 469);
+            this.lblDatos.Location = new System.Drawing.Point(22, 494);
             this.lblDatos.Name = "lblDatos";
             this.lblDatos.Size = new System.Drawing.Size(80, 15);
             this.lblDatos.TabIndex = 6;
@@ -131,7 +134,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gvFacturar);
-            this.groupBox2.Location = new System.Drawing.Point(25, 275);
+            this.groupBox2.Location = new System.Drawing.Point(25, 319);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(593, 172);
             this.groupBox2.TabIndex = 5;
@@ -151,12 +154,31 @@
             this.gvFacturar.Size = new System.Drawing.Size(562, 140);
             this.gvFacturar.TabIndex = 1;
             // 
+            // txtCodProducto
+            // 
+            this.txtCodProducto.Location = new System.Drawing.Point(166, 40);
+            this.txtCodProducto.Name = "txtCodProducto";
+            this.txtCodProducto.Size = new System.Drawing.Size(189, 23);
+            this.txtCodProducto.TabIndex = 3;
+            this.txtCodProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProducto_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Código Producto:";
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.pbrefresh);
             this.groupBox1.Controls.Add(this.gvProductos);
             this.groupBox1.Location = new System.Drawing.Point(25, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(593, 186);
+            this.groupBox1.Size = new System.Drawing.Size(593, 230);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista Producto";
@@ -175,29 +197,33 @@
             this.gvProductos.TabIndex = 0;
             this.gvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProductos_CellContentClick);
             // 
-            // txtCodProducto
+            // pbrefresh
             // 
-            this.txtCodProducto.Location = new System.Drawing.Point(166, 40);
-            this.txtCodProducto.Name = "txtCodProducto";
-            this.txtCodProducto.Size = new System.Drawing.Size(189, 23);
-            this.txtCodProducto.TabIndex = 3;
-            this.txtCodProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProducto_KeyPress);
+            this.pbrefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbrefresh.Image = ((System.Drawing.Image)(resources.GetObject("pbrefresh.Image")));
+            this.pbrefresh.Location = new System.Drawing.Point(519, 178);
+            this.pbrefresh.Name = "pbrefresh";
+            this.pbrefresh.Size = new System.Drawing.Size(42, 32);
+            this.pbrefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbrefresh.TabIndex = 1;
+            this.pbrefresh.TabStop = false;
+            this.pbrefresh.Click += new System.EventHandler(this.pbrefresh_Click);
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Código Producto:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(509, 212);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Refrescar";
             // 
             // frmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(706, 636);
+            this.ClientSize = new System.Drawing.Size(706, 648);
             this.Controls.Add(this.gbFacturación);
             this.Font = new System.Drawing.Font("Footlight MT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -215,7 +241,9 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvFacturar)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbrefresh)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,8 +252,6 @@
 
         private System.Windows.Forms.GroupBox gbFacturación;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView gvProductos;
         private System.Windows.Forms.TextBox txtCodProducto;
         private System.Windows.Forms.PictureBox pbFacturar;
         private System.Windows.Forms.Label lblMonto;
@@ -235,5 +261,9 @@
         private System.Windows.Forms.DataGridView gvFacturar;
         private System.Windows.Forms.Label lblCajero;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView gvProductos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbrefresh;
     }
 }

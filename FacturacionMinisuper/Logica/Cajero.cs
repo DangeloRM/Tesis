@@ -150,7 +150,7 @@ namespace Logica
         public DataTable ConsultaMasivaCajero()
         {
             DataTable dtCajero = new DataTable();
-            string consulta = string.Format("select IDCajero as Cédula,Nombre,Apellido,Telefono, Contrasena as Contraseña, Estado from Cajero");
+            string consulta = string.Format("select IDCajero, NombreAcceso, Contrasena, Nombre, Apellido, Telefono, Estado, IDTipoAcceso from Cajero ");
             Conexion.Conexion objDatos = new Conexion.Conexion();
 
             try
@@ -217,7 +217,7 @@ namespace Logica
             int registrosafectados = 0;
             Conexion.Conexion objDatos = new Conexion.Conexion();
 
-            string consulta = string.Format("insert into Cajero (idcajero,nombre,apellido,telefono,contrasena, estado) values({0},'{1}','{2}','{3}', '{4}', '{5}' )", IDCajero, Nombre, Apellido, Telefono, Contrasena, Estado);
+            string consulta = string.Format("exce SP_Cajero {0},'{1}','{2}', '{3}','{4}','{5}',1,2",IDCajero,NombreAcceso,Contrasena,Nombre,Apellido,Telefono,Estado,IDTipoAcceso);
             if (objDatos.AbrirConexion())
             {
                registrosafectados = objDatos.OperacionesHit(consulta);
@@ -226,6 +226,35 @@ namespace Logica
             objDatos = null;
             GC.Collect();
             return registrosafectados;
+        }
+
+        public int IdCajero()
+        {
+            int num = 0;
+            string consulta = "select COUNT(*) as IDCajero from Cajero";
+            Conexion.Conexion objDatos = new Conexion.Conexion();
+            try
+            {
+                if (objDatos.AbrirConexion())
+                {
+                    DataTable dtResultado = objDatos.HacerSelect(consulta);
+                    if (dtResultado != null && dtResultado.Rows.Count > 0)
+                    {
+                        int cod = Convert.ToInt32(dtResultado.Rows[0][0].ToString());
+                        num = cod + 1;
+
+                    }
+                    objDatos.CerrarConexion();
+                }
+            }
+            catch (Exception)
+            {
+
+                num = 0;
+            }
+            objDatos = null;
+            GC.Collect();
+            return num;
         }
 
              

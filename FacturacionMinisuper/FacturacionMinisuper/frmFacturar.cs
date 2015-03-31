@@ -86,6 +86,14 @@ namespace FacturacionMinisuper
             }
         }
 
+         private void CargarGrid()
+         {
+             Logica.Gestor objGestor = new Logica.Gestor();
+             gvProductos.DataSource = objGestor.ConsultaMasivaProducto();
+             objGestor = null;
+             GC.Collect();
+         }
+
          private void SolicitarCantidad(Logica.Producto objProducto)
          {
              Productos.frmProductoCantidad Cantidad = new Productos.frmProductoCantidad();
@@ -111,13 +119,16 @@ namespace FacturacionMinisuper
              if (gvProductos.CurrentRow != null)
              {
                  Logica.Producto objProducto = null;
+                 Logica.Gestor objGestor = new Logica.Gestor();
+                 gvProductos.DataSource = objGestor.ConsultaMasivaProducto();
+                 objGestor = null;
                  DataGridViewRow actual = this.gvProductos.CurrentRow;
                  int codpro = Convert.ToInt32(actual.Cells[0].Value.ToString());
                  string nomb = actual.Cells[1].Value.ToString();
                  double preci = Convert.ToDouble(actual.Cells[2].Value);
                  int cantidad = Convert.ToInt32(actual.Cells[3].Value.ToString());
 
-                 objProducto = new Logica.Producto(codpro,nomb,preci,cantidad);               
+                 objProducto = new Logica.Producto(codpro, nomb, preci, cantidad);
                  SolicitarCantidad(objProducto);
              }
          }
@@ -172,6 +183,10 @@ namespace FacturacionMinisuper
              }
          }
 
-        
+         private void pbrefresh_Click(object sender, EventArgs e)
+         {
+             CargarGrid();
+         }
+               
     }
 }

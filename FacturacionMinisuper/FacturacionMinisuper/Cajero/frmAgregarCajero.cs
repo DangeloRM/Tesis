@@ -20,11 +20,11 @@ namespace FacturacionMinisuper.Cajero
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            //if (!string.IsNullOrEmpty(txtIDCajero.Text) && !string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelef.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtEstado.Text))
+            //if (!string.IsNullOrEmpty(txtIDCajero.Text) && !string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelef.Text) && !string.IsNullOrEmpty(txtContrasena.Text))
             //{
             //    Logica.Gestor objGestor = new Logica.Gestor();
 
-            //    int registrosAfectados = objGestor.AgregarCajero(Convert.ToInt32(txtIDCajero.Text), txtNombre.Text, txtApellido.Text, txtTelef.Text, txtContrasena.Text, txtEstado.Text);
+            //    int registrosAfectados = objGestor.AgregarCajero(Convert.ToInt32(txtIDCajero.Text), txtNomAcces.Text, txtContrasena.Text, txtNombre.Text, txtApellido.Text, txtTelef.Text, Convert.ToInt32(txtIdTipo.Text));
 
             //    if (registrosAfectados > 0)
             //    {
@@ -73,7 +73,9 @@ namespace FacturacionMinisuper.Cajero
 
         private void frmAgregarCajero_Load(object sender, EventArgs e)
         {
-
+            Logica.Cajero objCajer = new Logica.Cajero();
+            txtIDCajero.Text = objCajer.IdCajero().ToString();
+            txtIDCajero.ReadOnly = true;
         }
 
     
