@@ -135,43 +135,73 @@ namespace FacturacionMinisuper
 
          private void pbFacturar_Click(object sender, EventArgs e)
          {
+             /*
+              * Primero verificamos si nuestro grid de productos contiene datos para 
+              * poder realizar la facturación correspondiente.
+              */
              if (CarroCompras.Rows.Count > 0)
              {
-                 Logica.Factura objFactura = new Logica.Factura();
-                 objFactura.Total = Convert.ToInt32(lblMonto.Text);
-                 objFactura.Fecha = DateTime.Now;
-                 objFactura.myCajero = myCajero;
+                 /*En el caso que si contenga productos válidos
+                  *procedemos con el proceso de facturación.
+                  */ 
+                 Logica.Factura objFactura = new Logica.Factura();//Creamos nuestro objeto factura
+                 objFactura.Total = Convert.ToInt32(lblMonto.Text);//Obtenemos el total del label encargado
+                 objFactura.Fecha = DateTime.Now;//Obtenemos la fecha de hoy
+                 objFactura.myCajero = myCajero;//Asignamos el cajero actual al que llevará la factura
+                 /*
+                  * Creamos nuestra lista de lineas de la factura o detalles para poder procesarlos
+                  * uno por uno y asignarlos al proceso de facturación.
+                  */
                  List<Logica.DetalleFactura> listaLineas = new List<Logica.DetalleFactura>();
+                 //Trabajamos en nuestra lista asignandole los valores de nuestro grid de productos a facturar.
+                 //Estos productos los obtenemos del grid CarroCompras de sus objetos datarow.
                  foreach (DataRow linea in CarroCompras.Rows)
                  {
+                     //Extraemos los datos correspondientes
                      int idP = Convert.ToInt32(linea[0].ToString());
                      Logica.Producto p = new Producto(idP);
                      string des = linea[1].ToString();
                      int precio = Convert.ToInt32(linea[2]);
                      int cant = Convert.ToInt32(linea[3]);
                      int subTotal = Convert.ToInt32(linea[4]);
+                     /*
+                      * Creamos nuestro objeto detalle y le asignamos los valores procesados
+                      * anteriormente provenientes de nuestro grid CarroCompras.
+                      */
                      Logica.DetalleFactura objDetalle = new Logica.DetalleFactura();
                      objDetalle.Cantidad = cant;
                      objDetalle.Precio = precio;
                      objDetalle.SubTotal = subTotal;
                      objDetalle.myProducto = p;
+                     /*
+                      * Agregamos nuestros detalles a nuestra lista previamente creada listaLineas
+                      */
                      listaLineas.Add(objDetalle);
                  }
+                 //Asignamos nuestra lista de detalles al objeto factura.
                  objFactura.Detalle = listaLineas;
+                 //Llamamos al gestor para poder usar nuestra clase de procesos Resultado Facturacion
                  Logica.Gestor objGestor = new Logica.Gestor();
+                 //Obtenemos los datos de respuesta de nuestra clase resultad facturacion, esta nos 
+                 //indicará si todo salió correctamente.
                  ResultadoFacturacion respuesta = objGestor.Facturar(objFactura);
+                 //Porcedemos a crear la bitácora respectiva para llevar un registro cerrado de las
+                 //actividades.
                  objGestor.GenerarBitacora(0, "El cajero "+myCajero.NombreAcceso+" ha generado una nueva factura con un monto de: "+objFactura.Total+" a las: "+DateTime.Today.TimeOfDay, myCajero.IDCajero);
                  objGestor = null;
+                 //Validamos nuestra respuesta si nuestra respuesta es 1 significa que todo salio bien
                  if (respuesta.CodigoError != 0)
                  {
                      MessageBox.Show(respuesta.MensajeError);
                  }
                  else
                  {
+                     //Procedemos a mostrar el reporte
                      ReporteFactura objReporte = new ReporteFactura();
-                     objReporte.CodFactura = respuesta.idFactura;
+                     objReporte.CodFactura = respuesta.idFactura;//Le enviamos el codigo de la factura para poder obtener el reporte
                      objReporte.ShowDialog();
                  }
+                 //Liberamos nuestros controles
                  MontoTotal = 0;
                  lblMonto.Text = string.Empty;
                  CarroCompras.Rows.Clear();
