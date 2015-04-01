@@ -42,15 +42,15 @@ namespace FacturacionMinisuper
 
         //private void txtCajero_KeyPress(object sender, KeyPressEventArgs e)
         //{
-        //     if (e.KeyChar == (Char)Keys.Enter)
+        //    if (e.KeyChar == (Char)Keys.Enter)
         //    {
         //        Logica.Gestor objGestor = new Logica.Gestor();
         //        Logica.Cajero objCajero = null;
         //        objCajero = objGestor.ConsultarCajero(Convert.ToInt32(txtCajero.Text));
         //        if (objCajero != null)
         //        {
-        //            lblDatos.Text = objCajero.IDCajero+ " " + objCajero.Nombre + " " + objCajero.Apellido;
-        //            lblCajero.Text= objCajero.IDCajero.ToString();
+        //            lblDatos.Text = objCajero.IDCajero + " " + objCajero.Nombre + " " + objCajero.Apellido;
+        //            lblCajero.Text = objCajero.IDCajero.ToString();
         //        }
         //        objGestor = null;
         //        txtCajero.Clear();
@@ -79,7 +79,7 @@ namespace FacturacionMinisuper
                     else
                     {
                         MessageBox.Show("El código escaneado: "
-                            + txtCodProducto.Text + " no existe");
+                            + txtCodProducto.Text + " no existe","El Código NO Existe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     txtCodProducto.Text = string.Empty;
                 }

@@ -38,6 +38,8 @@ namespace FacturacionMinisuper
 
         private void pbSalir_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Deseas Cerrar sesión?", "Cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
             Login myLogin = new Login();
             this.Dispose();
             myLogin.ShowDialog();
@@ -48,6 +50,8 @@ namespace FacturacionMinisuper
                 myLogin.Dispose();
                 frm.ShowDialog();
             }
+           }
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

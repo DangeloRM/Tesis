@@ -188,9 +188,9 @@
             this.pbSalir.BackColor = System.Drawing.Color.Transparent;
             this.pbSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbSalir.Image")));
-            this.pbSalir.Location = new System.Drawing.Point(882, 538);
+            this.pbSalir.Location = new System.Drawing.Point(897, 554);
             this.pbSalir.Name = "pbSalir";
-            this.pbSalir.Size = new System.Drawing.Size(100, 63);
+            this.pbSalir.Size = new System.Drawing.Size(76, 47);
             this.pbSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSalir.TabIndex = 7;
             this.pbSalir.TabStop = false;
@@ -202,11 +202,11 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(863, 604);
+            this.label6.Location = new System.Drawing.Point(880, 604);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 26);
+            this.label6.Size = new System.Drawing.Size(116, 26);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Salir del Sistema";
+            this.label6.Text = "Cerrar Sesión";
             // 
             // frmPrincipal
             // 

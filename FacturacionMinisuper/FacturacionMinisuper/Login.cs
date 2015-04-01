@@ -49,5 +49,13 @@ namespace FacturacionMinisuper
                 MessageBox.Show("Sus datos no son correctos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void pbSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseas Salir del Sistema?", "Salir del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+            Application.Exit();
+            }
+        }
     }
 }
