@@ -42,12 +42,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pbSalir = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pbBitacora = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCajero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDistribuidor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBitacora)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -208,6 +212,28 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Cerrar Sesión";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pbBitacora);
+            this.groupBox2.Location = new System.Drawing.Point(864, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(141, 74);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Registro Bitácoras";
+            // 
+            // pbBitacora
+            // 
+            this.pbBitacora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBitacora.Image = ((System.Drawing.Image)(resources.GetObject("pbBitacora.Image")));
+            this.pbBitacora.Location = new System.Drawing.Point(21, 23);
+            this.pbBitacora.Name = "pbBitacora";
+            this.pbBitacora.Size = new System.Drawing.Size(98, 48);
+            this.pbBitacora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBitacora.TabIndex = 0;
+            this.pbBitacora.TabStop = false;
+            this.pbBitacora.Click += new System.EventHandler(this.pbBitacora_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -215,6 +241,7 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1017, 639);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pbSalir);
             this.Controls.Add(this.label2);
@@ -237,6 +264,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbCajero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDistribuidor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbBitacora)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,6 +286,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pbBitacora;
 
     }
 }

@@ -20,15 +20,15 @@ namespace FacturacionMinisuper.Bitacora
 
         private void frmReporteBitacora_Load(object sender, EventArgs e)
         {
-
+            ReportDocument report = new ReportDocument();
+            report.Load(@"C:\Reportes\ReporteBitacora1.rpt");
+            report.Refresh();
+            this.rptReporteBitacora.ReportSource = report;
         }
 
         private void pbGenerarReporte_Click(object sender, EventArgs e)
         {
-            ReportDocument report = new ReportDocument();
-            report.Load(@"C:\Reportes\ReporteBitacora.rpt");
-            report.Refresh();
-            this.rptReporteBitacora.ReportSource = report;
+            
         }
 
         private void rptReporteBitacora_Load(object sender, EventArgs e)

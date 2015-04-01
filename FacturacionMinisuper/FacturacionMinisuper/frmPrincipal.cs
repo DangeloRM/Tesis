@@ -68,5 +68,11 @@ namespace FacturacionMinisuper
             pbDistribuidor.Enabled = CajeroConectado.Rol;
             pbProductos.Enabled = CajeroConectado.Rol;
         }
+
+        private void pbBitacora_Click(object sender, EventArgs e)
+        {
+            Bitacora.frmReporteBitacora objBitacora = new Bitacora.frmReporteBitacora();
+            objBitacora.Show();
+        }
     }
 }

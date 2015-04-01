@@ -36,14 +36,33 @@ namespace FacturacionMinisuper.Productos
 
         private void ConfigurarCantidad()
         {
-            this.Producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
-            this.Producto.SubTotal = this.Producto.Cantidad * this.Producto.Precio;
-            DialogResult = System.Windows.Forms.DialogResult.OK;
+            //Logica.Producto pr = new Logica.Producto();
+            //pr = pr.ConsultarProducto(Producto.CodProducto);
+            if (Producto.Cantidad > 0 || Producto.Cantidad == 1)
+            {
+                this.Producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                this.Producto.SubTotal = this.Producto.Cantidad * this.Producto.Precio;
+                DialogResult = System.Windows.Forms.DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("No hay existencias en inventario!!", "Error de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+            
         }
 
         private void pbAceptar_Click(object sender, EventArgs e)
         {
+            if (Producto.Cantidad > 0 || Producto.Cantidad == 1)
+            {
             ConfigurarCantidad();
+            }
+            else
+            {
+                MessageBox.Show("No hay existencias en inventario!!", "Error de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void pbCancelar_Click(object sender, EventArgs e)
