@@ -37,6 +37,7 @@ namespace FacturacionMinisuper.Distribuidor
                 if (registrosAfectados >= 0)
                 {
                     MessageBox.Show("Distribuidor Actualizado correctamente!", "Distribuidor Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
 
                 else

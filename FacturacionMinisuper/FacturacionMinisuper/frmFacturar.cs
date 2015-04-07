@@ -26,7 +26,7 @@ namespace FacturacionMinisuper
         {
             lblCajero.Text = myCajero.Nombre +" "+ myCajero.Apellido;
             CarroCompras = new DataTable("CarroCompras");
-            DataColumn colCodProducto = new DataColumn("Codigo", typeof(int));
+            DataColumn colCodProducto = new DataColumn("Codigo", typeof(string));
             colCodProducto.Caption = "Código";
             DataColumn colNombre = new DataColumn("Nombre", typeof(string));
             colNombre.Caption = "Nombre";
@@ -72,7 +72,7 @@ namespace FacturacionMinisuper
                 else
                 {
                     Logica.Gestor objGestor = new Logica.Gestor();
-                    Logica.Producto objProducto = objGestor.ConsultarProducto(Convert.ToInt32(txtCodProducto.Text));
+                    Logica.Producto objProducto = objGestor.ConsultarProducto(txtCodProducto.Text);
                     if (objProducto != null)
                     {
                         SolicitarCantidad(objProducto);
@@ -80,7 +80,7 @@ namespace FacturacionMinisuper
                     else
                     {
                         MessageBox.Show("El código escaneado: "
-                            + txtCodProducto.Text + " no existe","El Código NO Existe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            + txtCodProducto.Text + " no existe","Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     txtCodProducto.Text = string.Empty;
                 }
@@ -124,14 +124,14 @@ namespace FacturacionMinisuper
                  gvProductos.DataSource = objGestor.ConsultaMasivaProducto();
                  objGestor = null;
                  DataGridViewRow actual = this.gvProductos.CurrentRow;
-                 int codpro = Convert.ToInt32(actual.Cells[0].Value.ToString());
+                 string codpro = actual.Cells[0].Value.ToString();
                  string nomb = actual.Cells[1].Value.ToString();
                  double preci = Convert.ToDouble(actual.Cells[2].Value);
                  int cantidad = Convert.ToInt32(actual.Cells[3].Value.ToString());
 
                  objProducto = new Logica.Producto(codpro, nomb, preci, cantidad);
                  SolicitarCantidad(objProducto);
-             }
+                 }
          }
 
          private void pbFacturar_Click(object sender, EventArgs e)
@@ -159,8 +159,8 @@ namespace FacturacionMinisuper
                      foreach (DataRow linea in CarroCompras.Rows)
                      {
                          //Extraemos los datos correspondientes
-                         int idP = Convert.ToInt32(linea[0].ToString());
-                         Logica.Producto p = new Producto(idP);
+                         string idP = linea[0].ToString();
+                         Logica.Producto p = new Producto(idP.ToString());
                          string des = linea[1].ToString();
                          int precio = Convert.ToInt32(linea[2]);
                          int cant = Convert.ToInt32(linea[3]);
@@ -203,6 +203,7 @@ namespace FacturacionMinisuper
                          ReporteFactura objReporte = new ReporteFactura();
                          objReporte.CodFactura = respuesta.idFactura;//Le enviamos el codigo de la factura para poder obtener el reporte
                          objReporte.ShowDialog();
+                         CargarGrid();
                      }
             }
                      //Liberamos nuestros controles
@@ -216,11 +217,6 @@ namespace FacturacionMinisuper
                      MessageBox.Show("Debe comprar al menos un producto para facturar","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                  }
                  gvFacturar.DataSource = null;
-         }
-
-         private void pbrefresh_Click(object sender, EventArgs e)
-         {
-             CargarGrid();
          }
 
          private void txtCodProducto_TextChanged(object sender, EventArgs e)

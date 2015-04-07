@@ -236,6 +236,7 @@
             this.txtIdTipo.Size = new System.Drawing.Size(179, 24);
             this.txtIdTipo.TabIndex = 110;
             this.txtIdTipo.Text = "2";
+            this.txtIdTipo.Visible = false;
             // 
             // label4
             // 
@@ -246,6 +247,7 @@
             this.label4.Size = new System.Drawing.Size(121, 18);
             this.label4.TabIndex = 111;
             this.label4.Text = "ID Tipo Usuario: ";
+            this.label4.Visible = false;
             // 
             // frmAgregarCajero
             // 

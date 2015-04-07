@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-   public class Gestor : Logica.IGestor
+   public class Gestor : Logica.IGestor 
     {
 
         #region Cajero
@@ -117,7 +117,7 @@ namespace Logica
         #region Producto
 
         Producto objProducto = null;
-        public int AgregarProducto(int codproducto, string nombre, double precio, int coddistribuidor)
+        public int AgregarProducto(string codproducto, string nombre, double precio, int coddistribuidor)
         {
             objDistrib = new Distribuidor();
             if (objDistrib.ConsultarDistribuidor(coddistribuidor) != null)
@@ -135,7 +135,7 @@ namespace Logica
                 return 0;
             }
         }
-        public int ActualizarProducto(string nombre, double precio, int cantidad, int coddistribuidor, int codproducto)
+        public int ActualizarProducto(string nombre, double precio, int cantidad, int coddistribuidor, string codproducto)
         {
             objDistrib = new Distribuidor();
             if (objDistrib.ConsultarDistribuidor(coddistribuidor) != null)
@@ -160,7 +160,7 @@ namespace Logica
             return objProducto.ConsultaMasivaProductos();
         }
 
-         public Producto ConsultarProducto(int codproducto)
+         public Producto ConsultarProducto(string codproducto)
         {
             objProducto = new Producto();
             return objProducto.ConsultarProducto(codproducto);

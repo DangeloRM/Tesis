@@ -41,11 +41,15 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtTelefo = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNomAcceso = new System.Windows.Forms.TextBox();
+            this.txtTipoacces = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActualizar)).BeginInit();
@@ -69,14 +73,14 @@
             this.lblIDCajero.Location = new System.Drawing.Point(124, 18);
             this.lblIDCajero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDCajero.Name = "lblIDCajero";
-            this.lblIDCajero.Size = new System.Drawing.Size(58, 18);
+            this.lblIDCajero.Size = new System.Drawing.Size(71, 18);
             this.lblIDCajero.TabIndex = 1;
-            this.lblIDCajero.Text = "Cédula:";
+            this.lblIDCajero.Text = "IDCajero:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(124, 65);
+            this.lblNombre.Location = new System.Drawing.Point(124, 61);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(65, 18);
@@ -86,7 +90,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 115);
+            this.label3.Location = new System.Drawing.Point(124, 101);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 18);
@@ -96,7 +100,7 @@
             // lblTelef
             // 
             this.lblTelef.AutoSize = true;
-            this.lblTelef.Location = new System.Drawing.Point(124, 169);
+            this.lblTelef.Location = new System.Drawing.Point(124, 143);
             this.lblTelef.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelef.Name = "lblTelef";
             this.lblTelef.Size = new System.Drawing.Size(68, 18);
@@ -106,7 +110,7 @@
             // lblContrase
             // 
             this.lblContrase.AutoSize = true;
-            this.lblContrase.Location = new System.Drawing.Point(124, 213);
+            this.lblContrase.Location = new System.Drawing.Point(124, 189);
             this.lblContrase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContrase.Name = "lblContrase";
             this.lblContrase.Size = new System.Drawing.Size(88, 18);
@@ -116,7 +120,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(124, 262);
+            this.lblEstado.Location = new System.Drawing.Point(124, 320);
             this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 18);
@@ -126,7 +130,7 @@
             // txtIdca
             // 
             this.txtIdca.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtIdca.Location = new System.Drawing.Point(234, 14);
+            this.txtIdca.Location = new System.Drawing.Point(264, 15);
             this.txtIdca.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdca.Name = "txtIdca";
             this.txtIdca.ReadOnly = true;
@@ -135,7 +139,7 @@
             // 
             // txtNombr
             // 
-            this.txtNombr.Location = new System.Drawing.Point(234, 61);
+            this.txtNombr.Location = new System.Drawing.Point(264, 58);
             this.txtNombr.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombr.MaxLength = 25;
             this.txtNombr.Name = "txtNombr";
@@ -145,7 +149,7 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(234, 111);
+            this.txtApellido.Location = new System.Drawing.Point(264, 98);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.MaxLength = 30;
             this.txtApellido.Name = "txtApellido";
@@ -156,7 +160,7 @@
             // 
             // txtTelefo
             // 
-            this.txtTelefo.Location = new System.Drawing.Point(234, 165);
+            this.txtTelefo.Location = new System.Drawing.Point(264, 140);
             this.txtTelefo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefo.MaxLength = 15;
             this.txtTelefo.Name = "txtTelefo";
@@ -166,31 +170,18 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(234, 209);
+            this.txtContrasena.Location = new System.Drawing.Point(264, 186);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.MaxLength = 20;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(182, 24);
             this.txtContrasena.TabIndex = 4;
             // 
-            // txtEstado
-            // 
-            this.txtEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtEstado.FormattingEnabled = true;
-            this.txtEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(234, 258);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(182, 26);
-            this.txtEstado.TabIndex = 5;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(290, 291);
+            this.btnCancelar.Location = new System.Drawing.Point(291, 358);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(64, 48);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -202,7 +193,7 @@
             // 
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(390, 291);
+            this.btnActualizar.Location = new System.Drawing.Point(391, 358);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(64, 48);
             this.btnActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,7 +204,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(390, 342);
+            this.label2.Location = new System.Drawing.Point(391, 409);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 107;
@@ -222,23 +213,71 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(287, 342);
+            this.label1.Location = new System.Drawing.Point(288, 409);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 106;
             this.label1.Text = "Cancelar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(127, 233);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 18);
+            this.label4.TabIndex = 109;
+            this.label4.Text = "Usuario:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(127, 277);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 18);
+            this.label5.TabIndex = 110;
+            this.label5.Text = "Tipo Acceso:";
+            // 
+            // txtNomAcceso
+            // 
+            this.txtNomAcceso.Location = new System.Drawing.Point(264, 230);
+            this.txtNomAcceso.Name = "txtNomAcceso";
+            this.txtNomAcceso.Size = new System.Drawing.Size(182, 24);
+            this.txtNomAcceso.TabIndex = 111;
+            // 
+            // txtTipoacces
+            // 
+            this.txtTipoacces.Location = new System.Drawing.Point(264, 274);
+            this.txtTipoacces.Name = "txtTipoacces";
+            this.txtTipoacces.Size = new System.Drawing.Size(182, 24);
+            this.txtTipoacces.TabIndex = 112;
+            this.txtTipoacces.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipoacces_KeyPress);
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.AutoSize = true;
+            this.txtEstado.Location = new System.Drawing.Point(264, 319);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(99, 22);
+            this.txtEstado.TabIndex = 113;
+            this.txtEstado.Text = "checkBox1";
+            this.txtEstado.UseVisualStyleBackColor = true;
+            this.txtEstado.CheckedChanged += new System.EventHandler(this.txtEstado_CheckedChanged);
             // 
             // frmActualizarCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(495, 363);
+            this.ClientSize = new System.Drawing.Size(495, 435);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtTipoacces);
+            this.Controls.Add(this.txtNomAcceso);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtTelefo);
             this.Controls.Add(this.txtApellido);
@@ -283,10 +322,14 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtTelefo;
         private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.ComboBox txtEstado;
         private System.Windows.Forms.PictureBox btnCancelar;
         private System.Windows.Forms.PictureBox btnActualizar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtNomAcceso;
+        private System.Windows.Forms.TextBox txtTipoacces;
+        private System.Windows.Forms.CheckBox txtEstado;
     }
 }

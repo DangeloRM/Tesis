@@ -23,13 +23,16 @@ namespace FacturacionMinisuper.Productos
             txtCodProdu.Text = Producto.CodProducto.ToString();
             txtNombProduct.Text = Producto.Nombre;
             txtPrecio.Text = Producto.Precio.ToString();
+            txtStock.Text = Producto.Cantidad.ToString();
             txtCantidad.Focus();
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ValidacionTextBox.SoloNumeros(e);
             if (e.KeyChar == (Char)Keys.Enter)
             {
+
                 ConfigurarCantidad();
             }
         }
@@ -38,7 +41,8 @@ namespace FacturacionMinisuper.Productos
         {
             //Logica.Producto pr = new Logica.Producto();
             //pr = pr.ConsultarProducto(Producto.CodProducto);
-            if (Producto.Cantidad > 0 || Producto.Cantidad == 1)
+            
+            if (Producto.Cantidad > 0 || Producto.Cantidad == 1) 
             {
                 this.Producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                 this.Producto.SubTotal = this.Producto.Cantidad * this.Producto.Precio;
@@ -54,15 +58,24 @@ namespace FacturacionMinisuper.Productos
 
         private void pbAceptar_Click(object sender, EventArgs e)
         {
-            if (Producto.Cantidad > 0 || Producto.Cantidad == 1)
+            if (!string.IsNullOrEmpty(txtCantidad.Text))
             {
-            ConfigurarCantidad();
+                int value = Convert.ToInt32(txtCantidad.Text);
+                if (Producto.Cantidad > 0 && value > Convert.ToInt32(txtStock.Text))
+                {
+                    MessageBox.Show("Cantidad superior ó sin existencias en inventario!!", "Error de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    ConfigurarCantidad();
+                }
             }
             else
             {
-                MessageBox.Show("No hay existencias en inventario!!", "Error de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Por favor ingrese al menos un número", "Datos Incompletos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+           
         }
 
         private void pbCancelar_Click(object sender, EventArgs e)

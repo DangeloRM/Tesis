@@ -161,7 +161,7 @@
             this.pbBuscarDistri.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBuscarDistri.TabIndex = 14;
             this.pbBuscarDistri.TabStop = false;
-            this.pbBuscarDistri.Click += new System.EventHandler(this.pbBuscarDistri_Click);
+            this.pbBuscarDistri.Click += new System.EventHandler(this.pbBuscarDistri_Click_1);
             // 
             // txtTelef
             // 

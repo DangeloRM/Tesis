@@ -67,6 +67,7 @@ namespace FacturacionMinisuper
             pbCajero.Enabled = CajeroConectado.Rol;
             pbDistribuidor.Enabled = CajeroConectado.Rol;
             pbProductos.Enabled = CajeroConectado.Rol;
+            pbBitacora.Enabled = CajeroConectado.Rol;
         }
 
         private void pbBitacora_Click(object sender, EventArgs e)

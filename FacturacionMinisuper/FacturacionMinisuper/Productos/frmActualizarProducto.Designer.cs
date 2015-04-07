@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarProducto));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtDistri = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtNuevaCantidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pbBuscarProd = new System.Windows.Forms.PictureBox();
-            this.txtDistri = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -57,11 +57,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtDistri);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.txtNuevaCantidad);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.pbBuscarProd);
-            this.groupBox2.Controls.Add(this.txtDistri);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtPrecio);
             this.groupBox2.Controls.Add(this.txtCantidad);
@@ -79,7 +79,13 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información Producto";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // txtDistri
+            // 
+            this.txtDistri.Location = new System.Drawing.Point(216, 188);
+            this.txtDistri.Name = "txtDistri";
+            this.txtDistri.Size = new System.Drawing.Size(205, 24);
+            this.txtDistri.TabIndex = 18;
             // 
             // pictureBox2
             // 
@@ -97,7 +103,6 @@
             this.txtNuevaCantidad.Name = "txtNuevaCantidad";
             this.txtNuevaCantidad.Size = new System.Drawing.Size(205, 24);
             this.txtNuevaCantidad.TabIndex = 4;
-            this.txtNuevaCantidad.TextChanged += new System.EventHandler(this.txtNuevaCantidad_TextChanged);
             this.txtNuevaCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNuevaCantidad_KeyPress);
             // 
             // label3
@@ -108,7 +113,6 @@
             this.label3.Size = new System.Drawing.Size(133, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Cantidad Entrante:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pbBuscarProd
             // 
@@ -122,14 +126,6 @@
             this.pbBuscarProd.TabStop = false;
             this.pbBuscarProd.Click += new System.EventHandler(this.pbBuscarProd_Click);
             // 
-            // txtDistri
-            // 
-            this.txtDistri.Location = new System.Drawing.Point(216, 188);
-            this.txtDistri.Name = "txtDistri";
-            this.txtDistri.Size = new System.Drawing.Size(205, 24);
-            this.txtDistri.TabIndex = 13;
-            this.txtDistri.TextChanged += new System.EventHandler(this.txtDistri_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -138,7 +134,6 @@
             this.label2.Size = new System.Drawing.Size(91, 18);
             this.label2.TabIndex = 12;
             this.label2.Text = "Distribuidor:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtPrecio
             // 
@@ -147,7 +142,6 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(205, 24);
             this.txtPrecio.TabIndex = 3;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtCantidad
@@ -158,7 +152,6 @@
             this.txtCantidad.ReadOnly = true;
             this.txtCantidad.Size = new System.Drawing.Size(205, 24);
             this.txtCantidad.TabIndex = 10;
-            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // txtNombProduct
             // 
@@ -168,7 +161,6 @@
             this.txtNombProduct.Name = "txtNombProduct";
             this.txtNombProduct.Size = new System.Drawing.Size(205, 24);
             this.txtNombProduct.TabIndex = 2;
-            this.txtNombProduct.TextChanged += new System.EventHandler(this.txtNombProduct_TextChanged);
             // 
             // txtCodProdu
             // 
@@ -179,6 +171,7 @@
             this.txtCodProdu.Size = new System.Drawing.Size(205, 24);
             this.txtCodProdu.TabIndex = 1;
             this.txtCodProdu.TextChanged += new System.EventHandler(this.txtCodProdu_TextChanged);
+            this.txtCodProdu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProdu_KeyPress);
             // 
             // label6
             // 
@@ -189,7 +182,6 @@
             this.label6.Size = new System.Drawing.Size(58, 18);
             this.label6.TabIndex = 6;
             this.label6.Text = "Código:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
@@ -200,7 +192,6 @@
             this.label1.Size = new System.Drawing.Size(71, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Producto:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label5
             // 
@@ -211,7 +202,6 @@
             this.label5.Size = new System.Drawing.Size(47, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "Stock:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblPrecio
             // 
@@ -222,13 +212,12 @@
             this.lblPrecio.Size = new System.Drawing.Size(102, 18);
             this.lblPrecio.TabIndex = 3;
             this.lblPrecio.Text = "Precio unidad:";
-            this.lblPrecio.Click += new System.EventHandler(this.lblPrecio_Click);
             // 
             // pbActualizar
             // 
             this.pbActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizar.Image = ((System.Drawing.Image)(resources.GetObject("pbActualizar.Image")));
-            this.pbActualizar.Location = new System.Drawing.Point(581, 333);
+            this.pbActualizar.Location = new System.Drawing.Point(574, 333);
             this.pbActualizar.Name = "pbActualizar";
             this.pbActualizar.Size = new System.Drawing.Size(64, 48);
             this.pbActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -256,7 +245,6 @@
             this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 16;
             this.label4.Text = "Guardar";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label7
             // 
@@ -266,7 +254,6 @@
             this.label7.Size = new System.Drawing.Size(67, 18);
             this.label7.TabIndex = 15;
             this.label7.Text = "Cancelar";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // frmActualizarProducto
             // 

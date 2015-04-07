@@ -27,7 +27,7 @@ namespace Logica
                         foreach (DetalleFactura Detalle in myFactura.Detalle)
                         {
                             Producto pr = new Producto();
-                            string comm = string.Format("exec SP_Detalle {0},{1},{2},{3},{4};", pId, Detalle.myProducto.CodProducto, Detalle.Cantidad, Detalle.Precio, Detalle.SubTotal);
+                            string comm = string.Format("exec SP_Detalle {0},'{1}',{2},{3},{4};", pId, Detalle.myProducto.CodProducto, Detalle.Cantidad, Detalle.Precio, Detalle.SubTotal);
                             cnx.OperacionesHit(comm);
                             pr.ReducirStock(Detalle.myProducto.CodProducto, Detalle.Cantidad);
                         }

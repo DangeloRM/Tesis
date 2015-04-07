@@ -46,7 +46,7 @@ namespace FacturacionMinisuper
             }
             else
             {
-                MessageBox.Show("Sus datos no son correctos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sus datos no son correctos ó no tiene acceso al sistema", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -56,6 +56,11 @@ namespace FacturacionMinisuper
             {
             Application.Exit();
             }
+        }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

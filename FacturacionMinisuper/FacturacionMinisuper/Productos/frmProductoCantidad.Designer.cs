@@ -43,6 +43,8 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAceptar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,7 +54,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(466, 340);
+            this.label4.Location = new System.Drawing.Point(466, 386);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 15);
@@ -62,7 +64,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(344, 340);
+            this.label7.Location = new System.Drawing.Point(344, 386);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 15);
@@ -73,7 +75,7 @@
             // 
             this.pbCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("pbCancelar.Image")));
-            this.pbCancelar.Location = new System.Drawing.Point(332, 282);
+            this.pbCancelar.Location = new System.Drawing.Point(332, 328);
             this.pbCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pbCancelar.Name = "pbCancelar";
             this.pbCancelar.Size = new System.Drawing.Size(85, 55);
@@ -86,7 +88,7 @@
             // 
             this.pbAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAceptar.Image = ((System.Drawing.Image)(resources.GetObject("pbAceptar.Image")));
-            this.pbAceptar.Location = new System.Drawing.Point(451, 282);
+            this.pbAceptar.Location = new System.Drawing.Point(451, 328);
             this.pbAceptar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pbAceptar.Name = "pbAceptar";
             this.pbAceptar.Size = new System.Drawing.Size(85, 55);
@@ -160,7 +162,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 184);
+            this.label3.Location = new System.Drawing.Point(13, 237);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 15);
@@ -169,7 +171,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(124, 181);
+            this.txtCantidad.Location = new System.Drawing.Point(124, 234);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(104, 23);
@@ -191,6 +193,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtStock);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.txtCantidad);
             this.groupBox2.Controls.Add(this.label3);
@@ -204,10 +208,28 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.groupBox2.Size = new System.Drawing.Size(516, 234);
+            this.groupBox2.Size = new System.Drawing.Size(516, 281);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ingrese la Cantidad Producto";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 15);
+            this.label2.TabIndex = 326;
+            this.label2.Text = "Stock:";
+            // 
+            // txtStock
+            // 
+            this.txtStock.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtStock.Location = new System.Drawing.Point(124, 189);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.ReadOnly = true;
+            this.txtStock.Size = new System.Drawing.Size(104, 23);
+            this.txtStock.TabIndex = 327;
             // 
             // frmProductoCantidad
             // 
@@ -215,7 +237,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(574, 370);
+            this.ClientSize = new System.Drawing.Size(574, 414);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pbCancelar);
@@ -257,5 +279,7 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Label label2;
     }
 }

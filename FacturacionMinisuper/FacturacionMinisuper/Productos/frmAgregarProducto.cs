@@ -21,48 +21,24 @@ namespace FacturacionMinisuper.Productos
         {
             ComboDistribuidor();
         }
-       
-        private void pbBuscarDistri_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Logica.Gestor objgestor = new Logica.Gestor();
-                Logica.Distribuidor objdistr = new Logica.Distribuidor();
 
-                objdistr = objgestor.ConsultarDistribuidorNombre(txtNombreDistribui.Text.ToString());
-
-                txtCodDistribui.Text = objdistr.CodDistribuidor.ToString();
-                txtEstadoDistr.Text = objdistr.Estado;
-                txtTelef.Text = objdistr.Telefono.ToString();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ingrese un Distribuidor ó Distribuidor Inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-        }
-
-        private void cboDistribuid_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void pbAgregar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCodProdu.Text) && !string.IsNullOrEmpty(txtNombProduct.Text)  && !string.IsNullOrEmpty(txtPrecio.Text) && !string.IsNullOrEmpty(txtCodDistribui.Text) && !string.IsNullOrEmpty(txtNombProduct.Text))
+            if (!string.IsNullOrEmpty(txtCodProdu.Text) && !string.IsNullOrEmpty(txtNombProduct.Text)  && !string.IsNullOrEmpty(txtPrecio.Text) && !string.IsNullOrEmpty(txtNombreDistribui.Text))
             {
 
                 Logica.Gestor objGestor = new Logica.Gestor();
-                int registrosAfectados = objGestor.AgregarProducto(Convert.ToInt32(txtCodProdu.Text), txtNombProduct.Text, Convert.ToDouble(txtPrecio.Text), Convert.ToInt32(txtCodDistribui.Text));
+                int registrosAfectados = objGestor.AgregarProducto(txtCodProdu.Text, txtNombProduct.Text, Convert.ToDouble(txtPrecio.Text), Convert.ToInt32(txtCodDistribui.Text));
 
-                if (registrosAfectados > 0)
+                if (registrosAfectados > 0 )
                 {
                     MessageBox.Show("Producto Agregado correctamente!", "Producto Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 else
                 {
-                    MessageBox.Show("No se pudo Agregar el Producto", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                     MessageBox.Show("Producto", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
                 objGestor = null;
@@ -77,7 +53,7 @@ namespace FacturacionMinisuper.Productos
 
         private void txtCodProdu_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionTextBox.SoloNumeros(e);
+            
         }
 
         private void txtNombProduct_TextChanged(object sender, EventArgs e)
@@ -118,6 +94,25 @@ namespace FacturacionMinisuper.Productos
             catch (Exception ex)
             {
                 MessageBox.Show("Error capturado: " +ex);
+            }
+        }
+
+        private void pbBuscarDistri_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Logica.Gestor objgestor = new Logica.Gestor();
+                Logica.Distribuidor objdistr = new Logica.Distribuidor();
+
+                objdistr = objgestor.ConsultarDistribuidorNombre(txtNombreDistribui.Text.ToString());
+
+                txtCodDistribui.Text = objdistr.CodDistribuidor.ToString();
+                txtEstadoDistr.Text = objdistr.Estado;
+                txtTelef.Text = objdistr.Telefono.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un Distribuidor ó Distribuidor Inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

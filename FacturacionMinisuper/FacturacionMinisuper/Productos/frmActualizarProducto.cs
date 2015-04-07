@@ -31,7 +31,7 @@ namespace FacturacionMinisuper.Productos
                 Logica.Gestor objgestor = new Logica.Gestor();
                 Logica.Producto objpro= new Logica.Producto();
 
-                objpro = objgestor.ConsultarProducto(Convert.ToInt32(txtCodProdu.Text.ToString()));
+                objpro = objgestor.ConsultarProducto(txtCodProdu.Text.ToString());
 
                 txtNombProduct.Text = objpro.Nombre.ToString();
                 txtPrecio.Text = objpro.Precio.ToString();
@@ -50,7 +50,7 @@ namespace FacturacionMinisuper.Productos
             {
 
                 Logica.Gestor objGestor = new Logica.Gestor();
-                int registrosAfectados = objGestor.ActualizarProducto(txtNombProduct.Text, Convert.ToDouble(txtPrecio.Text), Convert.ToInt32(txtNuevaCantidad.Text), Convert.ToInt32(txtDistri.Text), Convert.ToInt32(txtCodProdu.Text));
+                int registrosAfectados = objGestor.ActualizarProducto(txtNombProduct.Text, Convert.ToDouble(txtPrecio.Text), Convert.ToInt32(txtNuevaCantidad.Text), Convert.ToInt32(txtDistri.Text), txtCodProdu.Text);
 
                 if (registrosAfectados > 0)
                 {
@@ -87,24 +87,9 @@ namespace FacturacionMinisuper.Productos
             ValidacionTextBox.SoloNumeros(e);
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DialogResult = System.Windows.Forms.DialogResult.Cancel;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtCodProdu_TextChanged(object sender, EventArgs e)
@@ -112,54 +97,11 @@ namespace FacturacionMinisuper.Productos
 
         }
 
-        private void txtNombProduct_TextChanged(object sender, EventArgs e)
+        private void txtCodProdu_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
 
-        private void lblPrecio_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNuevaCantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDistri_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

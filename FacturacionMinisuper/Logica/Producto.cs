@@ -11,7 +11,7 @@ namespace Logica
     {
         #region Prop
 
-        public int CodProducto { get; set; }
+        public string CodProducto { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }
         public int Cantidad { get; set; }
@@ -27,12 +27,12 @@ namespace Logica
         {
 
         }
-        public Producto(int codproducto)
+        public Producto(string codproducto)
         {
             this.CodProducto = codproducto;
         }
 
-        public Producto(int codproducto, string nombre, double precio, int cantidad, int coddistribuidor)
+        public Producto(string codproducto, string nombre, double precio, int cantidad, int coddistribuidor)
         {
             this.CodProducto = codproducto;
             this.Nombre = nombre;
@@ -42,7 +42,7 @@ namespace Logica
 
         }
 
-        public Producto(int codproducto, string nombre, double precio, int coddistribuidor)
+        public Producto(string codproducto, string nombre, double precio, int coddistribuidor)
         {
             this.CodProducto = codproducto;
             this.Nombre = nombre;
@@ -59,10 +59,10 @@ namespace Logica
         /// </summary>
         /// <param name="codproducto"></param>
         /// <returns></returns>
-        public Producto ConsultarProducto(int codproducto)
+        public Producto ConsultarProducto(string codproducto)
         {
             Producto objProducto = null;
-            string consulta = string.Format("exec SP_ConsultaProducto {0},1", codproducto);
+            string consulta = string.Format("exec SP_ConsultaProducto '{0}',1", codproducto);
 
             Conexion.Conexion objDatos = new Conexion.Conexion();
 
@@ -74,7 +74,7 @@ namespace Logica
 
                     if (dtResultado != null && dtResultado.Rows.Count > 0)
                     {
-                        int codprod = Convert.ToInt32(dtResultado.Rows[0][0].ToString());
+                        string codprod = dtResultado.Rows[0][0].ToString();
                         string nombr= dtResultado.Rows[0][1].ToString();
                         double preci = Convert.ToDouble(dtResultado.Rows[0][2].ToString());
                         int canti = Convert.ToInt32(dtResultado.Rows[0][3].ToString());
@@ -142,7 +142,7 @@ namespace Logica
         {
             int registrosafectados = 0;
 
-            string consulta = string.Format("exec SP_Producto {0}, {1},{2},'{3}',{4} , 2", CodProducto, CodDistribuidor, Precio, Nombre, Cantidad);
+            string consulta = string.Format("exec SP_Producto '{0}', {1},{2},'{3}',{4} , 2", CodProducto, CodDistribuidor, Precio, Nombre, Cantidad);
 
             Conexion.Conexion objDatos = new Conexion.Conexion();
             if (objDatos.AbrirConexion())
@@ -171,7 +171,7 @@ namespace Logica
             int registrosafectados = 0;
             Conexion.Conexion objDatos = new Conexion.Conexion();
 
-            string consulta = string.Format("exec SP_Producto {0}, {1},{2},'{3}', 1, 1", CodProducto, CodDistribuidor, Precio, Nombre );
+            string consulta = string.Format("exec SP_Producto '{0}', {1},{2},'{3}', 1, 1", CodProducto, CodDistribuidor, Precio, Nombre );
             if (objDatos.AbrirConexion())
             {
                  registrosafectados = objDatos.OperacionesHit(consulta);
@@ -182,11 +182,11 @@ namespace Logica
             return registrosafectados;
         }
 
-        public int ReducirStock(int pId, int pCant)
+        public int ReducirStock(string pId, int pCant)
         {
             int less = 0;
             Conexion.Conexion objDatos = new Conexion.Conexion();
-            string cmd = string.Format("exec ReducirStock {0}, {1}", pId, pCant);
+            string cmd = string.Format("exec ReducirStock '{0}', {1}", pId, pCant);
             if (objDatos.AbrirConexion())
             {
                 less = objDatos.OperacionesHit(cmd);
@@ -203,7 +203,7 @@ namespace Logica
 
         ~Producto()
         {
-            this.CodProducto = 0;
+            this.CodProducto = null;
             this.Nombre = null;
             this.Precio = 0;
             this.Cantidad = 0;

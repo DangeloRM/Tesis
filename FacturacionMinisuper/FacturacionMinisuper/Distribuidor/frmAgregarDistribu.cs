@@ -24,6 +24,7 @@ namespace FacturacionMinisuper.Distribuidor
             Logica.Distribuidor objDistri = new Logica.Distribuidor();
             txtCodDis.Text = objDistri.CodDistr().ToString();
             txtCodDis.ReadOnly = true;
+            txtEstad.Text = "Activo";
         }
 
         private void btnAgregar_Click_1(object sender, EventArgs e)

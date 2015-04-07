@@ -37,11 +37,11 @@
             this.txtCodDis = new System.Windows.Forms.TextBox();
             this.txtNomb = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtEstad = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtEstad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
@@ -129,19 +129,6 @@
             this.txtTelefono.TabIndex = 3;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
-            // txtEstad
-            // 
-            this.txtEstad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtEstad.FormattingEnabled = true;
-            this.txtEstad.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.txtEstad.Location = new System.Drawing.Point(165, 184);
-            this.txtEstad.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEstad.Name = "txtEstad";
-            this.txtEstad.Size = new System.Drawing.Size(212, 26);
-            this.txtEstad.TabIndex = 2;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -184,17 +171,26 @@
             this.label1.TabIndex = 125;
             this.label1.Text = "Cancelar";
             // 
+            // txtEstad
+            // 
+            this.txtEstad.Location = new System.Drawing.Point(165, 185);
+            this.txtEstad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEstad.MaxLength = 25;
+            this.txtEstad.Name = "txtEstad";
+            this.txtEstad.Size = new System.Drawing.Size(212, 24);
+            this.txtEstad.TabIndex = 127;
+            // 
             // frmAgregarDistribu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(490, 369);
+            this.Controls.Add(this.txtEstad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtEstad);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtNomb);
             this.Controls.Add(this.txtCodDis);
@@ -230,10 +226,10 @@
         private System.Windows.Forms.TextBox txtCodDis;
         private System.Windows.Forms.TextBox txtNomb;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.ComboBox txtEstad;
         private System.Windows.Forms.PictureBox btnCancelar;
         private System.Windows.Forms.PictureBox btnAgregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtEstad;
     }
 }

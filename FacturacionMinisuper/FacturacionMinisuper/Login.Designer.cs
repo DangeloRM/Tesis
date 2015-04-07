@@ -92,6 +92,7 @@
             this.txtContrasena.Size = new System.Drawing.Size(142, 23);
             this.txtContrasena.TabIndex = 4;
             this.txtContrasena.UseSystemPasswordChar = true;
+            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             // 
             // pictureBox1
             // 
