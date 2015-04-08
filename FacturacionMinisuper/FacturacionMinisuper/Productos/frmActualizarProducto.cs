@@ -68,35 +68,50 @@ namespace FacturacionMinisuper.Productos
             DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }
 
-        public void BuscarProducto()
-        {
+ //       public void BuscarProducto()
+ //       {
            
-                Logica.Gestor objgestor = new Logica.Gestor();
-                Logica.Producto objpro = new Logica.Producto();
+ //               Logica.Gestor objgestor = new Logica.Gestor();
+ //               Logica.Producto objpro = new Logica.Producto();
 
-                objpro = objgestor.ConsultarProducto(txtCodProdu.Text.ToString());
-                if (objpro != null)
-                {
-                    txtNombProduct.Text = objpro.Nombre.ToString();
-                    txtPrecio.Text = objpro.Precio.ToString();
-                    txtCantidad.Text = objpro.Cantidad.ToString();
-                    txtDistri.Text = objpro.CodDistribuidor.ToString();
-                }
-                else
-	{
- MessageBox.Show("Ingrese un Código ó Producto inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+ //               objpro = objgestor.ConsultarProducto(txtCodProdu.Text.ToString());
+ //               if (objpro != null)
+ //               {
+ //                   txtNombProduct.Text = objpro.Nombre.ToString();
+ //                   txtPrecio.Text = objpro.Precio.ToString();
+ //                   txtCantidad.Text = objpro.Cantidad.ToString();
+ //                   txtDistri.Text = objpro.CodDistribuidor.ToString();
+ //               }
+ //               else
+ //   {
+ //MessageBox.Show("Ingrese un Código ó Producto inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
            
-	}
+ //   }
 
                 
-        }
+ //       }
 
 
         private void txtCodProdu_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (Char)Keys.Enter)
-            {                  
-               BuscarProducto();
+            {
+                Logica.Gestor objGestor = new Logica.Gestor();
+                Logica.Producto objprod = objGestor.ConsultarProducto(txtCodProdu.Text);
+                if (objprod != null)
+                {
+                    txtNombProduct.Text = objprod.Nombre.ToString();
+                    txtPrecio.Text = objprod.Precio.ToString();
+                    txtCantidad.Text = objprod.Cantidad.ToString();
+                    txtDistri.Text = objprod.CodDistribuidor.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un Código ó Producto inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodProdu.Text = string.Empty;
+                }
+               
+               
             }
            
         }
