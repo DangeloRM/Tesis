@@ -39,10 +39,10 @@ namespace FacturacionMinisuper.Productos
 
         private void ConfigurarCantidad()
         {
-            Logica.Producto pr = new Logica.Producto();
-            pr = pr.ConsultarProducto(Producto.CodProducto);
-
-            if (pr.Cantidad > Convert.ToInt32(txtCantidad.Text) || Convert.ToInt32(txtCantidad.Text) == pr.Cantidad) 
+            //Logica.Producto pr = new Logica.Producto();
+            //pr = pr.ConsultarProducto(Producto.CodProducto);
+            
+            if (Producto.Cantidad > 0 || Producto.Cantidad == 1) 
             {
                 this.Producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                 this.Producto.SubTotal = this.Producto.Cantidad * this.Producto.Precio;

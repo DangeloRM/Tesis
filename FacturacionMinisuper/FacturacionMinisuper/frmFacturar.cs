@@ -112,7 +112,6 @@ namespace FacturacionMinisuper
                  lblMonto.Text = MontoTotal.ToString();
                  CarroCompras.Rows.Add(nuevo);
                  this.gvFacturar.DataSource = CarroCompras;
-                 CargarGrid();
              }
          }
 

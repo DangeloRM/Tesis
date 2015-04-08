@@ -49,7 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtNomAcceso = new System.Windows.Forms.TextBox();
             this.txtTipoacces = new System.Windows.Forms.TextBox();
-            this.tEstado = new System.Windows.Forms.CheckBox();
+            this.txtEstado = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActualizar)).BeginInit();
@@ -252,15 +252,16 @@
             this.txtTipoacces.TabIndex = 112;
             this.txtTipoacces.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipoacces_KeyPress);
             // 
-            // tEstado
+            // txtEstado
             // 
-            this.tEstado.AutoSize = true;
-            this.tEstado.Location = new System.Drawing.Point(264, 319);
-            this.tEstado.Name = "tEstado";
-            this.tEstado.Size = new System.Drawing.Size(15, 14);
-            this.tEstado.TabIndex = 113;
-            this.tEstado.UseVisualStyleBackColor = true;
-            this.tEstado.CheckedChanged += new System.EventHandler(this.txtEstado_CheckedChanged);
+            this.txtEstado.AutoSize = true;
+            this.txtEstado.Location = new System.Drawing.Point(264, 319);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(99, 22);
+            this.txtEstado.TabIndex = 113;
+            this.txtEstado.Text = "checkBox1";
+            this.txtEstado.UseVisualStyleBackColor = true;
+            this.txtEstado.CheckedChanged += new System.EventHandler(this.txtEstado_CheckedChanged);
             // 
             // frmActualizarCajero
             // 
@@ -268,7 +269,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(495, 435);
-            this.Controls.Add(this.tEstado);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtTipoacces);
             this.Controls.Add(this.txtNomAcceso);
             this.Controls.Add(this.label5);
@@ -329,6 +330,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNomAcceso;
         private System.Windows.Forms.TextBox txtTipoacces;
-        private System.Windows.Forms.CheckBox tEstado;
+        private System.Windows.Forms.CheckBox txtEstado;
     }
 }

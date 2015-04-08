@@ -28,16 +28,16 @@ namespace FacturacionMinisuper.Cajero
             txtNomAcceso.Text = CajeroModifi.NombreAcceso;
             txtTipoacces.Text = CajeroModifi.IDTipoAcceso.ToString();
             txtContrasena.Text = CajeroModifi.Contrasena;
-            tEstado.Checked = CajeroModifi.Estado;
+            txtEstado.Text = CajeroModifi.Estado.ToString();
 
         }
 
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNombr.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelefo.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtIdca.Text) && !string.IsNullOrEmpty(tEstado.Text))
+            if (!string.IsNullOrEmpty(txtNombr.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelefo.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtIdca.Text) && !string.IsNullOrEmpty(txtEstado.Text))
             {
                 Gestor objGestor = new Gestor();
-                int registrosAfectados = objGestor.ActualizarCajero(Convert.ToInt32(txtIdca.Text), txtNomAcceso.Text, txtContrasena.Text, txtNombr.Text, txtApellido.Text, txtTelefo.Text, Convert.ToBoolean(tEstado.Checked), Convert.ToInt32(txtTipoacces.Text));
+                int registrosAfectados = objGestor.ActualizarCajero(Convert.ToInt32(txtIdca.Text), txtNomAcceso.Text, txtContrasena.Text, txtNombr.Text, txtApellido.Text, txtTelefo.Text, Convert.ToBoolean(txtEstado.Text), Convert.ToInt32(txtTipoacces.Text));
 
                 if (registrosAfectados >= 0)
                 {
@@ -91,13 +91,13 @@ namespace FacturacionMinisuper.Cajero
         private void txtEstado_CheckedChanged(object sender, EventArgs e)
         {
            
-          if (tEstado.Checked)
+          if (txtEstado.Checked)
             {
-                tEstado.Text = "1";
+                txtEstado.Text = "1";
             }
              else
             {
-                tEstado.Text = "0";
+                txtEstado.Text = "0";
             }
         }
 
