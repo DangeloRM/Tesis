@@ -53,18 +53,22 @@ namespace FacturacionMinisuper.Productos
 
         private void txtCodProdu_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+                Logica.Gestor objGestor = new Logica.Gestor();
+                Logica.Producto objProducto = objGestor.ConsultarProducto(txtCodProdu.Text);
+                if (objProducto != null)
+                {
+                    MessageBox.Show("El producto ya esta en inventario!!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodProdu.Text = string.Empty;
+                }
+                else
+                {
+                }
+
+            }
         }
 
-        private void txtNombProduct_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombProduct_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {

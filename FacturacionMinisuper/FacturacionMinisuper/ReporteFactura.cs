@@ -32,7 +32,7 @@ namespace FacturacionMinisuper
             arregloParametros.Add(codFactura);
             this.rptReporteFactura.ParameterFieldInfo = arregloParametros;
             reporte.Load(@"C:\Reportes\ReporteFactura.rpt");
-            reporte.SetDatabaseLogon("sa", "falling20", "WILLIAM\\DESARROLLO", "DBFacturacionM");
+            reporte.SetDatabaseLogon("sa", "123", "DANGELO-PC", "DBFacturacionM");
             this.rptReporteFactura.ReportSource = reporte;
         }
     }

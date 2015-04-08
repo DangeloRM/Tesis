@@ -23,13 +23,12 @@ namespace FacturacionMinisuper.Productos
             txtNuevaCantidad.Text = "0";
         }
 
-
-        private void pbBuscarProd_Click(object sender, EventArgs e)
+        public void BuscarProducto()
         {
             try
             {
                 Logica.Gestor objgestor = new Logica.Gestor();
-                Logica.Producto objpro= new Logica.Producto();
+                Logica.Producto objpro = new Logica.Producto();
 
                 objpro = objgestor.ConsultarProducto(txtCodProdu.Text.ToString());
 
@@ -43,6 +42,7 @@ namespace FacturacionMinisuper.Productos
                 MessageBox.Show("Ingrese un Código ó Producto inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void pbActualizar_Click(object sender, EventArgs e)
         {
@@ -99,7 +99,10 @@ namespace FacturacionMinisuper.Productos
 
         private void txtCodProdu_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+                BuscarProducto();
+            }
         }
 
 

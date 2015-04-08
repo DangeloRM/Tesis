@@ -34,7 +34,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtNuevaCantidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pbBuscarProd = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -50,7 +49,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBuscarProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +59,6 @@
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.txtNuevaCantidad);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.pbBuscarProd);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtPrecio);
             this.groupBox2.Controls.Add(this.txtCantidad);
@@ -113,18 +110,6 @@
             this.label3.Size = new System.Drawing.Size(133, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Cantidad Entrante:";
-            // 
-            // pbBuscarProd
-            // 
-            this.pbBuscarProd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbBuscarProd.Image = ((System.Drawing.Image)(resources.GetObject("pbBuscarProd.Image")));
-            this.pbBuscarProd.Location = new System.Drawing.Point(419, 30);
-            this.pbBuscarProd.Name = "pbBuscarProd";
-            this.pbBuscarProd.Size = new System.Drawing.Size(36, 29);
-            this.pbBuscarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbBuscarProd.TabIndex = 14;
-            this.pbBuscarProd.TabStop = false;
-            this.pbBuscarProd.Click += new System.EventHandler(this.pbBuscarProd_Click);
             // 
             // label2
             // 
@@ -280,7 +265,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBuscarProd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -300,7 +284,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pbBuscarProd;
         private System.Windows.Forms.TextBox txtNuevaCantidad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbActualizar;

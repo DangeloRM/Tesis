@@ -40,24 +40,6 @@ namespace FacturacionMinisuper
             CarroCompras.Columns.Add(colSubTotal);
         }
 
-        //private void txtCajero_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == (Char)Keys.Enter)
-        //    {
-        //        Logica.Gestor objGestor = new Logica.Gestor();
-        //        Logica.Cajero objCajero = null;
-        //        objCajero = objGestor.ConsultarCajero(Convert.ToInt32(txtCajero.Text));
-        //        if (objCajero != null)
-        //        {
-        //            lblDatos.Text = objCajero.IDCajero + " " + objCajero.Nombre + " " + objCajero.Apellido;
-        //            lblCajero.Text = objCajero.IDCajero.ToString();
-        //        }
-        //        objGestor = null;
-        //        txtCajero.Clear();
-        //        e.Handled = true;
-        //    }
-        //}
-
          private void txtCodProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidacionTextBox.SoloNumeros(e);

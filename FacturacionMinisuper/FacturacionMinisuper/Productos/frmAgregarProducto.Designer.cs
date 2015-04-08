@@ -246,8 +246,6 @@
             this.txtNombProduct.Name = "txtNombProduct";
             this.txtNombProduct.Size = new System.Drawing.Size(157, 24);
             this.txtNombProduct.TabIndex = 3;
-            this.txtNombProduct.TextChanged += new System.EventHandler(this.txtNombProduct_TextChanged);
-            this.txtNombProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombProduct_KeyPress);
             // 
             // txtCodProdu
             // 

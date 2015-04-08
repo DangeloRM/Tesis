@@ -189,7 +189,7 @@ namespace Logica
         {
             int registrosafectados = 0;
 
-            string consulta = string.Format("update Cajero set NombreAcceso ='{0}', Contrasena ='{1}', Nombre ='{2}', Apellido ='{3}', Telefono = '{4}', Estado = '1', IDTipoAcceso= {6}" +
+            string consulta = string.Format("update Cajero set NombreAcceso ='{0}', Contrasena ='{1}', Nombre ='{2}', Apellido ='{3}', Telefono = '{4}', Estado = '{5}', IDTipoAcceso= {6}" +
                                             " where idcajero = {7}", NombreAcceso, Contrasena, Nombre, Apellido, Telefono, Estado, IDTipoAcceso, IDCajero);
 
             Conexion.Conexion objDatos = new Conexion.Conexion();
