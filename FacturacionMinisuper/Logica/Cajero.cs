@@ -40,6 +40,7 @@ namespace Logica
             this.Apellido = pApellido;
             this.Telefono = pTelefono;
             this.Estado = pEstado;
+            this.IDTipoAcceso = pIdAcceso;
          }
 
         public Cajero(string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
@@ -188,8 +189,8 @@ namespace Logica
         {
             int registrosafectados = 0;
 
-            string consulta = string.Format("update Cajero set NombreAcceso='{0}', Contrasena='{1}', Nombre='{2}', Apellido='{3}', Telefono= '{4}', Estado= 1, IDTipoAcceso= {5}" +
-                                            "where idcajero = {6}", NombreAcceso, Contrasena, Nombre, Apellido, Telefono, Estado, IDTipoAcceso, IDCajero);
+            string consulta = string.Format("update Cajero set NombreAcceso ='{0}', Contrasena ='{1}', Nombre ='{2}', Apellido ='{3}', Telefono = '{4}', Estado = '1', IDTipoAcceso= {6}" +
+                                            " where idcajero = {7}", NombreAcceso, Contrasena, Nombre, Apellido, Telefono, Estado, IDTipoAcceso, IDCajero);
 
             Conexion.Conexion objDatos = new Conexion.Conexion();
             if (objDatos.AbrirConexion())
