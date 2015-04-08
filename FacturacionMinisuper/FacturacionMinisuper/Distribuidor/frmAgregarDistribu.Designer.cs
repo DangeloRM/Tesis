@@ -177,6 +177,7 @@
             this.txtEstad.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstad.MaxLength = 25;
             this.txtEstad.Name = "txtEstad";
+            this.txtEstad.ReadOnly = true;
             this.txtEstad.Size = new System.Drawing.Size(212, 24);
             this.txtEstad.TabIndex = 127;
             // 

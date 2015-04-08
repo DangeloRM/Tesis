@@ -153,9 +153,9 @@
             this.txtCodProdu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCodProdu.MaxLength = 20;
             this.txtCodProdu.Name = "txtCodProdu";
+            this.txtCodProdu.ReadOnly = true;
             this.txtCodProdu.Size = new System.Drawing.Size(205, 24);
             this.txtCodProdu.TabIndex = 1;
-            this.txtCodProdu.TextChanged += new System.EventHandler(this.txtCodProdu_TextChanged);
             this.txtCodProdu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProdu_KeyPress);
             // 
             // label6

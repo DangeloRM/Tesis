@@ -23,26 +23,6 @@ namespace FacturacionMinisuper.Productos
             txtNuevaCantidad.Text = "0";
         }
 
-        public void BuscarProducto()
-        {
-            try
-            {
-                Logica.Gestor objgestor = new Logica.Gestor();
-                Logica.Producto objpro = new Logica.Producto();
-
-                objpro = objgestor.ConsultarProducto(txtCodProdu.Text.ToString());
-
-                txtNombProduct.Text = objpro.Nombre.ToString();
-                txtPrecio.Text = objpro.Precio.ToString();
-                txtCantidad.Text = objpro.Cantidad.ToString();
-                txtDistri.Text = objpro.CodDistribuidor.ToString();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ingrese un Código ó Producto inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
 
         private void pbActualizar_Click(object sender, EventArgs e)
         {
@@ -72,10 +52,6 @@ namespace FacturacionMinisuper.Productos
             }
         }
 
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -92,17 +68,37 @@ namespace FacturacionMinisuper.Productos
             DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }
 
-        private void txtCodProdu_TextChanged(object sender, EventArgs e)
+        public void BuscarProducto()
         {
+            try
+            {
+                Logica.Gestor objgestor = new Logica.Gestor();
+                Logica.Producto objpro = new Logica.Producto();
 
+                objpro = objgestor.ConsultarProducto(txtCodProdu.Text.ToString());
+
+                txtNombProduct.Text = objpro.Nombre.ToString();
+                txtPrecio.Text = objpro.Precio.ToString();
+                txtCantidad.Text = objpro.Cantidad.ToString();
+                txtDistri.Text = objpro.CodDistribuidor.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un Código ó Producto inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
 
         private void txtCodProdu_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (Char)Keys.Enter)
             {
+            if (txtCodProdu.Text != null)
+            {                
                 BuscarProducto();
+            } 
             }
+           
         }
 
 

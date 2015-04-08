@@ -53,6 +53,7 @@ namespace FacturacionMinisuper.Productos
 
         private void txtCodProdu_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ValidacionTextBox.SoloNumeros(e);
             if (e.KeyChar == (Char)Keys.Enter)
             {
                 Logica.Gestor objGestor = new Logica.Gestor();
