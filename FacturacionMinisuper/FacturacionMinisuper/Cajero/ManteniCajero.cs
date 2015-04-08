@@ -54,13 +54,14 @@ namespace FacturacionMinisuper.Cajero
             if (gvCajero.CurrentRow != null)
             {
                 int idcajer = Convert.ToInt32(gvCajero.CurrentRow.Cells[0].Value.ToString());
-                string nombre = gvCajero.CurrentRow.Cells[1].Value.ToString();
-                string apellido = gvCajero.CurrentRow.Cells[2].Value.ToString();
-                string telefon = gvCajero.CurrentRow.Cells[3].Value.ToString();
-                string contrasena = gvCajero.CurrentRow.Cells[4].Value.ToString();
-                string acces = gvCajero.CurrentRow.Cells[5].Value.ToString();
-                int idacces = Convert.ToInt32(gvCajero.CurrentRow.Cells[6].Value.ToString());
-                bool estado = Convert.ToBoolean(gvCajero.CurrentRow.Cells[7].Value.ToString());
+                string acces = gvCajero.CurrentRow.Cells[1].Value.ToString();
+                string contrasena = gvCajero.CurrentRow.Cells[2].Value.ToString();
+                string nombre = gvCajero.CurrentRow.Cells[3].Value.ToString();
+                string apellido = gvCajero.CurrentRow.Cells[4].Value.ToString();
+                string telefon = gvCajero.CurrentRow.Cells[5].Value.ToString();
+                bool estado = Convert.ToBoolean(gvCajero.CurrentRow.Cells[6].Value.ToString());
+                int idacces = Convert.ToInt32(gvCajero.CurrentRow.Cells[7].Value.ToString());
+                
                 Logica.Cajero objCajero = new Logica.Cajero(idcajer,acces,contrasena,nombre,apellido,telefon,estado,idacces);
 
                 frmActualizarCajero objActualizarCarj = new frmActualizarCajero();
