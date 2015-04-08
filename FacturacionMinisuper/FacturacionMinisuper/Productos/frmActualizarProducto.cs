@@ -70,33 +70,33 @@ namespace FacturacionMinisuper.Productos
 
         public void BuscarProducto()
         {
-            try
-            {
+           
                 Logica.Gestor objgestor = new Logica.Gestor();
                 Logica.Producto objpro = new Logica.Producto();
 
                 objpro = objgestor.ConsultarProducto(txtCodProdu.Text.ToString());
+                if (objpro != null)
+                {
+                    txtNombProduct.Text = objpro.Nombre.ToString();
+                    txtPrecio.Text = objpro.Precio.ToString();
+                    txtCantidad.Text = objpro.Cantidad.ToString();
+                    txtDistri.Text = objpro.CodDistribuidor.ToString();
+                }
+                else
+	{
+ MessageBox.Show("Ingrese un Código ó Producto inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+           
+	}
 
-                txtNombProduct.Text = objpro.Nombre.ToString();
-                txtPrecio.Text = objpro.Precio.ToString();
-                txtCantidad.Text = objpro.Cantidad.ToString();
-                txtDistri.Text = objpro.CodDistribuidor.ToString();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ingrese un Código ó Producto inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                
         }
 
 
         private void txtCodProdu_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (Char)Keys.Enter)
-            {
-            if (txtCodProdu.Text != null)
-            {                
-                BuscarProducto();
-            } 
+            {                  
+               BuscarProducto();
             }
            
         }
