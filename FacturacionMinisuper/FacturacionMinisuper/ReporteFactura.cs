@@ -35,5 +35,10 @@ namespace FacturacionMinisuper
             reporte.SetDatabaseLogon("sa", "123", "DANGELO-PC", "DBFacturacionM");
             this.rptReporteFactura.ReportSource = reporte;
         }
+
+        private void rptReporteFactura_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

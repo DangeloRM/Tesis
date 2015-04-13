@@ -42,9 +42,11 @@
             this.btnActualizar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActualizar)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -52,7 +54,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.DodgerBlue;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(441, 90);
@@ -63,7 +65,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(50, 137);
+            this.lblCodigo.Location = new System.Drawing.Point(77, 142);
             this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(58, 18);
@@ -73,7 +75,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(50, 179);
+            this.lblNombre.Location = new System.Drawing.Point(77, 184);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(65, 18);
@@ -83,7 +85,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(50, 226);
+            this.lblEstado.Location = new System.Drawing.Point(77, 231);
             this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 18);
@@ -93,7 +95,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(50, 264);
+            this.lblTelefono.Location = new System.Drawing.Point(77, 269);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(68, 18);
@@ -102,7 +104,7 @@
             // 
             // txtCodDistrib
             // 
-            this.txtCodDistrib.Location = new System.Drawing.Point(164, 133);
+            this.txtCodDistrib.Location = new System.Drawing.Point(191, 138);
             this.txtCodDistrib.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodDistrib.Name = "txtCodDistrib";
             this.txtCodDistrib.ReadOnly = true;
@@ -111,7 +113,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(164, 174);
+            this.txtNombre.Location = new System.Drawing.Point(191, 179);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 25;
             this.txtNombre.Name = "txtNombre";
@@ -120,7 +122,7 @@
             // 
             // txtTelefo
             // 
-            this.txtTelefo.Location = new System.Drawing.Point(164, 260);
+            this.txtTelefo.Location = new System.Drawing.Point(191, 265);
             this.txtTelefo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefo.MaxLength = 15;
             this.txtTelefo.Name = "txtTelefo";
@@ -135,7 +137,7 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(164, 222);
+            this.txtEstado.Location = new System.Drawing.Point(191, 227);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(234, 26);
@@ -145,7 +147,7 @@
             // 
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(278, 301);
+            this.btnCancelar.Location = new System.Drawing.Point(411, 313);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(64, 48);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -157,7 +159,7 @@
             // 
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(378, 301);
+            this.btnActualizar.Location = new System.Drawing.Point(323, 313);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(64, 48);
             this.btnActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,7 +170,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(378, 352);
+            this.label2.Location = new System.Drawing.Point(323, 364);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 106;
@@ -177,33 +179,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(275, 352);
+            this.label1.Location = new System.Drawing.Point(408, 364);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 105;
             this.label1.Text = "Cancelar";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblCodigo);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblNombre);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblEstado);
+            this.groupBox1.Controls.Add(this.btnActualizar);
+            this.groupBox1.Controls.Add(this.lblTelefono);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.txtCodDistrib);
+            this.groupBox1.Controls.Add(this.txtEstado);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.txtTelefo);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(505, 393);
+            this.groupBox1.TabIndex = 107;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Actualizar Proveedor ";
             // 
             // frmActualizarDistribu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(477, 380);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.txtTelefo);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtCodDistrib);
-            this.Controls.Add(this.lblTelefono);
-            this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(528, 417);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Footlight MT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -215,8 +227,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActualizar)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -235,5 +248,6 @@
         private System.Windows.Forms.PictureBox btnActualizar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

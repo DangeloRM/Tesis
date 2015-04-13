@@ -99,5 +99,11 @@ namespace FacturacionMinisuper.Distribuidor
             CargarGrid();
         }
 
+        private void pbReporteDis_Click(object sender, EventArgs e)
+        {
+            frmReporteDistrib objDistr = new frmReporteDistrib();
+            objDistr.ShowDialog();
+        }
+
     }
 }

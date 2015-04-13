@@ -206,6 +206,21 @@ namespace FacturacionMinisuper
          {
 
          }
+
+         private void gvFacturar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+         {
+             if (gvFacturar.CurrentRow != null)
+             {
+                 DataGridViewRow rowActual = gvFacturar.CurrentRow;
+                 string codProdSelect = rowActual.Cells[0].Value.ToString();
+                 lblSeleccionado.Text = codProdSelect;
+             }
+         }
+
+         private void pbEliminar_Click(object sender, EventArgs e)
+         {
+            
+         }
                
     }
 }

@@ -41,7 +41,7 @@ namespace FacturacionMinisuper.Cajero
 
                 if (registrosAfectados >= 0)
                 {
-                    MessageBox.Show("Cajero Actualizado correctamente!", "Cajero Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El Cajero: " + txtNombr.Text + ",se actualizo correctamente!", "Cajero Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 else

@@ -36,13 +36,13 @@ namespace FacturacionMinisuper.Distribuidor
 
                 if (registrosAfectados >= 0)
                 {
-                    MessageBox.Show("Distribuidor Actualizado correctamente!", "Distribuidor Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Proveedor Actualizado correctamente!", "Proveedor Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                 }
 
                 else
                 {
-                    MessageBox.Show("No se pudo Actualizar el Distribuidor", "Error al Actualizar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo Actualizar el Proveedor", "Error al Actualizar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
                 objGestor = null;

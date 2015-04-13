@@ -28,7 +28,7 @@ namespace FacturacionMinisuper.Cajero
 
                 if (registrosAfectados > 0)
                 {
-                    MessageBox.Show("Cajero Agregado correctamente!", "Cajero Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El Cajero: " + txtNombre.Text + ",se agrego correctamente!", "Cajero Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 else
@@ -77,6 +77,7 @@ namespace FacturacionMinisuper.Cajero
             txtIDCajero.Text = objCajer.IdCajero().ToString();
             txtIDCajero.ReadOnly = true;
         }
+
 
     
     }

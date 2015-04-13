@@ -40,12 +40,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pbReporteDis = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.bdManteDistri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizaDistribu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregaDis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDistribuidor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReporteDis)).BeginInit();
             this.SuspendLayout();
             // 
             // bdManteDistri
@@ -57,7 +60,7 @@
             this.bdManteDistri.Controls.Add(this.pbAgregaDis);
             this.bdManteDistri.Controls.Add(this.gvDistribuidor);
             this.bdManteDistri.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bdManteDistri.Location = new System.Drawing.Point(20, 39);
+            this.bdManteDistri.Location = new System.Drawing.Point(13, 13);
             this.bdManteDistri.Margin = new System.Windows.Forms.Padding(4);
             this.bdManteDistri.Name = "bdManteDistri";
             this.bdManteDistri.Padding = new System.Windows.Forms.Padding(4);
@@ -182,12 +185,35 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Refrescar";
             // 
+            // pbReporteDis
+            // 
+            this.pbReporteDis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbReporteDis.Image = ((System.Drawing.Image)(resources.GetObject("pbReporteDis.Image")));
+            this.pbReporteDis.Location = new System.Drawing.Point(253, 402);
+            this.pbReporteDis.Name = "pbReporteDis";
+            this.pbReporteDis.Size = new System.Drawing.Size(71, 46);
+            this.pbReporteDis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReporteDis.TabIndex = 6;
+            this.pbReporteDis.TabStop = false;
+            this.pbReporteDis.Click += new System.EventHandler(this.pbReporteDis_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(201, 448);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 18);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Productos por Proveedor";
+            // 
             // MenuDistribuidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(545, 483);
+            this.ClientSize = new System.Drawing.Size(527, 483);
+            this.Controls.Add(this.pbReporteDis);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -210,6 +236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvDistribuidor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReporteDis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +255,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pbReporteDis;
+        private System.Windows.Forms.Label label5;
     }
 }

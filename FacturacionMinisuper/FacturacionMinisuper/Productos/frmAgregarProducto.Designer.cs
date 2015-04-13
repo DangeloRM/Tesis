@@ -104,9 +104,9 @@
             this.label7.Location = new System.Drawing.Point(6, 35);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 18);
+            this.label7.Size = new System.Drawing.Size(128, 18);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Codigó Distribuidor:";
+            this.label7.Text = "Codigó Proveedor:";
             // 
             // label8
             // 
@@ -137,7 +137,7 @@
             this.groupBox1.Size = new System.Drawing.Size(663, 96);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Información Distribuidor";
+            this.groupBox1.Text = "Información Proveedor";
             // 
             // txtNombreDistribui
             // 
@@ -216,7 +216,7 @@
             this.groupBox2.Size = new System.Drawing.Size(663, 196);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Información Producto";
+            this.groupBox2.Text = "Agregar Producto";
             // 
             // pictureBox1
             // 
@@ -261,7 +261,7 @@
             // 
             this.pbAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAgregar.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregar.Image")));
-            this.pbAgregar.Location = new System.Drawing.Point(549, 382);
+            this.pbAgregar.Location = new System.Drawing.Point(459, 382);
             this.pbAgregar.Name = "pbAgregar";
             this.pbAgregar.Size = new System.Drawing.Size(73, 51);
             this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -273,7 +273,7 @@
             // 
             this.pbCncelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCncelar.Image = ((System.Drawing.Image)(resources.GetObject("pbCncelar.Image")));
-            this.pbCncelar.Location = new System.Drawing.Point(434, 382);
+            this.pbCncelar.Location = new System.Drawing.Point(571, 383);
             this.pbCncelar.Name = "pbCncelar";
             this.pbCncelar.Size = new System.Drawing.Size(73, 51);
             this.pbCncelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -284,7 +284,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(561, 437);
+            this.label4.Location = new System.Drawing.Point(471, 437);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 15);
             this.label4.TabIndex = 16;
@@ -293,7 +293,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(443, 437);
+            this.label5.Location = new System.Drawing.Point(579, 437);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 15);
             this.label5.TabIndex = 15;
@@ -304,7 +304,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(690, 465);
+            this.ClientSize = new System.Drawing.Size(690, 458);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pbCncelar);
@@ -312,7 +312,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Footlight MT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.MaximizeBox = false;

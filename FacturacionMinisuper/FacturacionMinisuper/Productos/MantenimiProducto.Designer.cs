@@ -30,12 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimiProducto));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pbReporteProducto = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbAgregar = new System.Windows.Forms.PictureBox();
             this.gvProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReporteProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).BeginInit();
@@ -43,6 +46,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.pbReporteProducto);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pbEditar);
@@ -53,10 +58,32 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(628, 420);
+            this.groupBox1.Size = new System.Drawing.Size(596, 478);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento Productos";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(45, 453);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 18);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Productos más Vendidos";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // pbReporteProducto
+            // 
+            this.pbReporteProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbReporteProducto.Image = ((System.Drawing.Image)(resources.GetObject("pbReporteProducto.Image")));
+            this.pbReporteProducto.Location = new System.Drawing.Point(95, 408);
+            this.pbReporteProducto.Name = "pbReporteProducto";
+            this.pbReporteProducto.Size = new System.Drawing.Size(53, 42);
+            this.pbReporteProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReporteProducto.TabIndex = 17;
+            this.pbReporteProducto.TabStop = false;
+            this.pbReporteProducto.Click += new System.EventHandler(this.pbReporteProducto_Click);
             // 
             // label2
             // 
@@ -95,7 +122,7 @@
             this.pbAgregar.BackColor = System.Drawing.Color.SteelBlue;
             this.pbAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAgregar.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregar.Image")));
-            this.pbAgregar.Location = new System.Drawing.Point(482, 25);
+            this.pbAgregar.Location = new System.Drawing.Point(484, 25);
             this.pbAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.pbAgregar.Name = "pbAgregar";
             this.pbAgregar.Size = new System.Drawing.Size(81, 63);
@@ -116,7 +143,7 @@
             this.gvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.ReadOnly = true;
-            this.gvProductos.Size = new System.Drawing.Size(561, 292);
+            this.gvProductos.Size = new System.Drawing.Size(540, 292);
             this.gvProductos.TabIndex = 0;
             this.gvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProductos_CellContentClick);
             // 
@@ -125,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(665, 482);
+            this.ClientSize = new System.Drawing.Size(632, 526);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Footlight MT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -138,6 +165,7 @@
             this.Load += new System.EventHandler(this.MantenimiProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReporteProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).EndInit();
@@ -153,5 +181,7 @@
         private System.Windows.Forms.DataGridView gvProductos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbReporteProducto;
     }
 }

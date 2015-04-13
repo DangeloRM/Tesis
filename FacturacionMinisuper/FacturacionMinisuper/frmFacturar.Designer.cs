@@ -41,6 +41,8 @@
             this.gvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblSeleccionado = new System.Windows.Forms.Label();
+            this.pbEliminar = new System.Windows.Forms.PictureBox();
             this.gbFacturación.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).BeginInit();
@@ -48,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvFacturar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFacturación
@@ -60,11 +63,12 @@
             this.gbFacturación.Controls.Add(this.groupBox1);
             this.gbFacturación.Controls.Add(this.txtCodProducto);
             this.gbFacturación.Controls.Add(this.label2);
-            this.gbFacturación.Location = new System.Drawing.Point(27, 29);
+            this.gbFacturación.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.gbFacturación.Location = new System.Drawing.Point(30, 29);
             this.gbFacturación.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbFacturación.Name = "gbFacturación";
             this.gbFacturación.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.gbFacturación.Size = new System.Drawing.Size(644, 607);
+            this.gbFacturación.Size = new System.Drawing.Size(680, 607);
             this.gbFacturación.TabIndex = 0;
             this.gbFacturación.TabStop = false;
             this.gbFacturación.Text = "Facturación";
@@ -121,10 +125,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pbEliminar);
+            this.groupBox2.Controls.Add(this.lblSeleccionado);
             this.groupBox2.Controls.Add(this.gvFacturar);
             this.groupBox2.Location = new System.Drawing.Point(25, 319);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(593, 172);
+            this.groupBox2.Size = new System.Drawing.Size(628, 172);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Productos a Facturar";
@@ -136,18 +142,18 @@
             this.gvFacturar.AllowUserToOrderColumns = true;
             this.gvFacturar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gvFacturar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvFacturar.Location = new System.Drawing.Point(16, 20);
+            this.gvFacturar.Location = new System.Drawing.Point(16, 22);
             this.gvFacturar.Name = "gvFacturar";
-            this.gvFacturar.ReadOnly = true;
             this.gvFacturar.Size = new System.Drawing.Size(562, 140);
             this.gvFacturar.TabIndex = 1;
+            this.gvFacturar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvFacturar_CellContentClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.gvProductos);
-            this.groupBox1.Location = new System.Drawing.Point(25, 83);
+            this.groupBox1.Location = new System.Drawing.Point(41, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(593, 230);
+            this.groupBox1.Size = new System.Drawing.Size(612, 230);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista Producto";
@@ -162,7 +168,7 @@
             this.gvProductos.Location = new System.Drawing.Point(16, 22);
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.ReadOnly = true;
-            this.gvProductos.Size = new System.Drawing.Size(562, 187);
+            this.gvProductos.Size = new System.Drawing.Size(579, 187);
             this.gvProductos.TabIndex = 0;
             this.gvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProductos_CellContentClick);
             // 
@@ -184,12 +190,33 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Código Producto:";
             // 
+            // lblSeleccionado
+            // 
+            this.lblSeleccionado.AutoSize = true;
+            this.lblSeleccionado.Location = new System.Drawing.Point(52, 158);
+            this.lblSeleccionado.Name = "lblSeleccionado";
+            this.lblSeleccionado.Size = new System.Drawing.Size(0, 15);
+            this.lblSeleccionado.TabIndex = 2;
+            this.lblSeleccionado.Visible = false;
+            // 
+            // pbEliminar
+            // 
+            this.pbEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminar.Image")));
+            this.pbEliminar.Location = new System.Drawing.Point(585, 33);
+            this.pbEliminar.Name = "pbEliminar";
+            this.pbEliminar.Size = new System.Drawing.Size(26, 33);
+            this.pbEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEliminar.TabIndex = 3;
+            this.pbEliminar.TabStop = false;
+            this.pbEliminar.Click += new System.EventHandler(this.pbEliminar_Click);
+            // 
             // frmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(706, 648);
+            this.ClientSize = new System.Drawing.Size(740, 648);
             this.Controls.Add(this.gbFacturación);
             this.Font = new System.Drawing.Font("Footlight MT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -207,9 +234,11 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvFacturar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +257,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView gvProductos;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lblSeleccionado;
+        private System.Windows.Forms.PictureBox pbEliminar;
     }
 }

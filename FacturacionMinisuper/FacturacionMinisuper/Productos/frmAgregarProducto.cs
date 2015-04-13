@@ -117,7 +117,7 @@ namespace FacturacionMinisuper.Productos
             }
             catch (Exception)
             {
-                MessageBox.Show("Ingrese un Distribuidor ó Distribuidor Inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un Proveedor ó Proveedor Inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

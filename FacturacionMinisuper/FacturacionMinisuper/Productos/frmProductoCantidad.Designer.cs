@@ -43,8 +43,8 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAceptar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,7 +54,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(466, 386);
+            this.label4.Location = new System.Drawing.Point(362, 386);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 15);
@@ -64,7 +64,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(344, 386);
+            this.label7.Location = new System.Drawing.Point(471, 386);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 15);
@@ -75,7 +75,7 @@
             // 
             this.pbCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("pbCancelar.Image")));
-            this.pbCancelar.Location = new System.Drawing.Point(332, 328);
+            this.pbCancelar.Location = new System.Drawing.Point(459, 328);
             this.pbCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pbCancelar.Name = "pbCancelar";
             this.pbCancelar.Size = new System.Drawing.Size(85, 55);
@@ -88,7 +88,7 @@
             // 
             this.pbAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAceptar.Image = ((System.Drawing.Image)(resources.GetObject("pbAceptar.Image")));
-            this.pbAceptar.Location = new System.Drawing.Point(451, 328);
+            this.pbAceptar.Location = new System.Drawing.Point(347, 328);
             this.pbAceptar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pbAceptar.Name = "pbAceptar";
             this.pbAceptar.Size = new System.Drawing.Size(85, 55);
@@ -213,15 +213,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ingrese la Cantidad Producto";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 15);
-            this.label2.TabIndex = 326;
-            this.label2.Text = "Stock:";
-            // 
             // txtStock
             // 
             this.txtStock.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -230,6 +221,15 @@
             this.txtStock.ReadOnly = true;
             this.txtStock.Size = new System.Drawing.Size(104, 23);
             this.txtStock.TabIndex = 327;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 15);
+            this.label2.TabIndex = 326;
+            this.label2.Text = "Stock:";
             // 
             // frmProductoCantidad
             // 
@@ -244,7 +244,7 @@
             this.Controls.Add(this.pbAceptar);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Footlight MT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;

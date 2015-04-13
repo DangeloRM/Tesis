@@ -37,12 +37,12 @@ namespace FacturacionMinisuper.Distribuidor
 
                 if (registrosAfectados > 0)
                 {
-                    MessageBox.Show("Distribuidor Agregado correctamente!", "Distribuidor Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El Proveedor:" + txtNomb.Text + ",se agrego correctamente!", "Proveedor Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 else
                 {
-                    MessageBox.Show("No se pudo Agregar el Distribuidor", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo Agregar el Proveedor", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
                 objGestor = null;

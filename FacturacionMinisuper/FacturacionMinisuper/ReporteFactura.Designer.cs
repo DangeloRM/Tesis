@@ -55,6 +55,7 @@
             this.rptReporteFactura.Size = new System.Drawing.Size(895, 491);
             this.rptReporteFactura.TabIndex = 0;
             this.rptReporteFactura.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.rptReporteFactura.Load += new System.EventHandler(this.rptReporteFactura_Load);
             // 
             // ReporteFactura
             // 

@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publicar\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -69,18 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\frmActualizarAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\frmActualizarAdmin.Designer.cs">
-      <DependentUpon>frmActualizarAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\frmManteAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\frmManteAdmin.Designer.cs">
-      <DependentUpon>frmManteAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bitacora\frmReporteBitacora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +117,12 @@
     <Compile Include="Distribuidor\frmProveedInactivo.Designer.cs">
       <DependentUpon>frmProveedInactivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Distribuidor\frmReporteDistrib.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distribuidor\frmReporteDistrib.Designer.cs">
+      <DependentUpon>frmReporteDistrib.cs</DependentUpon>
+    </Compile>
     <Compile Include="Distribuidor\ManteniDistribuidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +165,12 @@
     <Compile Include="Productos\frmProductoCantidad.Designer.cs">
       <DependentUpon>frmProductoCantidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Productos\frmReporteProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\frmReporteProd.Designer.cs">
+      <DependentUpon>frmReporteProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos\MantenimiProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +210,9 @@
     <EmbeddedResource Include="Distribuidor\frmProveedInactivo.resx">
       <DependentUpon>frmProveedInactivo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Distribuidor\frmReporteDistrib.resx">
+      <DependentUpon>frmReporteDistrib.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Distribuidor\ManteniDistribuidor.resx">
       <DependentUpon>ManteniDistribuidor.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\frmProductoCantidad.resx">
       <DependentUpon>frmProductoCantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\frmReporteProd.resx">
+      <DependentUpon>frmReporteProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\MantenimiProducto.resx">
       <DependentUpon>MantenimiProducto.cs</DependentUpon>

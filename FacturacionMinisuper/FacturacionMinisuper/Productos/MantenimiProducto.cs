@@ -59,5 +59,16 @@ namespace FacturacionMinisuper.Productos
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbReporteProducto_Click(object sender, EventArgs e)
+        {
+            frmReporteProd objprod = new frmReporteProd();
+            objprod.ShowDialog();
+        }
+
     }
 }

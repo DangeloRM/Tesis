@@ -58,6 +58,7 @@
             this.rptReporteBitacora.TabIndex = 1;
             this.rptReporteBitacora.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.rptReporteBitacora.ToolPanelWidth = 233;
+            this.rptReporteBitacora.Load += new System.EventHandler(this.rptReporteBitacora_Load_1);
             // 
             // frmReporteBitacora
             // 
