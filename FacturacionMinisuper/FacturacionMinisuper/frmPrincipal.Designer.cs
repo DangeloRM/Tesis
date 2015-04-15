@@ -62,7 +62,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(38, 467);
+            this.pictureBox2.Location = new System.Drawing.Point(37, 425);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(127, 79);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,7 +75,7 @@
             this.pbProductos.BackColor = System.Drawing.Color.Transparent;
             this.pbProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbProductos.Image = ((System.Drawing.Image)(resources.GetObject("pbProductos.Image")));
-            this.pbProductos.Location = new System.Drawing.Point(38, 335);
+            this.pbProductos.Location = new System.Drawing.Point(37, 293);
             this.pbProductos.Name = "pbProductos";
             this.pbProductos.Size = new System.Drawing.Size(127, 75);
             this.pbProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,7 +88,7 @@
             this.pbCajero.BackColor = System.Drawing.Color.Transparent;
             this.pbCajero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCajero.Image = ((System.Drawing.Image)(resources.GetObject("pbCajero.Image")));
-            this.pbCajero.Location = new System.Drawing.Point(38, 198);
+            this.pbCajero.Location = new System.Drawing.Point(37, 156);
             this.pbCajero.Name = "pbCajero";
             this.pbCajero.Size = new System.Drawing.Size(127, 75);
             this.pbCajero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +101,7 @@
             this.pbDistribuidor.BackColor = System.Drawing.Color.Transparent;
             this.pbDistribuidor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbDistribuidor.Image = ((System.Drawing.Image)(resources.GetObject("pbDistribuidor.Image")));
-            this.pbDistribuidor.Location = new System.Drawing.Point(38, 64);
+            this.pbDistribuidor.Location = new System.Drawing.Point(37, 22);
             this.pbDistribuidor.Name = "pbDistribuidor";
             this.pbDistribuidor.Size = new System.Drawing.Size(127, 75);
             this.pbDistribuidor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,7 +165,7 @@
             this.pbBitacora.BackColor = System.Drawing.Color.Transparent;
             this.pbBitacora.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbBitacora.Image = ((System.Drawing.Image)(resources.GetObject("pbBitacora.Image")));
-            this.pbBitacora.Location = new System.Drawing.Point(561, 551);
+            this.pbBitacora.Location = new System.Drawing.Point(319, 548);
             this.pbBitacora.Name = "pbBitacora";
             this.pbBitacora.Size = new System.Drawing.Size(98, 50);
             this.pbBitacora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,7 +178,7 @@
             this.pbRespaldo.BackColor = System.Drawing.Color.Transparent;
             this.pbRespaldo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbRespaldo.Image = ((System.Drawing.Image)(resources.GetObject("pbRespaldo.Image")));
-            this.pbRespaldo.Location = new System.Drawing.Point(430, 551);
+            this.pbRespaldo.Location = new System.Drawing.Point(188, 548);
             this.pbRespaldo.Name = "pbRespaldo";
             this.pbRespaldo.Size = new System.Drawing.Size(100, 50);
             this.pbRespaldo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -191,7 +191,7 @@
             this.pbManual.BackColor = System.Drawing.Color.Transparent;
             this.pbManual.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbManual.Image = ((System.Drawing.Image)(resources.GetObject("pbManual.Image")));
-            this.pbManual.Location = new System.Drawing.Point(292, 551);
+            this.pbManual.Location = new System.Drawing.Point(50, 548);
             this.pbManual.Name = "pbManual";
             this.pbManual.Size = new System.Drawing.Size(100, 50);
             this.pbManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -205,7 +205,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label8.Location = new System.Drawing.Point(574, 604);
+            this.label8.Location = new System.Drawing.Point(332, 601);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 26);
             this.label8.TabIndex = 9;
@@ -217,7 +217,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(443, 604);
+            this.label9.Location = new System.Drawing.Point(192, 601);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 26);
             this.label9.TabIndex = 10;
@@ -229,7 +229,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label10.Location = new System.Drawing.Point(287, 604);
+            this.label10.Location = new System.Drawing.Point(45, 601);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 26);
             this.label10.TabIndex = 11;
@@ -241,7 +241,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label11.Location = new System.Drawing.Point(64, 276);
+            this.label11.Location = new System.Drawing.Point(63, 234);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 26);
             this.label11.TabIndex = 14;
@@ -253,7 +253,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(45, 142);
+            this.label12.Location = new System.Drawing.Point(44, 100);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 26);
             this.label12.TabIndex = 15;
@@ -265,7 +265,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(61, 551);
+            this.label3.Location = new System.Drawing.Point(60, 509);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 26);
             this.label3.TabIndex = 16;
@@ -277,7 +277,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(61, 413);
+            this.label4.Location = new System.Drawing.Point(60, 371);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 26);
             this.label4.TabIndex = 17;

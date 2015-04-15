@@ -92,7 +92,7 @@ namespace FacturacionMinisuper
             try
             {
                 System.Diagnostics.Process proc = new System.Diagnostics.Process();
-                proc.StartInfo.FileName = "C:\\scanner.pdf";
+                proc.StartInfo.FileName = "C:\\ManualUsuario.pdf";
                 proc.Start();
                 proc.Close();
                 //Process.Start( @"C:\\Manual.pdf");
@@ -107,7 +107,8 @@ namespace FacturacionMinisuper
 
         private void pbRespaldo_Click(object sender, EventArgs e)
         {
-
+              if (MessageBox.Show("Deseas respaldar la base de datos?", "Backup", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
             bool desea_respaldar = true;
             Cursor.Current = Cursors.WaitCursor;
 
@@ -118,13 +119,14 @@ namespace FacturacionMinisuper
                 connect = new SqlConnection(con);
                 connect.Open();
                 SqlCommand command;
-                command = new SqlCommand(@"backup database DBFacturacionM to disk ='C:\Respaldo\BackUp" + System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString()
+                command = new SqlCommand(@"backup database DBFacturacionM to disk ='C:\Respaldo\BackUp" + "-" + System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString()
                  + "-" + System.DateTime.Now.Hour.ToString() + "-" + System.DateTime.Now.Minute.ToString()
                  + "-" + System.DateTime.Now.Second.ToString() + ".bak' with init,stats=10", connect);
                 command.ExecuteNonQuery();
                 connect.Close();
 
                 MessageBox.Show("El Respaldo de la base de datos fue realizado satisfactoriamente!!", "Respaldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             }
            
         }

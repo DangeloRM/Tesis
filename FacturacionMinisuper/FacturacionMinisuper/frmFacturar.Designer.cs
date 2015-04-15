@@ -30,32 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFacturar));
             this.gbFacturación = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblMonto = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCajero = new System.Windows.Forms.Label();
             this.pbFacturar = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblSeleccionado = new System.Windows.Forms.Label();
             this.gvFacturar = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblSeleccionado = new System.Windows.Forms.Label();
-            this.pbEliminar = new System.Windows.Forms.PictureBox();
             this.gbFacturación.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvFacturar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFacturación
             // 
-            this.gbFacturación.Controls.Add(this.groupBox3);
             this.gbFacturación.Controls.Add(this.label3);
             this.gbFacturación.Controls.Add(this.lblCajero);
             this.gbFacturación.Controls.Add(this.pbFacturar);
@@ -73,30 +67,10 @@
             this.gbFacturación.TabStop = false;
             this.gbFacturación.Text = "Facturación";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.lblMonto);
-            this.groupBox3.Location = new System.Drawing.Point(355, 497);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(158, 59);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Total a Facturar";
-            // 
-            // lblMonto
-            // 
-            this.lblMonto.AutoSize = true;
-            this.lblMonto.Font = new System.Drawing.Font("Footlight MT Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonto.Location = new System.Drawing.Point(85, 28);
-            this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(61, 20);
-            this.lblMonto.TabIndex = 8;
-            this.lblMonto.Text = "####";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(541, 589);
+            this.label3.Location = new System.Drawing.Point(543, 575);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 15);
             this.label3.TabIndex = 11;
@@ -115,7 +89,7 @@
             // 
             this.pbFacturar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbFacturar.Image = ((System.Drawing.Image)(resources.GetObject("pbFacturar.Image")));
-            this.pbFacturar.Location = new System.Drawing.Point(530, 521);
+            this.pbFacturar.Location = new System.Drawing.Point(532, 507);
             this.pbFacturar.Name = "pbFacturar";
             this.pbFacturar.Size = new System.Drawing.Size(73, 65);
             this.pbFacturar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,33 +99,42 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.pbEliminar);
             this.groupBox2.Controls.Add(this.lblSeleccionado);
             this.groupBox2.Controls.Add(this.gvFacturar);
-            this.groupBox2.Location = new System.Drawing.Point(25, 319);
+            this.groupBox2.Location = new System.Drawing.Point(34, 320);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(628, 172);
+            this.groupBox2.Size = new System.Drawing.Size(612, 172);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Productos a Facturar";
             // 
+            // lblSeleccionado
+            // 
+            this.lblSeleccionado.AutoSize = true;
+            this.lblSeleccionado.Location = new System.Drawing.Point(52, 158);
+            this.lblSeleccionado.Name = "lblSeleccionado";
+            this.lblSeleccionado.Size = new System.Drawing.Size(0, 15);
+            this.lblSeleccionado.TabIndex = 2;
+            this.lblSeleccionado.Visible = false;
+            // 
             // gvFacturar
             // 
             this.gvFacturar.AllowUserToAddRows = false;
-            this.gvFacturar.AllowUserToDeleteRows = false;
             this.gvFacturar.AllowUserToOrderColumns = true;
             this.gvFacturar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gvFacturar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvFacturar.Location = new System.Drawing.Point(16, 22);
             this.gvFacturar.Name = "gvFacturar";
-            this.gvFacturar.Size = new System.Drawing.Size(562, 140);
+            this.gvFacturar.ReadOnly = true;
+            this.gvFacturar.Size = new System.Drawing.Size(579, 140);
             this.gvFacturar.TabIndex = 1;
             this.gvFacturar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvFacturar_CellContentClick);
+            this.gvFacturar.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.gvFacturar_RowsRemoved);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.gvProductos);
-            this.groupBox1.Location = new System.Drawing.Point(41, 83);
+            this.groupBox1.Location = new System.Drawing.Point(34, 84);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(612, 230);
             this.groupBox1.TabIndex = 4;
@@ -190,33 +173,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Código Producto:";
             // 
-            // lblSeleccionado
-            // 
-            this.lblSeleccionado.AutoSize = true;
-            this.lblSeleccionado.Location = new System.Drawing.Point(52, 158);
-            this.lblSeleccionado.Name = "lblSeleccionado";
-            this.lblSeleccionado.Size = new System.Drawing.Size(0, 15);
-            this.lblSeleccionado.TabIndex = 2;
-            this.lblSeleccionado.Visible = false;
-            // 
-            // pbEliminar
-            // 
-            this.pbEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminar.Image")));
-            this.pbEliminar.Location = new System.Drawing.Point(585, 33);
-            this.pbEliminar.Name = "pbEliminar";
-            this.pbEliminar.Size = new System.Drawing.Size(26, 33);
-            this.pbEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbEliminar.TabIndex = 3;
-            this.pbEliminar.TabStop = false;
-            this.pbEliminar.Click += new System.EventHandler(this.pbEliminar_Click);
-            // 
             // frmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(740, 648);
+            this.ClientSize = new System.Drawing.Size(738, 648);
             this.Controls.Add(this.gbFacturación);
             this.Font = new System.Drawing.Font("Footlight MT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -230,15 +192,12 @@
             this.Load += new System.EventHandler(this.frmFacturar_Load);
             this.gbFacturación.ResumeLayout(false);
             this.gbFacturación.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvFacturar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,15 +208,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodProducto;
         private System.Windows.Forms.PictureBox pbFacturar;
-        private System.Windows.Forms.Label lblMonto;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView gvFacturar;
         private System.Windows.Forms.Label lblCajero;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView gvProductos;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lblSeleccionado;
-        private System.Windows.Forms.PictureBox pbEliminar;
     }
 }

@@ -81,7 +81,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(32, 151);
+            this.lblPrecio.Location = new System.Drawing.Point(32, 177);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(102, 18);
@@ -213,7 +213,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(663, 196);
+            this.groupBox2.Size = new System.Drawing.Size(663, 214);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar Producto";
@@ -231,7 +231,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(165, 148);
+            this.txtPrecio.Location = new System.Drawing.Point(165, 174);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(157, 24);
@@ -243,8 +243,9 @@
             this.txtNombProduct.Location = new System.Drawing.Point(165, 92);
             this.txtNombProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombProduct.MaxLength = 100;
+            this.txtNombProduct.Multiline = true;
             this.txtNombProduct.Name = "txtNombProduct";
-            this.txtNombProduct.Size = new System.Drawing.Size(157, 24);
+            this.txtNombProduct.Size = new System.Drawing.Size(209, 57);
             this.txtNombProduct.TabIndex = 3;
             // 
             // txtCodProdu
