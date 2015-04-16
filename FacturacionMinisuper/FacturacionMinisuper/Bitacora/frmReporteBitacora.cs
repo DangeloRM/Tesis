@@ -25,19 +25,21 @@ namespace FacturacionMinisuper.Bitacora
         }
 
         private void pbBuscar_Click(object sender, EventArgs e)
-        {
-            ReportDocument report = new ReportDocument();
-            ParameterFields arregloParam = new ParameterFields();
-            ParameterField Fecha = new ParameterField();
-            Fecha.Name = "@Fecha";
-            ParameterDiscreteValue valor = new ParameterDiscreteValue();
-            valor.Value = this.dateTimePicker1.Value.ToString("yyyy-MM-dd");
-            Fecha.CurrentValues.Add(valor);
-            arregloParam.Add(Fecha);
-            this.rptReporteBitacora.ParameterFieldInfo = arregloParam;
-            report.Load(@"C:\Reportes\ReporteBitacora1.rpt");
-            //report.SetDatabaseLogon("sa", "123", "DANGELO-PC", "DBFacturacionM");
-            this.rptReporteBitacora.ReportSource = report;
-        }
+        {         
+           
+                ReportDocument report = new ReportDocument();
+                ParameterFields arregloParam = new ParameterFields();
+                ParameterField Fecha = new ParameterField();
+                Fecha.Name = "@Fecha";
+                ParameterDiscreteValue valor = new ParameterDiscreteValue();
+                valor.Value = this.dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                Fecha.CurrentValues.Add(valor);
+                arregloParam.Add(Fecha);
+                this.rptReporteBitacora.ParameterFieldInfo = arregloParam;
+                report.Load(@"C:\Reportes\ReporteBitacora1.rpt");
+                //report.SetDatabaseLogon("sa", "123", "DANGELO-PC", "DBFacturacionM");
+                this.rptReporteBitacora.ReportSource = report;  
+	              
+       }
     }
 }

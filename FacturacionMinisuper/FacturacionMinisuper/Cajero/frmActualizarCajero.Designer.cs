@@ -166,7 +166,7 @@
             // 
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(319, 380);
+            this.btnActualizar.Location = new System.Drawing.Point(315, 380);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(64, 48);
             this.btnActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

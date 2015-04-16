@@ -64,7 +64,6 @@
             this.lblID.Size = new System.Drawing.Size(71, 18);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "IDCajero:";
-
             // 
             // lblNombre
             // 
@@ -75,7 +74,6 @@
             this.lblNombre.Size = new System.Drawing.Size(69, 18);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre: ";
-
             // 
             // lblApellidos
             // 
@@ -86,6 +84,7 @@
             this.lblApellidos.Size = new System.Drawing.Size(72, 18);
             this.lblApellidos.TabIndex = 2;
             this.lblApellidos.Text = "Apellidos:";
+            // 
             // lbltelefono
             // 
             this.lbltelefono.AutoSize = true;

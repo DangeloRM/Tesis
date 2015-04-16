@@ -34,7 +34,7 @@ namespace FacturacionMinisuper.Cajero
 
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNombr.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelefo.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtIdca.Text) && !string.IsNullOrEmpty(tEstado.Text))
+            if (!string.IsNullOrEmpty(txtNombr.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtTelefo.Text) && !string.IsNullOrEmpty(txtContrasena.Text) && !string.IsNullOrEmpty(txtNomAcceso.Text) && !string.IsNullOrEmpty(txtTipoacces.Text))
             {
                 Gestor objGestor = new Gestor();
                 int registrosAfectados = objGestor.ActualizarCajero(Convert.ToInt32(txtIdca.Text), txtNomAcceso.Text, txtContrasena.Text, txtNombr.Text, txtApellido.Text, txtTelefo.Text, Convert.ToBoolean(tEstado.Checked), Convert.ToInt32(txtTipoacces.Text));
