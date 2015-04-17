@@ -40,6 +40,7 @@
             this.gvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblMonto = new System.Windows.Forms.Label();
             this.gbFacturación.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // gbFacturación
             // 
+            this.gbFacturación.Controls.Add(this.lblMonto);
             this.gbFacturación.Controls.Add(this.label3);
             this.gbFacturación.Controls.Add(this.lblCajero);
             this.gbFacturación.Controls.Add(this.pbFacturar);
@@ -173,6 +175,15 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Código Producto:";
             // 
+            // lblMonto
+            // 
+            this.lblMonto.AutoSize = true;
+            this.lblMonto.Location = new System.Drawing.Point(408, 558);
+            this.lblMonto.Name = "lblMonto";
+            this.lblMonto.Size = new System.Drawing.Size(0, 15);
+            this.lblMonto.TabIndex = 12;
+            this.lblMonto.Visible = false;
+            // 
             // frmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -215,5 +226,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView gvProductos;
         private System.Windows.Forms.Label lblSeleccionado;
+        private System.Windows.Forms.Label lblMonto;
     }
 }

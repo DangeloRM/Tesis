@@ -90,7 +90,7 @@ namespace FacturacionMinisuper
                  nuevo["Precio"] = Cantidad.Producto.Precio;
                  nuevo["Cantidad"] = Cantidad.Producto.Cantidad;
                  nuevo["SubTotal"] = Cantidad.Producto.SubTotal;
-                 //MontoTotal = MontoTotal + Cantidad.Producto.SubTotal;
+                 MontoTotal = MontoTotal + Cantidad.Producto.SubTotal;
                  //lblMonto.Text = MontoTotal.ToString();
                  CarroCompras.Rows.Add(nuevo);
                  this.gvFacturar.DataSource = CarroCompras;
@@ -129,7 +129,7 @@ namespace FacturacionMinisuper
                       *procedemos con el proceso de facturación.
                       */
                      Logica.Factura objFactura = new Logica.Factura();//Creamos nuestro objeto factura
-                     //objFactura.Total = Convert.ToInt32(lblMonto.Text);//Obtenemos el total del label encargado
+                     objFactura.Total = Convert.ToInt32(MontoTotal);//Obtenemos el total del label encargado
                      objFactura.Fecha = DateTime.Now;//Obtenemos la fecha de hoy
                      objFactura.myCajero = myCajero;//Asignamos el cajero actual al que llevará la factura
                      /*
@@ -191,7 +191,7 @@ namespace FacturacionMinisuper
             }
                      //Liberamos nuestros controles
                      MontoTotal = 0;
-                     //lblMonto.Text = string.Empty;
+                     lblMonto.Text = string.Empty;
                      CarroCompras.Rows.Clear();
                      gvFacturar.DataSource = null;
                  }
