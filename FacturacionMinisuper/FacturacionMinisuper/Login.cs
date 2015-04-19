@@ -25,29 +25,7 @@ namespace FacturacionMinisuper
 
         private void pbIngresar_Click(object sender, EventArgs e)
         {
-            Logica.Gestor myGestor = new Logica.Gestor();
-            Logica.Cajero CJ = new Logica.Cajero();
-            CJ = myGestor.IniciaSession(txtUser.Text.Trim());
-            if (CJ != null)
-            {
-                if (CJ.Contrasena == txtContrasena.Text)
-                {
-                    this.myCajero = CJ;
-                    DialogResult = System.Windows.Forms.DialogResult.OK;
-                    MessageBox.Show("Bienvenido(a) al sistema " + txtUser.Text, "Sistema Facturación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña incorrecto", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtUser.Clear();
-                    txtContrasena.Clear();
-                    txtUser.Focus();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Sus datos no son correctos ó no tiene acceso al sistema", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+           
         }
 
         private void pbSalir_Click(object sender, EventArgs e)
@@ -61,6 +39,36 @@ namespace FacturacionMinisuper
         private void txtContrasena_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+                Logica.Gestor myGestor = new Logica.Gestor();
+                Logica.Cajero CJ = new Logica.Cajero();
+                CJ = myGestor.IniciaSession(txtUser.Text.Trim());
+                if (CJ != null)
+                {
+                    if (CJ.Contrasena == txtContrasena.Text)
+                    {
+                        this.myCajero = CJ;
+                        DialogResult = System.Windows.Forms.DialogResult.OK;
+                        MessageBox.Show("Bienvenido(a) al sistema " + txtUser.Text, "Sistema Facturación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrecto", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtUser.Clear();
+                        txtContrasena.Clear();
+                        txtUser.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Sus datos no son correctos ó no tiene acceso al sistema", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
