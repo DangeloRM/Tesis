@@ -33,7 +33,6 @@
             this.pbProductos = new System.Windows.Forms.PictureBox();
             this.pbCajero = new System.Windows.Forms.PictureBox();
             this.pbDistribuidor = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pbSalir = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -109,30 +108,17 @@
             this.pbDistribuidor.TabStop = false;
             this.pbDistribuidor.Click += new System.EventHandler(this.pbDistribuidor_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Buxton Sketch", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(452, 237);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 59);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Sistema Facturación ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Buxton Sketch", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(412, 296);
+            this.label2.Location = new System.Drawing.Point(379, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(458, 59);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Minisuper María Fernanda";
+            this.label2.Text = "Minisúper María Fernanda";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbSalir
@@ -229,7 +215,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label10.Location = new System.Drawing.Point(45, 601);
+            this.label10.Location = new System.Drawing.Point(32, 601);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 26);
             this.label10.TabIndex = 11;
@@ -307,7 +293,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pbSalir);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Footlight MT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -333,7 +318,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbDistribuidor;
         private System.Windows.Forms.PictureBox pbCajero;
