@@ -36,7 +36,7 @@ namespace FacturacionMinisuper.Bitacora
                 Fecha.CurrentValues.Add(valor);
                 arregloParam.Add(Fecha);
                 this.rptReporteBitacora.ParameterFieldInfo = arregloParam;
-                report.Load(@"C:\Reportes\ReporteBitacora1.rpt");
+                report.Load(@"C:\Reportes\ReporteBitacoras.rpt");
                 //report.SetDatabaseLogon("sa", "123", "DANGELO-PC", "DBFacturacionM");
                 this.rptReporteBitacora.ReportSource = report;  
 	              

@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacturacionMinisuper", "Fac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{4237B25B-2932-43AD-9E94-7C42EC8FAB9A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SistemaFacturacion", "SistemaFacturacion\SistemaFacturacion.vdproj", "{D7C6186C-E132-473D-A302-53F44A1D2045}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,8 +27,6 @@ Global
 		{4237B25B-2932-43AD-9E94-7C42EC8FAB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4237B25B-2932-43AD-9E94-7C42EC8FAB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4237B25B-2932-43AD-9E94-7C42EC8FAB9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7C6186C-E132-473D-A302-53F44A1D2045}.Debug|Any CPU.ActiveCfg = Debug
-		{D7C6186C-E132-473D-A302-53F44A1D2045}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

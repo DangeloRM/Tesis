@@ -31,8 +31,8 @@ namespace FacturacionMinisuper
             codFactura.CurrentValues.Add(valor);
             arregloParametros.Add(codFactura);
             this.rptReporteFactura.ParameterFieldInfo = arregloParametros;
-            reporte.Load(@"C:\Reportes\ReporteFactura.rpt");
-            reporte.SetDatabaseLogon("sa", "123", "DANGELO-PC", "DBFacturacionM");
+            reporte.Load(@"C:\Reportes\ReporteFacturas.rpt");
+            //reporte.SetDatabaseLogon("sa", "123", "DANGELO-PC", "DBFacturacionM1");
             this.rptReporteFactura.ReportSource = reporte;
         }
 

@@ -119,7 +119,7 @@ namespace FacturacionMinisuper
                 connect = new SqlConnection(con);
                 connect.Open();
                 SqlCommand command;
-                command = new SqlCommand(@"backup database DBFacturacionM to disk ='C:\Respaldo\BackUp" + "-" + System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString()
+                command = new SqlCommand(@"backup database DBFacturacionM1 to disk ='C:\Respaldo\BackUp" + "-" + System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString()
                  + "-" + System.DateTime.Now.Hour.ToString() + "-" + System.DateTime.Now.Minute.ToString()
                  + "-" + System.DateTime.Now.Second.ToString() + ".bak' with init,stats=10", connect);
                 command.ExecuteNonQuery();

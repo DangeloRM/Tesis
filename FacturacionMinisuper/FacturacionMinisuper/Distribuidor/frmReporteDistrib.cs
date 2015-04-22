@@ -21,7 +21,7 @@ namespace FacturacionMinisuper.Distribuidor
         private void frmReporteDistrib_Load(object sender, EventArgs e)
         {
             ReportDocument report = new ReportDocument();
-            report.Load(@"C:\Reportes\ReporteDistribuidores.rpt");
+            report.Load(@"C:\Reportes\ReporteDistribuidor.rpt");
             report.Refresh();
             this.rptReporteDsitr.ReportSource = report;
         }
