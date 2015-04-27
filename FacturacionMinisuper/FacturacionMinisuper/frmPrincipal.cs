@@ -68,12 +68,15 @@ namespace FacturacionMinisuper
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             //Permisos del Formulario principal
-            pbBitacora.Enabled = CajeroConectado.Rol;
-            pbRespaldo.Enabled = CajeroConectado.Rol;
-            pbCajero.Enabled = CajeroConectado.Rol;
-            pbDistribuidor.Enabled = CajeroConectado.Rol;
-            pbProductos.Enabled = CajeroConectado.Rol;
-            pbBitacora.Enabled = CajeroConectado.Rol;
+            pbBitacora.Visible = CajeroConectado.Rol;
+            lblBita.Visible = CajeroConectado.Rol;
+            pbCajero.Visible = CajeroConectado.Rol;
+            lblCaje.Visible = CajeroConectado.Rol;
+            pbDistribuidor.Visible = CajeroConectado.Rol;
+            lblPro.Visible = CajeroConectado.Rol;
+            pbProductos.Visible = CajeroConectado.Rol;
+            lblProd.Visible = CajeroConectado.Rol;
+            
         }
 
         private void pbBitacora_Click(object sender, EventArgs e)
