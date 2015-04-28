@@ -118,7 +118,7 @@ namespace FacturacionMinisuper
            if (desea_respaldar)
             {
                 SqlConnection connect;
-                string con = "Data Source = DANGELO-PC; Initial Catalog=DBFacturacionM ;Integrated Security = True;";
+                string con = "Data Source = DANGELO-PC; Initial Catalog=DBFacturacionM1 ;Integrated Security = True;";
                 connect = new SqlConnection(con);
                 connect.Open();
                 SqlCommand command;

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFacturar));
             this.gbFacturación = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblMonto = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCajero = new System.Windows.Forms.Label();
             this.pbFacturar = new System.Windows.Forms.PictureBox();
@@ -40,18 +42,20 @@
             this.gvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblMonto = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbFacturación.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvFacturar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFacturación
             // 
-            this.gbFacturación.Controls.Add(this.lblMonto);
+            this.gbFacturación.Controls.Add(this.groupBox3);
             this.gbFacturación.Controls.Add(this.label3);
             this.gbFacturación.Controls.Add(this.lblCajero);
             this.gbFacturación.Controls.Add(this.pbFacturar);
@@ -68,6 +72,29 @@
             this.gbFacturación.TabIndex = 0;
             this.gbFacturación.TabStop = false;
             this.gbFacturación.Text = "Facturación";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.lblMonto);
+            this.groupBox3.Font = new System.Drawing.Font("Footlight MT Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(317, 518);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(159, 62);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Total";
+            // 
+            // lblMonto
+            // 
+            this.lblMonto.AutoSize = true;
+            this.lblMonto.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonto.ForeColor = System.Drawing.Color.Black;
+            this.lblMonto.Location = new System.Drawing.Point(69, 26);
+            this.lblMonto.Name = "lblMonto";
+            this.lblMonto.Size = new System.Drawing.Size(0, 24);
+            this.lblMonto.TabIndex = 12;
             // 
             // label3
             // 
@@ -175,14 +202,15 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Código Producto:";
             // 
-            // lblMonto
+            // pictureBox1
             // 
-            this.lblMonto.AutoSize = true;
-            this.lblMonto.Location = new System.Drawing.Point(408, 558);
-            this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(0, 15);
-            this.lblMonto.TabIndex = 12;
-            this.lblMonto.Visible = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(36, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // frmFacturar
             // 
@@ -203,12 +231,15 @@
             this.Load += new System.EventHandler(this.frmFacturar_Load);
             this.gbFacturación.ResumeLayout(false);
             this.gbFacturación.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvFacturar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,5 +258,7 @@
         private System.Windows.Forms.DataGridView gvProductos;
         private System.Windows.Forms.Label lblSeleccionado;
         private System.Windows.Forms.Label lblMonto;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

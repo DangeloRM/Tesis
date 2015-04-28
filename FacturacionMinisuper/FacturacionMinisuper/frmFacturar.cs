@@ -54,7 +54,7 @@ namespace FacturacionMinisuper
                 nuevo["Cantidad"] = Cantidad.Producto.Cantidad;
                 nuevo["SubTotal"] = Cantidad.Producto.SubTotal;
                 MontoTotal = MontoTotal + Cantidad.Producto.SubTotal;
-                //lblMonto.Text = MontoTotal.ToString();
+                lblMonto.Text = MontoTotal.ToString();
                 CarroCompras.Rows.Add(nuevo);
                 this.gvFacturar.DataSource = CarroCompras;
                 CargarGrid();
