@@ -53,8 +53,8 @@ namespace FacturacionMinisuper
                 nuevo["Precio"] = Cantidad.Producto.Precio;
                 nuevo["Cantidad"] = Cantidad.Producto.Cantidad;
                 nuevo["SubTotal"] = Cantidad.Producto.SubTotal;
-                MontoTotal = MontoTotal + Cantidad.Producto.SubTotal;
-                lblMonto.Text = MontoTotal.ToString();
+                //MontoTotal = MontoTotal + Cantidad.Producto.SubTotal;
+                //lblMonto.Text = MontoTotal.ToString();
                 CarroCompras.Rows.Add(nuevo);
                 this.gvFacturar.DataSource = CarroCompras;
                 CargarGrid();
@@ -204,6 +204,26 @@ namespace FacturacionMinisuper
              }
          }
 
+         public void UpdateAmount()
+         {
+             double Amount = 0;
+             foreach (DataRow linea in CarroCompras.Rows)
+             {
+                 try
+                 {
+                     linea.BeginEdit();
+                     Amount = Amount + Convert.ToInt32(linea[4]);
+                     linea.AcceptChanges();
+                 }
+                 catch (Exception)
+                 {
+                     //Por si acaso.
+                 }                 
+             }
+             this.lblMonto.Text = Amount.ToString();
+         }
+
+
          private void pbEliminar_Click(object sender, EventArgs e)
          {
             
@@ -212,7 +232,12 @@ namespace FacturacionMinisuper
 
          private void gvFacturar_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
          {
-             
+             UpdateAmount();
+         }
+
+         private void gvFacturar_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+         {
+             UpdateAmount();
          }
                
     }

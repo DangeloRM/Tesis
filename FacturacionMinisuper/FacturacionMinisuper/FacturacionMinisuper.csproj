@@ -52,10 +52,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>52E6DF2EE3C2F10BAB9F4CFDE6E461C5FBEC58A1</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>7C23581D6F8292376846CBF494AB03A122CA2ECA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>FacturacionMinisuper_ClaveTemporal.pfx</ManifestKeyFile>
+    <ManifestKeyFile>FacturacionMinisuper_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -267,7 +267,7 @@
     <EmbeddedResource Include="ReporteFactura.resx">
       <DependentUpon>ReporteFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="FacturacionMinisuper_ClaveTemporal.pfx" />
+    <None Include="FacturacionMinisuper_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
