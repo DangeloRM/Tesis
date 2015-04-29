@@ -52,7 +52,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>7C23581D6F8292376846CBF494AB03A122CA2ECA</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>0808E22F0FDEC5EE2BD159781D22E3320BB0B23E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>FacturacionMinisuper_TemporaryKey.pfx</ManifestKeyFile>

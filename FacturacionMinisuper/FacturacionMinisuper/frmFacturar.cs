@@ -38,7 +38,8 @@ namespace FacturacionMinisuper
             CarroCompras.Columns.Add(colPrecio);
             CarroCompras.Columns.Add(colCantidad);
             CarroCompras.Columns.Add(colSubTotal);
-        }
+
+                    }
 
         private void SolicitarCantidad(Logica.Producto objProducto)
         {
@@ -58,6 +59,7 @@ namespace FacturacionMinisuper
                 CarroCompras.Rows.Add(nuevo);
                 this.gvFacturar.DataSource = CarroCompras;
                 CargarGrid();
+
             }
         }
 
@@ -133,21 +135,24 @@ namespace FacturacionMinisuper
                      List<Logica.DetalleFactura> listaLineas = new List<Logica.DetalleFactura>();
                      foreach (DataRow linea in CarroCompras.Rows)
                      {
-                        
-                         string idP = linea[0].ToString();
-                         Logica.Producto p = new Producto(idP.ToString());
-                         string des = linea[1].ToString();
-                         int precio = Convert.ToInt32(linea[2]);
-                         int cant = Convert.ToInt32(linea[3]);
-                         int subTotal = Convert.ToInt32(linea[4]);
-                        
-                         Logica.DetalleFactura objDetalle = new Logica.DetalleFactura();
-                         objDetalle.Cantidad = cant;
-                         objDetalle.Precio = precio;
-                         objDetalle.SubTotal = subTotal;
-                         objDetalle.myProducto = p;
+                         if (linea.RowState != DataRowState.Deleted)
+                         {
+                             string idP = linea[0].ToString();
+                             Logica.Producto p = new Producto(idP.ToString());
+                             string des = linea[1].ToString();
+                             int precio = Convert.ToInt32(linea[2]);
+                             int cant = Convert.ToInt32(linea[3]);
+                             int subTotal = Convert.ToInt32(linea[4]);
+
+                             Logica.DetalleFactura objDetalle = new Logica.DetalleFactura();
+                             objDetalle.Cantidad = cant;
+                             objDetalle.Precio = precio;
+                             objDetalle.SubTotal = subTotal;
+                             objDetalle.myProducto = p;
+
+                             listaLineas.Add(objDetalle);
+                         }
                          
-                         listaLineas.Add(objDetalle);
                      }
                      if (MessageBox.Show("Deseas realizar esta venta?", "Venta Productos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -158,7 +163,7 @@ namespace FacturacionMinisuper
                      
                      ResultadoFacturacion respuesta = objGestor.Facturar(objFactura);
                     
-                     objGestor.GenerarBitacora(0, "El cajero " + myCajero.Nombre +" "+ myCajero.Apellido + " ha generado una nueva factura por un monto de: " + objFactura.Total , myCajero.IDCajero);
+                     objGestor.GenerarBitacora(0, "El cajero " + myCajero.Nombre +" "+ myCajero.Apellido + " ha generado una nueva factura por un monto de: " + this.lblMonto.Text , myCajero.IDCajero);
                      objGestor = null;
                    
                      if (respuesta.CodigoError != 0)
@@ -175,16 +180,16 @@ namespace FacturacionMinisuper
                      }
             }
                    
-                     MontoTotal = 0;
-                     lblMonto.Text = string.Empty;
-                     CarroCompras.Rows.Clear();
-                     gvFacturar.DataSource = null;
+                     //MontoTotal = 0;
+                     //lblMonto.Text = string.Empty;
+                     //CarroCompras.Rows.Clear();
+                     //gvFacturar.DataSource = null;
                  }
                  else
                  {
                      MessageBox.Show("Debe comprar al menos un producto para facturar","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                  }
-                 gvFacturar.DataSource = null;
+                 
          }
 
          private void txtCodProducto_TextChanged(object sender, EventArgs e)
@@ -222,7 +227,7 @@ namespace FacturacionMinisuper
              }
              this.lblMonto.Text = Amount.ToString();
          }
-
+           
 
          private void pbEliminar_Click(object sender, EventArgs e)
          {
@@ -238,6 +243,15 @@ namespace FacturacionMinisuper
          private void gvFacturar_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
          {
              UpdateAmount();
+         }
+
+         private void pblimpiar_Click(object sender, EventArgs e)
+         {
+             MontoTotal = 0;
+             lblMonto.Text = string.Empty;
+             CarroCompras.Rows.Clear();
+             gvFacturar.DataSource = null;
+             gvFacturar.DataSource = null;
          }
                
     }

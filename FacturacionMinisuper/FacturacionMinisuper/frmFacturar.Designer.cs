@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFacturar));
             this.gbFacturación = new System.Windows.Forms.GroupBox();
+            this.pblimpiar = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMonto = new System.Windows.Forms.Label();
@@ -43,7 +44,9 @@
             this.gvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbFacturación.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pblimpiar)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacturar)).BeginInit();
@@ -55,6 +58,8 @@
             // 
             // gbFacturación
             // 
+            this.gbFacturación.Controls.Add(this.label1);
+            this.gbFacturación.Controls.Add(this.pblimpiar);
             this.gbFacturación.Controls.Add(this.groupBox3);
             this.gbFacturación.Controls.Add(this.label3);
             this.gbFacturación.Controls.Add(this.lblCajero);
@@ -68,10 +73,22 @@
             this.gbFacturación.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbFacturación.Name = "gbFacturación";
             this.gbFacturación.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.gbFacturación.Size = new System.Drawing.Size(680, 607);
+            this.gbFacturación.Size = new System.Drawing.Size(694, 607);
             this.gbFacturación.TabIndex = 0;
             this.gbFacturación.TabStop = false;
             this.gbFacturación.Text = "Facturación";
+            // 
+            // pblimpiar
+            // 
+            this.pblimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pblimpiar.Image = ((System.Drawing.Image)(resources.GetObject("pblimpiar.Image")));
+            this.pblimpiar.Location = new System.Drawing.Point(635, 379);
+            this.pblimpiar.Name = "pblimpiar";
+            this.pblimpiar.Size = new System.Drawing.Size(52, 57);
+            this.pblimpiar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pblimpiar.TabIndex = 14;
+            this.pblimpiar.TabStop = false;
+            this.pblimpiar.Click += new System.EventHandler(this.pblimpiar_Click);
             // 
             // groupBox3
             // 
@@ -89,7 +106,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -176,7 +193,7 @@
             this.groupBox1.Controls.Add(this.gvProductos);
             this.groupBox1.Location = new System.Drawing.Point(34, 84);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(612, 230);
+            this.groupBox1.Size = new System.Drawing.Size(627, 230);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista Producto";
@@ -191,7 +208,7 @@
             this.gvProductos.Location = new System.Drawing.Point(16, 22);
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.ReadOnly = true;
-            this.gvProductos.Size = new System.Drawing.Size(579, 187);
+            this.gvProductos.Size = new System.Drawing.Size(596, 187);
             this.gvProductos.TabIndex = 0;
             this.gvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProductos_CellContentClick);
             // 
@@ -213,12 +230,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Código Producto:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(635, 439);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 15);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Limpiar";
+            // 
             // frmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(738, 648);
+            this.ClientSize = new System.Drawing.Size(752, 648);
             this.Controls.Add(this.gbFacturación);
             this.Font = new System.Drawing.Font("Footlight MT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -232,6 +258,7 @@
             this.Load += new System.EventHandler(this.frmFacturar_Load);
             this.gbFacturación.ResumeLayout(false);
             this.gbFacturación.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pblimpiar)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -261,5 +288,7 @@
         private System.Windows.Forms.Label lblMonto;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pblimpiar;
+        private System.Windows.Forms.Label label1;
     }
 }

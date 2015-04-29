@@ -112,11 +112,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label2.Location = new System.Drawing.Point(342, 255);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(585, 55);
+            this.label2.Size = new System.Drawing.Size(490, 57);
             this.label2.TabIndex = 6;
             this.label2.Text = "Minisúper María Fernanda";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,7 +126,7 @@
             this.pbSalir.BackColor = System.Drawing.Color.Transparent;
             this.pbSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbSalir.Image")));
-            this.pbSalir.Location = new System.Drawing.Point(914, 551);
+            this.pbSalir.Location = new System.Drawing.Point(898, 554);
             this.pbSalir.Name = "pbSalir";
             this.pbSalir.Size = new System.Drawing.Size(76, 47);
             this.pbSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,11 +138,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(897, 601);
+            this.label6.Location = new System.Drawing.Point(870, 601);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 25);
+            this.label6.Size = new System.Drawing.Size(135, 28);
             this.label6.TabIndex = 8;
             this.label6.Text = "Cerrar Sesión";
             // 
@@ -151,7 +151,7 @@
             this.pbBitacora.BackColor = System.Drawing.Color.Transparent;
             this.pbBitacora.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbBitacora.Image = ((System.Drawing.Image)(resources.GetObject("pbBitacora.Image")));
-            this.pbBitacora.Location = new System.Drawing.Point(319, 548);
+            this.pbBitacora.Location = new System.Drawing.Point(337, 548);
             this.pbBitacora.Name = "pbBitacora";
             this.pbBitacora.Size = new System.Drawing.Size(98, 50);
             this.pbBitacora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +164,7 @@
             this.pbRespaldo.BackColor = System.Drawing.Color.Transparent;
             this.pbRespaldo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbRespaldo.Image = ((System.Drawing.Image)(resources.GetObject("pbRespaldo.Image")));
-            this.pbRespaldo.Location = new System.Drawing.Point(188, 548);
+            this.pbRespaldo.Location = new System.Drawing.Point(213, 551);
             this.pbRespaldo.Name = "pbRespaldo";
             this.pbRespaldo.Size = new System.Drawing.Size(100, 50);
             this.pbRespaldo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -189,11 +189,11 @@
             // 
             this.lblBita.AutoSize = true;
             this.lblBita.BackColor = System.Drawing.Color.Transparent;
-            this.lblBita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBita.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBita.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblBita.Location = new System.Drawing.Point(332, 601);
+            this.lblBita.Location = new System.Drawing.Point(347, 601);
             this.lblBita.Name = "lblBita";
-            this.lblBita.Size = new System.Drawing.Size(91, 25);
+            this.lblBita.Size = new System.Drawing.Size(93, 28);
             this.lblBita.TabIndex = 9;
             this.lblBita.Text = "Bitácora";
             // 
@@ -201,11 +201,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(192, 601);
+            this.label9.Location = new System.Drawing.Point(207, 601);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 25);
+            this.label9.Size = new System.Drawing.Size(106, 28);
             this.label9.TabIndex = 10;
             this.label9.Text = "Respaldar";
             // 
@@ -213,11 +213,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label10.Location = new System.Drawing.Point(32, 601);
+            this.label10.Location = new System.Drawing.Point(23, 601);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(163, 25);
+            this.label10.Size = new System.Drawing.Size(169, 28);
             this.label10.TabIndex = 11;
             this.label10.Text = "Manual Usuario";
             // 
@@ -225,11 +225,11 @@
             // 
             this.lblCaje.AutoSize = true;
             this.lblCaje.BackColor = System.Drawing.Color.Transparent;
-            this.lblCaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaje.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCaje.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCaje.Location = new System.Drawing.Point(63, 234);
+            this.lblCaje.Location = new System.Drawing.Point(60, 234);
             this.lblCaje.Name = "lblCaje";
-            this.lblCaje.Size = new System.Drawing.Size(86, 25);
+            this.lblCaje.Size = new System.Drawing.Size(90, 33);
             this.lblCaje.TabIndex = 14;
             this.lblCaje.Text = "Cajeros";
             // 
@@ -237,11 +237,11 @@
             // 
             this.lblPro.AutoSize = true;
             this.lblPro.BackColor = System.Drawing.Color.Transparent;
-            this.lblPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPro.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPro.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblPro.Location = new System.Drawing.Point(44, 100);
+            this.lblPro.Location = new System.Drawing.Point(35, 100);
             this.lblPro.Name = "lblPro";
-            this.lblPro.Size = new System.Drawing.Size(134, 25);
+            this.lblPro.Size = new System.Drawing.Size(139, 33);
             this.lblPro.TabIndex = 15;
             this.lblPro.Text = "Proveedores";
             // 
@@ -249,11 +249,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(60, 509);
+            this.label3.Location = new System.Drawing.Point(54, 507);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 25);
+            this.label3.Size = new System.Drawing.Size(107, 33);
             this.label3.TabIndex = 16;
             this.label3.Text = "Facturar";
             // 
@@ -261,11 +261,11 @@
             // 
             this.lblProd.AutoSize = true;
             this.lblProd.BackColor = System.Drawing.Color.Transparent;
-            this.lblProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProd.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProd.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblProd.Location = new System.Drawing.Point(60, 371);
+            this.lblProd.Location = new System.Drawing.Point(45, 371);
             this.lblProd.Name = "lblProd";
-            this.lblProd.Size = new System.Drawing.Size(109, 25);
+            this.lblProd.Size = new System.Drawing.Size(120, 33);
             this.lblProd.TabIndex = 17;
             this.lblProd.Text = "Productos";
             // 
