@@ -57,7 +57,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(19, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(448, 76);
+            this.pictureBox1.Size = new System.Drawing.Size(374, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -65,7 +65,7 @@
             // lblcod
             // 
             this.lblcod.AutoSize = true;
-            this.lblcod.Location = new System.Drawing.Point(68, 114);
+            this.lblcod.Location = new System.Drawing.Point(65, 114);
             this.lblcod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcod.Name = "lblcod";
             this.lblcod.Size = new System.Drawing.Size(58, 18);
@@ -75,7 +75,7 @@
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
-            this.lblnombre.Location = new System.Drawing.Point(68, 153);
+            this.lblnombre.Location = new System.Drawing.Point(58, 153);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(65, 18);
@@ -95,7 +95,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 225);
+            this.label4.Location = new System.Drawing.Point(58, 225);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
@@ -104,16 +104,16 @@
             // 
             // txtCodDis
             // 
-            this.txtCodDis.Location = new System.Drawing.Point(187, 108);
+            this.txtCodDis.Location = new System.Drawing.Point(134, 111);
             this.txtCodDis.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodDis.Name = "txtCodDis";
             this.txtCodDis.ReadOnly = true;
-            this.txtCodDis.Size = new System.Drawing.Size(212, 24);
+            this.txtCodDis.Size = new System.Drawing.Size(62, 24);
             this.txtCodDis.TabIndex = 124;
             // 
             // txtNomb
             // 
-            this.txtNomb.Location = new System.Drawing.Point(187, 149);
+            this.txtNomb.Location = new System.Drawing.Point(134, 150);
             this.txtNomb.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomb.MaxLength = 25;
             this.txtNomb.Name = "txtNomb";
@@ -123,11 +123,11 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(187, 221);
+            this.txtTelefono.Location = new System.Drawing.Point(134, 222);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.MaxLength = 15;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(212, 24);
+            this.txtTelefono.Size = new System.Drawing.Size(120, 24);
             this.txtTelefono.TabIndex = 3;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
@@ -135,7 +135,7 @@
             // 
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(403, 268);
+            this.btnCancelar.Location = new System.Drawing.Point(329, 266);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(64, 48);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -147,7 +147,7 @@
             // 
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(307, 268);
+            this.btnAgregar.Location = new System.Drawing.Point(233, 266);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(64, 48);
             this.btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,7 +158,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(309, 319);
+            this.label2.Location = new System.Drawing.Point(235, 317);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 126;
@@ -167,7 +167,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(400, 319);
+            this.label1.Location = new System.Drawing.Point(326, 317);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 125;
@@ -175,12 +175,12 @@
             // 
             // txtEstad
             // 
-            this.txtEstad.Location = new System.Drawing.Point(187, 186);
+            this.txtEstad.Location = new System.Drawing.Point(134, 186);
             this.txtEstad.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstad.MaxLength = 25;
             this.txtEstad.Name = "txtEstad";
             this.txtEstad.ReadOnly = true;
-            this.txtEstad.Size = new System.Drawing.Size(212, 24);
+            this.txtEstad.Size = new System.Drawing.Size(62, 24);
             this.txtEstad.TabIndex = 127;
             this.txtEstad.Text = "Activo";
             // 
@@ -201,7 +201,7 @@
             this.groupBox1.Controls.Add(this.txtNomb);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 342);
+            this.groupBox1.Size = new System.Drawing.Size(416, 342);
             this.groupBox1.TabIndex = 128;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Proveedor";
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(510, 365);
+            this.ClientSize = new System.Drawing.Size(442, 365);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Footlight MT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

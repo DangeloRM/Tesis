@@ -58,7 +58,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(36, 41);
+            this.lblID.Location = new System.Drawing.Point(83, 41);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(71, 18);
@@ -68,7 +68,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(36, 91);
+            this.lblNombre.Location = new System.Drawing.Point(85, 91);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(69, 18);
@@ -78,7 +78,7 @@
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Location = new System.Drawing.Point(36, 142);
+            this.lblApellidos.Location = new System.Drawing.Point(82, 142);
             this.lblApellidos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(72, 18);
@@ -88,7 +88,7 @@
             // lbltelefono
             // 
             this.lbltelefono.AutoSize = true;
-            this.lbltelefono.Location = new System.Drawing.Point(36, 185);
+            this.lbltelefono.Location = new System.Drawing.Point(82, 185);
             this.lbltelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltelefono.Name = "lbltelefono";
             this.lbltelefono.Size = new System.Drawing.Size(72, 18);
@@ -98,7 +98,7 @@
             // lblContrasena
             // 
             this.lblContrasena.AutoSize = true;
-            this.lblContrasena.Location = new System.Drawing.Point(36, 236);
+            this.lblContrasena.Location = new System.Drawing.Point(66, 236);
             this.lblContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.Size = new System.Drawing.Size(88, 18);
@@ -112,7 +112,7 @@
             this.txtIDCajero.MaxLength = 12;
             this.txtIDCajero.Name = "txtIDCajero";
             this.txtIDCajero.ReadOnly = true;
-            this.txtIDCajero.Size = new System.Drawing.Size(179, 24);
+            this.txtIDCajero.Size = new System.Drawing.Size(93, 24);
             this.txtIDCajero.TabIndex = 1;
             this.txtIDCajero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDCajero_KeyPress);
             // 
@@ -142,7 +142,7 @@
             this.txtTelef.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelef.MaxLength = 15;
             this.txtTelef.Name = "txtTelef";
-            this.txtTelef.Size = new System.Drawing.Size(179, 24);
+            this.txtTelef.Size = new System.Drawing.Size(93, 24);
             this.txtTelef.TabIndex = 4;
             this.txtTelef.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelef_KeyPress);
             // 
@@ -221,7 +221,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 290);
+            this.label3.Location = new System.Drawing.Point(36, 287);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 18);
@@ -235,7 +235,7 @@
             this.txtIdTipo.MaxLength = 25;
             this.txtIdTipo.Name = "txtIdTipo";
             this.txtIdTipo.ReadOnly = true;
-            this.txtIdTipo.Size = new System.Drawing.Size(179, 24);
+            this.txtIdTipo.Size = new System.Drawing.Size(49, 24);
             this.txtIdTipo.TabIndex = 110;
             this.txtIdTipo.Text = "2";
             this.txtIdTipo.Visible = false;

@@ -92,7 +92,7 @@
             // 
             // txtDistri
             // 
-            this.txtDistri.Location = new System.Drawing.Point(216, 224);
+            this.txtDistri.Location = new System.Drawing.Point(162, 224);
             this.txtDistri.Name = "txtDistri";
             this.txtDistri.Size = new System.Drawing.Size(205, 24);
             this.txtDistri.TabIndex = 18;
@@ -143,16 +143,16 @@
             // 
             // txtNuevaCantidad
             // 
-            this.txtNuevaCantidad.Location = new System.Drawing.Point(216, 257);
+            this.txtNuevaCantidad.Location = new System.Drawing.Point(162, 257);
             this.txtNuevaCantidad.Name = "txtNuevaCantidad";
-            this.txtNuevaCantidad.Size = new System.Drawing.Size(205, 24);
+            this.txtNuevaCantidad.Size = new System.Drawing.Size(74, 24);
             this.txtNuevaCantidad.TabIndex = 4;
             this.txtNuevaCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNuevaCantidad_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 259);
+            this.label3.Location = new System.Drawing.Point(13, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 18);
             this.label3.TabIndex = 15;
@@ -161,7 +161,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 226);
+            this.label2.Location = new System.Drawing.Point(55, 227);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 18);
             this.label2.TabIndex = 12;
@@ -169,25 +169,25 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(216, 153);
+            this.txtPrecio.Location = new System.Drawing.Point(162, 150);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(205, 24);
+            this.txtPrecio.Size = new System.Drawing.Size(110, 24);
             this.txtPrecio.TabIndex = 3;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(216, 186);
+            this.txtCantidad.Location = new System.Drawing.Point(162, 186);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.ReadOnly = true;
-            this.txtCantidad.Size = new System.Drawing.Size(205, 24);
+            this.txtCantidad.Size = new System.Drawing.Size(95, 24);
             this.txtCantidad.TabIndex = 10;
             // 
             // txtNombProduct
             // 
-            this.txtNombProduct.Location = new System.Drawing.Point(216, 76);
+            this.txtNombProduct.Location = new System.Drawing.Point(162, 74);
             this.txtNombProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombProduct.MaxLength = 100;
             this.txtNombProduct.Multiline = true;
@@ -197,7 +197,7 @@
             // 
             // txtCodProdu
             // 
-            this.txtCodProdu.Location = new System.Drawing.Point(216, 35);
+            this.txtCodProdu.Location = new System.Drawing.Point(162, 35);
             this.txtCodProdu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCodProdu.MaxLength = 20;
             this.txtCodProdu.Name = "txtCodProdu";
@@ -208,7 +208,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(75, 38);
+            this.label6.Location = new System.Drawing.Point(88, 38);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 18);
@@ -218,7 +218,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 100);
+            this.label1.Location = new System.Drawing.Point(75, 99);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 18);
@@ -228,7 +228,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(75, 188);
+            this.label5.Location = new System.Drawing.Point(99, 189);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 18);
@@ -238,7 +238,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(75, 155);
+            this.lblPrecio.Location = new System.Drawing.Point(44, 153);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(102, 18);

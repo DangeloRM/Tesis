@@ -177,6 +177,10 @@ namespace FacturacionMinisuper
                          objReporte.CodFactura = respuesta.idFactura;
                          objReporte.ShowDialog();
                          CargarGrid();
+                         gvFacturar.DataSource = null;
+                         MontoTotal = 0;
+                         lblMonto.Text = string.Empty;
+                         CarroCompras.Rows.Clear();
                      }
             }
                    
@@ -189,7 +193,7 @@ namespace FacturacionMinisuper
                  {
                      MessageBox.Show("Debe comprar al menos un producto para facturar","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                  }
-                 
+                 //gvFacturar.DataSource = null;
          }
 
          private void txtCodProducto_TextChanged(object sender, EventArgs e)
@@ -251,7 +255,7 @@ namespace FacturacionMinisuper
              lblMonto.Text = string.Empty;
              CarroCompras.Rows.Clear();
              gvFacturar.DataSource = null;
-             gvFacturar.DataSource = null;
+             
          }
                
     }

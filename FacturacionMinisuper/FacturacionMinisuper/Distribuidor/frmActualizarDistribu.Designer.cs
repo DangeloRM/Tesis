@@ -65,7 +65,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(77, 142);
+            this.lblCodigo.Location = new System.Drawing.Point(98, 141);
             this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(58, 18);
@@ -75,7 +75,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(77, 184);
+            this.lblNombre.Location = new System.Drawing.Point(91, 182);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(65, 18);
@@ -85,7 +85,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(77, 231);
+            this.lblEstado.Location = new System.Drawing.Point(101, 230);
             this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 18);
@@ -95,7 +95,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(77, 269);
+            this.lblTelefono.Location = new System.Drawing.Point(88, 268);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(68, 18);
@@ -104,16 +104,16 @@
             // 
             // txtCodDistrib
             // 
-            this.txtCodDistrib.Location = new System.Drawing.Point(191, 138);
+            this.txtCodDistrib.Location = new System.Drawing.Point(164, 138);
             this.txtCodDistrib.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodDistrib.Name = "txtCodDistrib";
             this.txtCodDistrib.ReadOnly = true;
-            this.txtCodDistrib.Size = new System.Drawing.Size(234, 24);
+            this.txtCodDistrib.Size = new System.Drawing.Size(96, 24);
             this.txtCodDistrib.TabIndex = 23;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(191, 179);
+            this.txtNombre.Location = new System.Drawing.Point(164, 179);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 25;
             this.txtNombre.Name = "txtNombre";
@@ -122,11 +122,11 @@
             // 
             // txtTelefo
             // 
-            this.txtTelefo.Location = new System.Drawing.Point(191, 265);
+            this.txtTelefo.Location = new System.Drawing.Point(164, 265);
             this.txtTelefo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefo.MaxLength = 15;
             this.txtTelefo.Name = "txtTelefo";
-            this.txtTelefo.Size = new System.Drawing.Size(234, 24);
+            this.txtTelefo.Size = new System.Drawing.Size(96, 24);
             this.txtTelefo.TabIndex = 3;
             this.txtTelefo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefo_KeyPress);
             // 
@@ -137,10 +137,10 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(191, 227);
+            this.txtEstado.Location = new System.Drawing.Point(164, 227);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(234, 26);
+            this.txtEstado.Size = new System.Drawing.Size(96, 26);
             this.txtEstado.TabIndex = 2;
             // 
             // btnCancelar

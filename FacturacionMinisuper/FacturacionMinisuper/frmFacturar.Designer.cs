@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFacturar));
             this.gbFacturación = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pblimpiar = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,7 +45,6 @@
             this.gvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbFacturación.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblimpiar)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -77,6 +77,15 @@
             this.gbFacturación.TabIndex = 0;
             this.gbFacturación.TabStop = false;
             this.gbFacturación.Text = "Facturación";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(635, 439);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 15);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Limpiar";
             // 
             // pblimpiar
             // 
@@ -118,7 +127,7 @@
             this.lblMonto.AutoSize = true;
             this.lblMonto.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonto.ForeColor = System.Drawing.Color.Black;
-            this.lblMonto.Location = new System.Drawing.Point(69, 26);
+            this.lblMonto.Location = new System.Drawing.Point(79, 26);
             this.lblMonto.Name = "lblMonto";
             this.lblMonto.Size = new System.Drawing.Size(0, 24);
             this.lblMonto.TabIndex = 12;
@@ -229,15 +238,6 @@
             this.label2.Size = new System.Drawing.Size(112, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Código Producto:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(635, 439);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Limpiar";
             // 
             // frmFacturar
             // 
