@@ -104,6 +104,18 @@ namespace Conexion
             return registrosAfectados;
         }
 
+        public void Respaldo(string consulta)
+        {
+            try
+            {
+                SqlCommand comando = new SqlCommand(consulta, cnx);
+                comando.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
         #endregion Funciones
 
         #region Destruc

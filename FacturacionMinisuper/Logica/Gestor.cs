@@ -9,9 +9,15 @@ namespace Logica
 {
    public class Gestor : Logica.IGestor 
     {
+       Respaldo objrespal = null;
 
+       public void RealizarRespaldo()
+       {
+           objrespal = new Respaldo();
+           objrespal.RealizarBackup();
+       }
         #region Cajero
-
+       
         Cajero objCajero = null;
         public int ActualizarCajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
         {

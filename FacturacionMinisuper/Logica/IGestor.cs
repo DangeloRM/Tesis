@@ -3,6 +3,7 @@ namespace Logica
 {
     interface IGestor
     {
+        void RealizarRespaldo();
         int ActualizarCajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso);
         int ActualizarDistribuidor(string nombre, string estado, string telefono, int coddistribuidor);
         int ActualizarMovInventario(DateTime fecharealizacion, int codinventario);

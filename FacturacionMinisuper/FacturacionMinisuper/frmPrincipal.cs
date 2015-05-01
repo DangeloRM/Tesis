@@ -98,10 +98,7 @@ namespace FacturacionMinisuper
                 proc.StartInfo.FileName = "C:\\ManualUsuario.pdf";
                 proc.Start();
                 proc.Close();
-                //Process.Start( @"C:\\Manual.pdf");
-                //Application.StartupPath + 
-                //string pdfPath = Path.Combine(Application.StartupPath, "archivo.pdf");
-                //Process.Start(pdfPath);
+                
             }
             catch (Exception)            {
                 MessageBox.Show("No se puede mostrar");
@@ -110,27 +107,46 @@ namespace FacturacionMinisuper
 
         private void pbRespaldo_Click(object sender, EventArgs e)
         {
-              if (MessageBox.Show("Deseas respaldar la base de datos?", "Backup", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+             if (MessageBox.Show("Deseas respaldar la base de datos?", "Backup", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-            bool desea_respaldar = true;
-            Cursor.Current = Cursors.WaitCursor;
+                  Logica.Gestor objGestor = new Logica.Gestor();
+                 Logica.Respaldo objRespaldo = objGestor.RealizarRespaldo();
+                    objGestor = null;
 
-           if (desea_respaldar)
-            {
-                SqlConnection connect;
-                string con = "Data Source = DANGELO-PC; Initial Catalog=DBFacturacionM1 ;Integrated Security = True;";
-                connect = new SqlConnection(con);
-                connect.Open();
-                SqlCommand command;
-                command = new SqlCommand(@"backup database DBFacturacionM1 to disk ='C:\Respaldo\BackUp" + "-" + System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString()
-                 + "-" + System.DateTime.Now.Hour.ToString() + "-" + System.DateTime.Now.Minute.ToString()
-                 + "-" + System.DateTime.Now.Second.ToString() + ".bak' with init,stats=10", connect);
-                command.ExecuteNonQuery();
-                connect.Close();
+            //    Logica.Gestor objGestor = new Logica.Gestor();
+            //    int registrosAfectados = objGestor.RealizarRespaldo();
 
-                MessageBox.Show("El Respaldo de la base de datos fue realizado satisfactoriamente!!", "Respaldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            }
+            //      if (registrosAfectados)
+            //    {
+            //        MessageBox.Show("Respaldo realizado correctamente!", "BackUp!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+
+            //    else
+            //    {
+            //        MessageBox.Show("Respaldo", "Error al respaldar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    }
+
+            //    objGestor = null;
+            //    DialogResult = System.Windows.Forms.DialogResult.OK;
+            //bool desea_respaldar = true;
+            //    Cursor.Current = Cursors.WaitCursor;
+
+            //    if (desea_respaldar)
+            //    {
+            //        SqlConnection connect;
+            //        string con = "Data Source = DANGELO-PC; Initial Catalog=DBFacturacionM1 ;Integrated Security = True;";
+            //        connect = new SqlConnection(con);
+            //        connect.Open();
+            //        SqlCommand command;
+            //        command = new SqlCommand(@"backup database DBFacturacionM1 to disk ='C:\Respaldo\BackUp" + "-" + System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString()
+            //         + "-" + System.DateTime.Now.Hour.ToString() + "-" + System.DateTime.Now.Minute.ToString()
+            //         + "-" + System.DateTime.Now.Second.ToString() + ".bak' with init,stats=10", connect);
+            //        command.ExecuteNonQuery();
+            //        connect.Close();
+
+            //        MessageBox.Show("El Respaldo de la base de datos fue realizado satisfactoriamente!!", "Respaldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+           }
            
         }
     }

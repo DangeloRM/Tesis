@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="IGestor.cs" />
     <Compile Include="ProcesoFacturacion.cs" />
+    <Compile Include="Respaldo.cs" />
     <Compile Include="ResultadoFacturacion.cs" />
     <Compile Include="Bitacora.cs" />
     <Compile Include="Cajero.cs" />
