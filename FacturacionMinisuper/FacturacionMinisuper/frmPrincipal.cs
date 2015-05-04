@@ -110,7 +110,7 @@ namespace FacturacionMinisuper
              if (MessageBox.Show("Deseas respaldar la base de datos?", "Backup", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                   Logica.Gestor objGestor = new Logica.Gestor();
-                 Logica.Respaldo objRespaldo = objGestor.RealizarRespaldo();
+                 //Logica.Respaldo objRespaldo = objGestor.RealizarRespaldo();
                     objGestor = null;
 
             //    Logica.Gestor objGestor = new Logica.Gestor();
