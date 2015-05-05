@@ -52,8 +52,6 @@ namespace FacturacionMinisuper
                 nuevo["Precio"] = Cantidad.Producto.Precio;
                 nuevo["Cantidad"] = Cantidad.Producto.Cantidad;
                 nuevo["SubTotal"] = Cantidad.Producto.SubTotal;
-                //MontoTotal = MontoTotal + Cantidad.Producto.SubTotal;
-                //lblMonto.Text = MontoTotal.ToString();
                 CarroCompras.Rows.Add(nuevo);
                 this.gvFacturar.DataSource = CarroCompras;
                 CargarGrid();
@@ -174,16 +172,12 @@ namespace FacturacionMinisuper
                     }
                 }
 
-                //MontoTotal = 0;
-                //lblMonto.Text = string.Empty;
-                //CarroCompras.Rows.Clear();
-                //gvFacturar.DataSource = null;
             }
             else
             {
                 MessageBox.Show("Debe comprar al menos un producto para facturar", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            //gvFacturar.DataSource = null;
+            
         }
 
         private void txtCodProducto_TextChanged(object sender, EventArgs e)
@@ -221,11 +215,7 @@ namespace FacturacionMinisuper
             this.lblMonto.Text = Amount.ToString();
         }
 
-        private void pbEliminar_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void gvFacturar_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+         private void gvFacturar_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             UpdateAmount();
         }
