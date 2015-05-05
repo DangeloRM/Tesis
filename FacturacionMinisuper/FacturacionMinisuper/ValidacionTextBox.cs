@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper
@@ -26,7 +22,7 @@ namespace FacturacionMinisuper
             else
             {
                 v.Handled = true;
-                MessageBox.Show("Solo se permiten Letras","Ingreso datos no validos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Solo se permiten Letras", "Ingreso datos no validos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

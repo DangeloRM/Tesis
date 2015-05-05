@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper.Productos
@@ -22,29 +15,25 @@ namespace FacturacionMinisuper.Productos
             ComboDistribuidor();
         }
 
-
         private void pbAgregar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCodProdu.Text) && !string.IsNullOrEmpty(txtNombProduct.Text)  && !string.IsNullOrEmpty(txtPrecio.Text) && !string.IsNullOrEmpty(txtNombreDistribui.Text))
+            if (!string.IsNullOrEmpty(txtCodProdu.Text) && !string.IsNullOrEmpty(txtNombProduct.Text) && !string.IsNullOrEmpty(txtPrecio.Text) && !string.IsNullOrEmpty(txtNombreDistribui.Text))
             {
-
                 Logica.Gestor objGestor = new Logica.Gestor();
                 int registrosAfectados = objGestor.AgregarProducto(txtCodProdu.Text, txtNombProduct.Text, Convert.ToDouble(txtPrecio.Text), Convert.ToInt32(txtCodDistribui.Text));
 
-                if (registrosAfectados > 0 )
+                if (registrosAfectados > 0)
                 {
                     MessageBox.Show("Producto Agregado correctamente!", "Producto Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
                 else
                 {
-                     MessageBox.Show("Producto", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Producto", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
                 objGestor = null;
                 DialogResult = System.Windows.Forms.DialogResult.OK;
             }
-
             else
             {
                 MessageBox.Show("Por favor ingrese todos los datos", "Datos Incompletos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -66,10 +55,8 @@ namespace FacturacionMinisuper.Productos
                 else
                 {
                 }
-
             }
         }
-
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -98,7 +85,7 @@ namespace FacturacionMinisuper.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error capturado: " +ex);
+                MessageBox.Show("Error capturado: " + ex);
             }
         }
 
@@ -120,6 +107,5 @@ namespace FacturacionMinisuper.Productos
                 MessageBox.Show("Ingrese un Proveedor ó Proveedor Inexistente", "Error al Buscar!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        }
+    }
 }

@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logica
 {
     public class Bitacora
     {
-
         #region Prop
+
         public int CodBitacora { get; set; }
+
         public string Evento { get; set; }
+
         public int IDCajero { get; set; }
 
         #endregion Prop
@@ -21,10 +19,9 @@ namespace Logica
 
         public Bitacora()
         {
-
         }
 
-        public Bitacora(int codbitacora, string evento,  int idcajero)
+        public Bitacora(int codbitacora, string evento, int idcajero)
         {
             this.CodBitacora = codbitacora;
             this.Evento = evento;
@@ -33,9 +30,8 @@ namespace Logica
 
         #endregion Contruc
 
-
         #region Opraciones Select
-        
+
         /// <summary>
         /// Consultar Bitacora
         /// </summary>
@@ -60,22 +56,19 @@ namespace Logica
                         string even = dtResultado.Rows[0][1].ToString();
                         int idcaje = Convert.ToInt32(dtResultado.Rows[0][2].ToString());
 
-                        objBitacora = new Bitacora(codbitac, even,  idcaje);
-
+                        objBitacora = new Bitacora(codbitac, even, idcaje);
                     }
                     objDatos.CerrarConexion();
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("HUBO UN ERROR", ex); 
+                Console.WriteLine("HUBO UN ERROR", ex);
             }
             objDatos = null;
             GC.Collect();
             return objBitacora;
         }
-
-
 
         /// <summary>
         /// Consulta Masiva Bitacora
@@ -94,11 +87,10 @@ namespace Logica
                     dtBitacora = objDatos.HacerSelect(consulta);
                     objDatos.CerrarConexion();
                 }
-
             }
             catch (Exception ex)
             {
-                Console.WriteLine("HUBO UN ERROR", ex); 
+                Console.WriteLine("HUBO UN ERROR", ex);
             }
             objDatos = null;
             GC.Collect();
@@ -106,7 +98,6 @@ namespace Logica
         }
 
         #endregion Opraciones Select
-
 
         #region Operaciones Hit
 
@@ -122,10 +113,10 @@ namespace Logica
         {
             int registrosafectados = 0;
             Conexion.Conexion objDatos = new Conexion.Conexion();
-            string consulta = string.Format(" exec AgregarBitacora {0},'{1}',{2}", CodBitacora, Evento, IDCajero);            
+            string consulta = string.Format(" exec AgregarBitacora {0},'{1}',{2}", CodBitacora, Evento, IDCajero);
             if (objDatos.AbrirConexion())
             {
-               registrosafectados = objDatos.OperacionesHit(consulta);
+                registrosafectados = objDatos.OperacionesHit(consulta);
                 objDatos.CerrarConexion();
             }
             objDatos = null;
@@ -147,21 +138,19 @@ namespace Logica
                     {
                         int cod = Convert.ToInt32(dtResultado.Rows[0][0].ToString());
                         num = cod + 1;
-
                     }
                     objDatos.CerrarConexion();
                 }
             }
             catch (Exception)
             {
-
                 num = 0;
             }
             objDatos = null;
             GC.Collect();
             return num;
         }
-        
+
         #endregion Operaciones Hit
 
         #region Desctruc
@@ -171,7 +160,6 @@ namespace Logica
             this.CodBitacora = 0;
             this.Evento = null;
             this.IDCajero = 0;
-
         }
 
         #endregion Desctruc

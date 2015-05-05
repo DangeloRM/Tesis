@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logica
 {
@@ -12,27 +8,38 @@ namespace Logica
         #region Prop
 
         public int IDCajero { get; set; }
+
         public string NombreAcceso { get; set; }
+
         public string Nombre { get; set; }
+
         public string Apellido { get; set; }
+
         public string Telefono { get; set; }
+
         public string Contrasena { get; set; }
+
         public bool Estado { get; set; }
+
         public int IDTipoAcceso { get; set; }
+
         public bool Rol { get; set; }
 
         #endregion Prop
 
         #region Contruc
-        public Cajero() { }
 
-         public Cajero(int idcajero)
-         {
+        public Cajero()
+        {
+        }
+
+        public Cajero(int idcajero)
+        {
             this.IDCajero = idcajero;
-         }
+        }
 
         public Cajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
-         {
+        {
             this.IDCajero = pId;
             this.NombreAcceso = pAcceso;
             this.Contrasena = pPass;
@@ -41,7 +48,7 @@ namespace Logica
             this.Telefono = pTelefono;
             this.Estado = pEstado;
             this.IDTipoAcceso = pIdAcceso;
-         }
+        }
 
         public Cajero(string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
         {
@@ -65,9 +72,11 @@ namespace Logica
             this.IDTipoAcceso = pIdAcceso;
             this.Rol = pRol;
         }
+
         #endregion Contruc
 
         #region Operaciones Select
+
         /// <summary>
         /// Consulta Especifica Cajero
         /// </summary>
@@ -76,7 +85,7 @@ namespace Logica
         public Cajero ConsultarCajero(int Usuario)
         {
             Cajero objCajero = null;
-            string consulta = string.Format("select c.IDCajero, c.NombreAcceso, c.Contrasena, c.Nombre, c.Apellido, c.Telefono, "                             +"c.Estado, c.IDTipoAcceso from Cajero c"
+            string consulta = string.Format("select c.IDCajero, c.NombreAcceso, c.Contrasena, c.Nombre, c.Apellido, c.Telefono, " + "c.Estado, c.IDTipoAcceso from Cajero c"
                                            + "where c.NombreAcceso = '{0}'", Usuario);
             Conexion.Conexion objDatos = new Conexion.Conexion();
             try
@@ -101,7 +110,7 @@ namespace Logica
             }
             catch (Exception ex)
             {
-                Console.WriteLine("HUBO UN ERROR", ex); 
+                Console.WriteLine("HUBO UN ERROR", ex);
             }
             objDatos = null;
             GC.Collect();
@@ -161,11 +170,10 @@ namespace Logica
                     dtCajero = objDatos.HacerSelect(consulta);
                     objDatos.CerrarConexion();
                 }
-
             }
             catch (Exception ex)
             {
-                Console.WriteLine("HUBO UN ERROR", ex); 
+                Console.WriteLine("HUBO UN ERROR", ex);
             }
             objDatos = null;
             GC.Collect();
@@ -175,6 +183,7 @@ namespace Logica
         #endregion Operaciones Select
 
         #region Operaciones Hit
+
         /// <summary>
         /// Actualizar  Cajero
         /// </summary>
@@ -218,10 +227,10 @@ namespace Logica
             int registrosafectados = 0;
             Conexion.Conexion objDatos = new Conexion.Conexion();
 
-            string consulta = string.Format("exec SP_Cajero {0},'{1}','{2}', '{3}','{4}','{5}',1,2",IDCajero,NombreAcceso,Contrasena,Nombre,Apellido,Telefono,Estado,IDTipoAcceso);
+            string consulta = string.Format("exec SP_Cajero {0},'{1}','{2}', '{3}','{4}','{5}',1,2", IDCajero, NombreAcceso, Contrasena, Nombre, Apellido, Telefono, Estado, IDTipoAcceso);
             if (objDatos.AbrirConexion())
             {
-               registrosafectados = objDatos.OperacionesHit(consulta);
+                registrosafectados = objDatos.OperacionesHit(consulta);
                 objDatos.CerrarConexion();
             }
             objDatos = null;
@@ -243,14 +252,12 @@ namespace Logica
                     {
                         int cod = Convert.ToInt32(dtResultado.Rows[0][0].ToString());
                         num = cod + 1;
-
                     }
                     objDatos.CerrarConexion();
                 }
             }
             catch (Exception)
             {
-
                 num = 0;
             }
             objDatos = null;
@@ -258,7 +265,6 @@ namespace Logica
             return num;
         }
 
-             
         #endregion Operaciones Hit
 
         #region Destruc

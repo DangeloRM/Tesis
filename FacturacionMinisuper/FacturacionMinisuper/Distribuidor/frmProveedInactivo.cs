@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper.Distribuidor
@@ -33,12 +26,10 @@ namespace FacturacionMinisuper.Distribuidor
                 string codDistriSelect = rowActual.Cells[0].Value.ToString();
                 lblSeleccionado.Text = codDistriSelect;
             }
-
         }
 
         private void gvDistribuidor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void frmProveedInactivo_Load(object sender, EventArgs e)
@@ -48,7 +39,6 @@ namespace FacturacionMinisuper.Distribuidor
 
         private void pbActualizaDistribu_Click(object sender, EventArgs e)
         {
-
             if (gvDistribuidor.CurrentRow != null)
             {
                 int coddistr = Convert.ToInt32(gvDistribuidor.CurrentRow.Cells[0].Value.ToString());

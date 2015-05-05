@@ -1,31 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logica
 {
-   public class Respaldo
+    public class Respaldo
     {
-
-       public void RealizarBackup()
-       {
-           string consulta = string.Format(@"backup database DBFacturacionM1 to disk ='C:\Respaldo\BackUp" + "-" + System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString()
-                   + "-" + System.DateTime.Now.Hour.ToString() + "-" + System.DateTime.Now.Minute.ToString()
-                   + "-" + System.DateTime.Now.Second.ToString() + ".bak' with init,stats=10");
-
-           Conexion.Conexion objDatos = new Conexion.Conexion();
-           if (objDatos.AbrirConexion())
-           {
-               objDatos.Respaldo(consulta);
-               objDatos.CerrarConexion();
-           }
-           objDatos = null;
-           GC.Collect();
-
-       }
-           
+        public int RealizarBackup()
+        {
+            int success = 0;
+            string cmd = "USE Master "
+                         + "BACKUP DATABASE DBFacturacionM1 "
+                         + "TO DISK = 'C:\\Respaldo\\BackUp-" + DateTime.Today.Day
+                         + "-" + DateTime.Today.Month
+                         + "-" + DateTime.Today.Year
+                         + "-" + DateTime.Now.Hour
+                         + "-" + DateTime.Now.Minute
+                         + "-" + DateTime.Now.Second
+                         + ".bak' WITH NOINIT";
+            Conexion.Conexion objDatos = new Conexion.Conexion();
+            if (objDatos.AbrirConexion())
+            {
+                success = objDatos.Respaldo(cmd);
+                objDatos.CerrarConexion();
+            }
+            objDatos = null;
+            GC.Collect();
+            return success;
+        }
     }
 }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logica
 {
@@ -12,17 +8,19 @@ namespace Logica
         #region Propi
 
         public int CodDistribuidor { get; set; }
-        public string Nombre { get; set; }
-        public string Estado { get; set; }
-        public string Telefono { get; set; }   
 
+        public string Nombre { get; set; }
+
+        public string Estado { get; set; }
+
+        public string Telefono { get; set; }
 
         #endregion Propi
 
         #region Constru
+
         public Distribuidor()
         {
-
         }
 
         public Distribuidor(string nombre)
@@ -35,54 +33,52 @@ namespace Logica
             this.CodDistribuidor = codditribuidor;
             this.Nombre = nombre;
             this.Estado = estado;
-            this.Telefono = telefono;     
-
+            this.Telefono = telefono;
         }
 
-        #endregion Construc
+        #endregion Constru
 
         #region Operaciones Select
+
         /// <summary>
         /// Consulta Especifica de Distribuidores
         /// </summary>
         /// <param name="coddistribuidor"></param>
         /// <returns></returns>
         public Distribuidor ConsultarDistribuidor(int coddistribuidor)
-        { 
-        Distribuidor objDistribuidor = null;
-        string consulta = string.Format("Select CodDistribuidor, Nombre, Estado, Telefono" +
-                                        "from Distribuidor where CodDistribuidor = (0)", coddistribuidor);
-
-        Conexion.Conexion objDatos = new Conexion.Conexion();
-
-        try
         {
-            if (objDatos.AbrirConexion())
+            Distribuidor objDistribuidor = null;
+            string consulta = string.Format("Select CodDistribuidor, Nombre, Estado, Telefono" +
+                                            "from Distribuidor where CodDistribuidor = (0)", coddistribuidor);
+
+            Conexion.Conexion objDatos = new Conexion.Conexion();
+
+            try
             {
-                DataTable dtResultado = objDatos.HacerSelect(consulta);
-
-                if (dtResultado != null && dtResultado.Rows.Count >0)
+                if (objDatos.AbrirConexion())
                 {
-                    
-                    int codDis = Convert.ToInt32(dtResultado.Rows[0][0]);
-                    string nomb = dtResultado.Rows[0][1].ToString();
-                    string estad = dtResultado.Rows[0][2].ToString();
-                    string telf = dtResultado.Rows[0][3].ToString();
+                    DataTable dtResultado = objDatos.HacerSelect(consulta);
 
-                    objDistribuidor = new Distribuidor(codDis, nomb, estad, telf);
-                    
+                    if (dtResultado != null && dtResultado.Rows.Count > 0)
+                    {
+                        int codDis = Convert.ToInt32(dtResultado.Rows[0][0]);
+                        string nomb = dtResultado.Rows[0][1].ToString();
+                        string estad = dtResultado.Rows[0][2].ToString();
+                        string telf = dtResultado.Rows[0][3].ToString();
+
+                        objDistribuidor = new Distribuidor(codDis, nomb, estad, telf);
+                    }
+                    objDatos.CerrarConexion();
                 }
-                objDatos.CerrarConexion();
-            }            
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("HUBO UN ERROR", ex);   
-        }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("HUBO UN ERROR", ex);
+            }
 
-        objDatos = null;
-        GC.Collect();
-        return objDistribuidor;
+            objDatos = null;
+            GC.Collect();
+            return objDistribuidor;
         }
 
         public Distribuidor ConsultarDistribuidorNomb(string nombre)
@@ -104,7 +100,7 @@ namespace Logica
                         string nom = dtResultado.Rows[0][1].ToString();
                         string estad = dtResultado.Rows[0][2].ToString();
                         string telf = dtResultado.Rows[0][3].ToString();
-                        objDistribuidor = new Distribuidor(codDis,nom,estad,telf);
+                        objDistribuidor = new Distribuidor(codDis, nom, estad, telf);
                     }
                     objDatos.CerrarConexion();
                 }
@@ -136,7 +132,6 @@ namespace Logica
                     dtDistribuidor = objDatos.HacerSelect(consulta);
                     objDatos.CerrarConexion();
                 }
-                
             }
             catch (Exception ex)
             {
@@ -161,7 +156,6 @@ namespace Logica
                     dtDistribuidor = objDatos.HacerSelect(consulta);
                     objDatos.CerrarConexion();
                 }
-
             }
             catch (Exception ex)
             {
@@ -172,9 +166,11 @@ namespace Logica
             GC.Collect();
             return dtDistribuidor;
         }
+
         #endregion Operaciones Select
 
         #region Operaciones Hit
+
         /// <summary>
         /// ActualizarDistribuidor
         /// </summary>
@@ -187,7 +183,7 @@ namespace Logica
         {
             int registrosafectados = 0;
 
-            string consulta = string.Format("update Distribuidor set Nombre='{0}', Estado='{1}', Telefono='{2}'"+
+            string consulta = string.Format("update Distribuidor set Nombre='{0}', Estado='{1}', Telefono='{2}'" +
                                             "where CodDistribuidor = {3}", Nombre, Estado, Telefono, CodDistribuidor);
 
             Conexion.Conexion objDatos = new Conexion.Conexion();
@@ -200,7 +196,6 @@ namespace Logica
             GC.Collect();
             return registrosafectados;
         }
-
 
         /// <summary>
         /// Agregar Distribuidor
@@ -236,18 +231,16 @@ namespace Logica
                 if (objDatos.AbrirConexion())
                 {
                     DataTable dtResultado = objDatos.HacerSelect(consulta);
-                    if (dtResultado != null && dtResultado.Rows.Count > 0) 
+                    if (dtResultado != null && dtResultado.Rows.Count > 0)
                     {
                         int cod = Convert.ToInt32(dtResultado.Rows[0][0].ToString());
                         num = cod + 1;
-                        
                     }
                     objDatos.CerrarConexion();
                 }
             }
             catch (Exception)
             {
-
                 num = 0;
             }
             objDatos = null;
@@ -269,5 +262,4 @@ namespace Logica
 
         #endregion Destruc
     }
-
-    }
+}

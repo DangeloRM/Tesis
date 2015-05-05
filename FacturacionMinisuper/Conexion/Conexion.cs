@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
-
-
-
+using System.Data.SqlClient;
 
 namespace Conexion
 {
@@ -16,10 +9,10 @@ namespace Conexion
     {
         #region Prop
 
-        SqlConnection cnx = null;
-        
-       #endregion Prop
-        
+        private SqlConnection cnx = null;
+
+        #endregion Prop
+
         #region Constr
 
         public Conexion()
@@ -44,9 +37,7 @@ namespace Conexion
             }
             catch (Exception)
             {
-
                 abrirconexion = false;
-
             }
             return abrirconexion;
         }
@@ -55,7 +46,7 @@ namespace Conexion
         /// Cerrar Conexion
         /// </summary>
         /// <returns></returns>
-        public bool CerrarConexion() 
+        public bool CerrarConexion()
         {
             bool cerrarconexion = true;
 
@@ -65,9 +56,7 @@ namespace Conexion
             }
             catch (Exception)
             {
-
                 cerrarconexion = false;
-
             }
             return cerrarconexion;
         }
@@ -77,7 +66,7 @@ namespace Conexion
         /// </summary>
         /// <param name="consulta"></param>
         /// <returns></returns>
-        public DataTable HacerSelect(string consulta) 
+        public DataTable HacerSelect(string consulta)
         {
             DataTable dtconsulta = new DataTable();
 
@@ -100,22 +89,25 @@ namespace Conexion
             {
                 Console.WriteLine(ex.Message);
             }
-           
+
             return registrosAfectados;
         }
 
-        public void Respaldo(string consulta)
+        public int Respaldo(string consulta)
         {
+            int success = 0;
             try
             {
                 SqlCommand comando = new SqlCommand(consulta, cnx);
-                comando.ExecuteNonQuery();
+                success = comando.ExecuteNonQuery();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
             }
+            return success;
         }
+
         #endregion Funciones
 
         #region Destruc
@@ -126,5 +118,5 @@ namespace Conexion
         }
 
         #endregion Destruc
-   }
+    }
 }

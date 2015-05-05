@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper.Cajero
@@ -32,10 +25,7 @@ namespace FacturacionMinisuper.Cajero
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
-
-     
 
         private void pbAgregarCajero_Click(object sender, EventArgs e)
         {
@@ -43,14 +33,12 @@ namespace FacturacionMinisuper.Cajero
             objAgregar.ShowDialog();
             if (objAgregar.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
-              CargarGrid();
+                CargarGrid();
             }
-
-           }
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
             if (gvCajero.CurrentRow != null)
             {
                 int idcajer = Convert.ToInt32(gvCajero.CurrentRow.Cells[0].Value.ToString());
@@ -61,8 +49,8 @@ namespace FacturacionMinisuper.Cajero
                 string telefon = gvCajero.CurrentRow.Cells[5].Value.ToString();
                 bool estado = Convert.ToBoolean(gvCajero.CurrentRow.Cells[6].Value.ToString());
                 int idacces = Convert.ToInt32(gvCajero.CurrentRow.Cells[7].Value.ToString());
-                
-                Logica.Cajero objCajero = new Logica.Cajero(idcajer,acces,contrasena,nombre,apellido,telefon,estado,idacces);
+
+                Logica.Cajero objCajero = new Logica.Cajero(idcajer, acces, contrasena, nombre, apellido, telefon, estado, idacces);
 
                 frmActualizarCajero objActualizarCarj = new frmActualizarCajero();
                 objActualizarCarj.CajeroModifi = objCajero;
@@ -77,7 +65,6 @@ namespace FacturacionMinisuper.Cajero
 
         private void gvCajero_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void gvCajero_MouseClick(object sender, MouseEventArgs e)
@@ -88,8 +75,6 @@ namespace FacturacionMinisuper.Cajero
                 string idCajeroSeleccionado = rowActual.Cells[0].Value.ToString();
                 lblSeleccionado.Text = idCajeroSeleccionado;
             }
-
         }
-        }
-    
+    }
 }

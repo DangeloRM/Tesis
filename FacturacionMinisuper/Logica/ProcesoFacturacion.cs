@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logica
 {
@@ -20,7 +16,7 @@ namespace Logica
                 if (add > 0)
                 {
                     string idFactura = "SELECT @@IDENTITY";
-                    DataTable dt = cnx.HacerSelect(idFactura);                    
+                    DataTable dt = cnx.HacerSelect(idFactura);
                     if (dt != null && dt.Rows.Count > 0)
                     {
                         int pId = Convert.ToInt32(dt.Rows[0][0]);

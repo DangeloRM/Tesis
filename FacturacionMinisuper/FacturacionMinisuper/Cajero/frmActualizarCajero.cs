@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Logica;
+using System;
 using System.Windows.Forms;
-using Logica;
 
 namespace FacturacionMinisuper.Cajero
 {
     public partial class frmActualizarCajero : Form
     {
         public Logica.Cajero CajeroModifi { get; set; }
+
         public frmActualizarCajero()
         {
             InitializeComponent();
@@ -29,7 +23,6 @@ namespace FacturacionMinisuper.Cajero
             txtTipoacces.Text = CajeroModifi.IDTipoAcceso.ToString();
             txtContrasena.Text = CajeroModifi.Contrasena;
             tEstado.Checked = CajeroModifi.Estado;
-
         }
 
         private void btnActualizar_Click_1(object sender, EventArgs e)
@@ -43,7 +36,6 @@ namespace FacturacionMinisuper.Cajero
                 {
                     MessageBox.Show("El Cajero: " + txtNombr.Text + ",se actualizo correctamente!", "Cajero Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
                 else
                 {
                     MessageBox.Show("No se pudo Actualizar el Cajero", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -51,7 +43,6 @@ namespace FacturacionMinisuper.Cajero
                 objGestor = null;
                 DialogResult = System.Windows.Forms.DialogResult.OK;
             }
-
             else
             {
                 MessageBox.Show("Por favor complete todos los espacios", "Espacios en incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -80,7 +71,6 @@ namespace FacturacionMinisuper.Cajero
 
         private void txtApellido_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txtTipoacces_KeyPress(object sender, KeyPressEventArgs e)
@@ -90,19 +80,14 @@ namespace FacturacionMinisuper.Cajero
 
         private void txtEstado_CheckedChanged(object sender, EventArgs e)
         {
-           
-          if (tEstado.Checked)
+            if (tEstado.Checked)
             {
                 tEstado.Text = "1";
             }
-             else
+            else
             {
                 tEstado.Text = "0";
             }
         }
-
-       
-
-      
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper.Productos
@@ -16,7 +9,6 @@ namespace FacturacionMinisuper.Productos
         {
             InitializeComponent();
         }
-
 
         private void CargarGrid()
         {
@@ -43,25 +35,21 @@ namespace FacturacionMinisuper.Productos
 
         private void pbEditar_Click(object sender, EventArgs e)
         {
-                frmActualizarProducto objActualizarProd = new frmActualizarProducto();
-                objActualizarProd.ShowDialog();
+            frmActualizarProducto objActualizarProd = new frmActualizarProducto();
+            objActualizarProd.ShowDialog();
 
-                if (objActualizarProd.DialogResult == System.Windows.Forms.DialogResult.OK)
-                {
-                    CargarGrid();
-                }
-         }
-        
+            if (objActualizarProd.DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                CargarGrid();
+            }
+        }
 
-        
         private void gvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pbReporteProducto_Click(object sender, EventArgs e)
@@ -69,6 +57,5 @@ namespace FacturacionMinisuper.Productos
             frmReporteProd objprod = new frmReporteProd();
             objprod.ShowDialog();
         }
-
     }
 }

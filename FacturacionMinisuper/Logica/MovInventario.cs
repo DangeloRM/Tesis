@@ -1,28 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logica
 {
     public class MovInventario
     {
-
         #region Prop
 
         public int CodInventario { get; set; }
+
         public DateTime FechaRealizacion { get; set; }
+
         public int CodProducto { get; set; }
 
         #endregion Prop
 
         #region Construc
 
-        public MovInventario() 
+        public MovInventario()
         {
-
         }
 
         public MovInventario(int codinventario, DateTime fecharealizacion, int codproducto)
@@ -30,12 +26,12 @@ namespace Logica
             this.CodInventario = codinventario;
             this.FechaRealizacion = fecharealizacion;
             this.CodProducto = codproducto;
-
         }
 
         #endregion Construc
 
         #region Operacion Select
+
         /// <summary>
         /// Consulta Especifica MovInventario
         /// </summary>
@@ -61,20 +57,18 @@ namespace Logica
                         int codinv = Convert.ToInt32(dtResultado.Rows[0][0].ToString());
                         System.DateTime fecharealiz = Convert.ToDateTime(dtResultado.Rows[0][1].ToString());
                         int codpr = Convert.ToInt32(dtResultado.Rows[0][2].ToString());
-
                     }
                     objDatos.CerrarConexion();
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("HUBO UN ERROR", ex); 
+                Console.WriteLine("HUBO UN ERROR", ex);
             }
             objDatos = null;
             GC.Collect();
             return objMovInventario;
         }
-
 
         /// <summary>
         /// Consulta Masiva MovInventarios
@@ -93,11 +87,10 @@ namespace Logica
                     dtMovInvent = objDatos.HacerSelect(consulta);
                     objDatos.CerrarConexion();
                 }
-
             }
             catch (Exception ex)
             {
-                Console.WriteLine("HUBO UN ERROR", ex); 
+                Console.WriteLine("HUBO UN ERROR", ex);
             }
             objDatos = null;
             GC.Collect();
@@ -117,7 +110,7 @@ namespace Logica
             int registrosafectados = 0;
 
             string consulta = string.Format("update MovInventario set fecharealizacion='{0}', " +
-                                            "where codinventario = {1}", FechaRealizacion,  CodInventario);
+                                            "where codinventario = {1}", FechaRealizacion, CodInventario);
 
             Conexion.Conexion objDatos = new Conexion.Conexion();
             if (objDatos.AbrirConexion())
@@ -160,10 +153,8 @@ namespace Logica
         ~MovInventario()
         {
             this.CodInventario = 0;
- 
         }
 
         #endregion Destruc
-
     }
 }

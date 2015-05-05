@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper.Productos
@@ -13,6 +6,7 @@ namespace FacturacionMinisuper.Productos
     public partial class frmProductoCantidad : Form
     {
         public Logica.Producto Producto { get; set; }
+
         public frmProductoCantidad()
         {
             InitializeComponent();
@@ -32,7 +26,6 @@ namespace FacturacionMinisuper.Productos
             ValidacionTextBox.SoloNumeros(e);
             if (e.KeyChar == (Char)Keys.Enter)
             {
-
                 ConfigurarCantidad();
             }
         }
@@ -42,7 +35,7 @@ namespace FacturacionMinisuper.Productos
             Logica.Producto pr = new Logica.Producto();
             pr = pr.ConsultarProducto(Producto.CodProducto);
 
-            if (pr.Cantidad > Convert.ToInt32(txtCantidad.Text) || Convert.ToInt32(txtCantidad.Text) == pr.Cantidad) 
+            if (pr.Cantidad > Convert.ToInt32(txtCantidad.Text) || Convert.ToInt32(txtCantidad.Text) == pr.Cantidad)
             {
                 this.Producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                 this.Producto.SubTotal = this.Producto.Cantidad * this.Producto.Precio;
@@ -51,9 +44,7 @@ namespace FacturacionMinisuper.Productos
             else
             {
                 MessageBox.Show("No hay existencias en inventario!!", "Error de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
             }
-            
         }
 
         private void pbAceptar_Click(object sender, EventArgs e)
@@ -67,7 +58,6 @@ namespace FacturacionMinisuper.Productos
                 }
                 else
                 {
-
                     ConfigurarCantidad();
                 }
             }
@@ -75,7 +65,6 @@ namespace FacturacionMinisuper.Productos
             {
                 MessageBox.Show("Por favor ingrese al menos un número", "Datos Incompletos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-           
         }
 
         private void pbCancelar_Click(object sender, EventArgs e)

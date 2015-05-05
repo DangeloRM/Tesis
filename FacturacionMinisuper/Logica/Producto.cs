@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logica
 {
@@ -12,12 +8,16 @@ namespace Logica
         #region Prop
 
         public string CodProducto { get; set; }
+
         public string Nombre { get; set; }
+
         public double Precio { get; set; }
+
         public int Cantidad { get; set; }
+
         public int CodDistribuidor { get; set; }
+
         public double SubTotal { get; set; }
-        
 
         #endregion Prop
 
@@ -25,8 +25,8 @@ namespace Logica
 
         public Producto()
         {
-
         }
+
         public Producto(string codproducto)
         {
             this.CodProducto = codproducto;
@@ -39,7 +39,6 @@ namespace Logica
             this.Precio = precio;
             this.Cantidad = cantidad;
             this.CodDistribuidor = coddistribuidor;
-
         }
 
         public Producto(string codproducto, string nombre, double precio, int coddistribuidor)
@@ -48,12 +47,12 @@ namespace Logica
             this.Nombre = nombre;
             this.Precio = precio;
             this.CodDistribuidor = coddistribuidor;
-
         }
 
         #endregion Construc
 
         #region Operaciones Select
+
         /// <summary>
         /// Consultar Producto
         /// </summary>
@@ -75,7 +74,7 @@ namespace Logica
                     if (dtResultado != null && dtResultado.Rows.Count > 0)
                     {
                         string codprod = dtResultado.Rows[0][0].ToString();
-                        string nombr= dtResultado.Rows[0][1].ToString();
+                        string nombr = dtResultado.Rows[0][1].ToString();
                         double preci = Convert.ToDouble(dtResultado.Rows[0][2].ToString());
                         int canti = Convert.ToInt32(dtResultado.Rows[0][3].ToString());
                         int coddistri = Convert.ToInt32(dtResultado.Rows[0][4].ToString());
@@ -87,13 +86,12 @@ namespace Logica
             }
             catch (Exception ex)
             {
-                Console.WriteLine("HUBO UN ERROR", ex); 
+                Console.WriteLine("HUBO UN ERROR", ex);
             }
             objDatos = null;
             GC.Collect();
             return objProducto;
         }
-
 
         /// <summary>
         /// ConsultaMasivaProductos
@@ -112,17 +110,15 @@ namespace Logica
                     dtProducto = objDatos.HacerSelect(consulta);
                     objDatos.CerrarConexion();
                 }
-
             }
             catch (Exception ex)
             {
-                Console.WriteLine("HUBO UN ERROR", ex); 
+                Console.WriteLine("HUBO UN ERROR", ex);
             }
             objDatos = null;
             GC.Collect();
             return dtProducto;
         }
-        
 
         #endregion Operaciones Select
 
@@ -155,9 +151,8 @@ namespace Logica
             return registrosafectados;
         }
 
-
         /// <summary>
-        ///Agregar Producto 
+        ///Agregar Producto
         /// </summary>
         /// <param name="codproducto"></param>
         /// <param name="nombre"></param>
@@ -171,10 +166,10 @@ namespace Logica
             int registrosafectados = 0;
             Conexion.Conexion objDatos = new Conexion.Conexion();
 
-            string consulta = string.Format("exec SP_Producto '{0}', {1},{2},'{3}', 1, 1", CodProducto, CodDistribuidor, Precio, Nombre );
+            string consulta = string.Format("exec SP_Producto '{0}', {1},{2},'{3}', 1, 1", CodProducto, CodDistribuidor, Precio, Nombre);
             if (objDatos.AbrirConexion())
             {
-                 registrosafectados = objDatos.OperacionesHit(consulta);
+                registrosafectados = objDatos.OperacionesHit(consulta);
                 objDatos.CerrarConexion();
             }
             objDatos = null;
@@ -207,10 +202,9 @@ namespace Logica
             this.Nombre = null;
             this.Precio = 0;
             this.Cantidad = 0;
-            this.CodDistribuidor = 0;            
+            this.CodDistribuidor = 0;
         }
 
         #endregion Destructor
     }
-
 }

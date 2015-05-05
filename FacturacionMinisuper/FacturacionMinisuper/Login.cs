@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper
@@ -13,6 +6,7 @@ namespace FacturacionMinisuper
     public partial class Login : Form
     {
         public Logica.Cajero myCajero { get; set; }
+
         public Login()
         {
             InitializeComponent();
@@ -20,7 +14,6 @@ namespace FacturacionMinisuper
 
         private void Login_Load(object sender, EventArgs e)
         {
-
         }
 
         private void pbIngresar_Click(object sender, EventArgs e)
@@ -54,13 +47,12 @@ namespace FacturacionMinisuper
         {
             if (MessageBox.Show("Deseas Salir del Sistema?", "Salir del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-            Application.Exit();
+                Application.Exit();
             }
         }
 
         private void txtContrasena_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
@@ -95,7 +87,6 @@ namespace FacturacionMinisuper
 
         private void label3_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

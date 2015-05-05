@@ -1,27 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logica
 {
-   public class Gestor : Logica.IGestor 
+    public class Gestor : Logica.IGestor
     {
-       Respaldo objrespal = null;
+        private Respaldo objrespal = null;
 
-       public void RealizarRespaldo()
-       {
-           objrespal = new Respaldo();
-           objrespal.RealizarBackup();
-       }
+        public int RealizarRespaldo()
+        {
+            objrespal = new Respaldo();
+            return objrespal.RealizarBackup();
+        }
+
         #region Cajero
-       
-        Cajero objCajero = null;
+
+        private Cajero objCajero = null;
+
         public int ActualizarCajero(int pId, string pAcceso, string pPass, string pNombre, string pApellido, string pTelefono, bool pEstado, int pIdAcceso)
         {
-            objCajero = new Cajero(pId, pAcceso,pPass,pNombre,pApellido, pTelefono, pEstado, pIdAcceso);
+            objCajero = new Cajero(pId, pAcceso, pPass, pNombre, pApellido, pTelefono, pEstado, pIdAcceso);
             return objCajero.ActualizarCajero();
         }
 
@@ -37,11 +35,12 @@ namespace Logica
             return objCajero.ConsultarCajero(idcajero);
         }
 
-       public Cajero IniciaSession(string pCajero)
+        public Cajero IniciaSession(string pCajero)
         {
             objCajero = new Cajero();
             return objCajero.InicioSesion(pCajero);
         }
+
         public DataTable ConsultaMasivaCajero()
         {
             objCajero = new Cajero();
@@ -52,16 +51,17 @@ namespace Logica
 
         #region Distrib
 
-         Distribuidor objDistrib = null;
+        private Distribuidor objDistrib = null;
+
         public int ActualizarDistribuidor(string nombre, string estado, string telefono, int coddistribuidor)
         {
-            objDistrib = new Distribuidor(coddistribuidor,nombre,estado,telefono);
+            objDistrib = new Distribuidor(coddistribuidor, nombre, estado, telefono);
             return objDistrib.ActualizarDistribuidor();
         }
 
-          public int AgregarDistribuidor(int coddistribuidor,string nombre, string estado, string telefono)
+        public int AgregarDistribuidor(int coddistribuidor, string nombre, string estado, string telefono)
         {
-            objDistrib = new Distribuidor(coddistribuidor,nombre,estado,telefono);
+            objDistrib = new Distribuidor(coddistribuidor, nombre, estado, telefono);
             return objDistrib.AgregarDistribuidor();
         }
 
@@ -76,6 +76,7 @@ namespace Logica
             objDistrib = new Distribuidor();
             return objDistrib.ConsultarDistribuidorNomb(nombre);
         }
+
         public DataTable ConsultaMasivaDistribuidores()
         {
             objDistrib = new Distribuidor();
@@ -87,23 +88,23 @@ namespace Logica
             objDistrib = new Distribuidor();
             return objDistrib.ConsultaMasivaDistribuidoresInactivos();
         }
+
         #endregion Distrib
 
         #region MovInventario
 
-        MovInventario objMovInventario = null;
+        private MovInventario objMovInventario = null;
+
         public int AgregarMovInventario(int codinventario, DateTime fecharealizacion)
         {
-            
-                objMovInventario = new MovInventario(codinventario, fecharealizacion, codinventario);
-                return objMovInventario.AgregarMovInventario();
-           
+            objMovInventario = new MovInventario(codinventario, fecharealizacion, codinventario);
+            return objMovInventario.AgregarMovInventario();
         }
+
         public int ActualizarMovInventario(DateTime fecharealizacion, int codinventario)
         {
-                objMovInventario = new MovInventario(codinventario, fecharealizacion, codinventario);
-                return objMovInventario.ActualizarMovInventario();
- 
+            objMovInventario = new MovInventario(codinventario, fecharealizacion, codinventario);
+            return objMovInventario.ActualizarMovInventario();
         }
 
         public DataTable ConsultaMasivaMovInventario()
@@ -122,7 +123,8 @@ namespace Logica
 
         #region Producto
 
-        Producto objProducto = null;
+        private Producto objProducto = null;
+
         public int AgregarProducto(string codproducto, string nombre, double precio, int coddistribuidor)
         {
             objDistrib = new Distribuidor();
@@ -131,16 +133,17 @@ namespace Logica
                 coddistribuidor = objDistrib.CodDistribuidor;
             }
 
-                 objProducto = new Producto(codproducto, nombre, precio, coddistribuidor);
-                 if (objProducto.ConsultarProducto(codproducto) ==null)
-                 {
-                     return objProducto.AgregarProducto();
-                 }
+            objProducto = new Producto(codproducto, nombre, precio, coddistribuidor);
+            if (objProducto.ConsultarProducto(codproducto) == null)
+            {
+                return objProducto.AgregarProducto();
+            }
             else
             {
                 return 0;
             }
         }
+
         public int ActualizarProducto(string nombre, double precio, int cantidad, int coddistribuidor, string codproducto)
         {
             objDistrib = new Distribuidor();
@@ -149,7 +152,7 @@ namespace Logica
                 coddistribuidor = objDistrib.CodDistribuidor;
             }
 
-            objProducto = new Producto(codproducto, nombre,precio, cantidad, coddistribuidor);
+            objProducto = new Producto(codproducto, nombre, precio, cantidad, coddistribuidor);
             if (objProducto.ConsultarProducto(codproducto) != null)
             {
                 return objProducto.ActualizarProducto();
@@ -160,13 +163,13 @@ namespace Logica
             }
         }
 
-         public DataTable ConsultaMasivaProducto()
+        public DataTable ConsultaMasivaProducto()
         {
             objProducto = new Producto();
             return objProducto.ConsultaMasivaProductos();
         }
 
-         public Producto ConsultarProducto(string codproducto)
+        public Producto ConsultarProducto(string codproducto)
         {
             objProducto = new Producto();
             return objProducto.ConsultarProducto(codproducto);
@@ -174,18 +177,18 @@ namespace Logica
 
         #endregion Producto
 
-         public ResultadoFacturacion Facturar(Factura pFactura)
-         {
-             ProcesoFacturacion objFacturacion = new ProcesoFacturacion();
-             return objFacturacion.Facturar(pFactura);
-         }
+        public ResultadoFacturacion Facturar(Factura pFactura)
+        {
+            ProcesoFacturacion objFacturacion = new ProcesoFacturacion();
+            return objFacturacion.Facturar(pFactura);
+        }
 
-         Bitacora myBit = null;
-         public int GenerarBitacora(int pId, string pAccion, int IdCajero)
-         {
-             myBit = new Bitacora(pId, pAccion, IdCajero);
-             return myBit.AgregarBitacora();
-         }
+        private Bitacora myBit = null;
 
+        public int GenerarBitacora(int pId, string pAccion, int IdCajero)
+        {
+            myBit = new Bitacora(pId, pAccion, IdCajero);
+            return myBit.AgregarBitacora();
+        }
     }
 }

@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper.Distribuidor
 {
     public partial class frmAgregarDistribu : Form
     {
-
         public Logica.Distribuidor AgregDistr { get; set; }
+
         public frmAgregarDistribu()
         {
             InitializeComponent();
@@ -31,7 +24,6 @@ namespace FacturacionMinisuper.Distribuidor
         {
             if (!string.IsNullOrEmpty(txtCodDis.Text) && !string.IsNullOrEmpty(txtNomb.Text) && !string.IsNullOrEmpty(txtEstad.Text) && !string.IsNullOrEmpty(txtTelefono.Text))
             {
-
                 Logica.Gestor objGestor = new Logica.Gestor();
                 int registrosAfectados = objGestor.AgregarDistribuidor(Convert.ToInt32(txtCodDis.Text), txtNomb.Text, txtEstad.Text, txtTelefono.Text);
 
@@ -39,7 +31,6 @@ namespace FacturacionMinisuper.Distribuidor
                 {
                     MessageBox.Show("El Proveedor:" + txtNomb.Text + ",se agrego correctamente!", "Proveedor Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
                 else
                 {
                     MessageBox.Show("No se pudo Agregar el Proveedor", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -48,7 +39,6 @@ namespace FacturacionMinisuper.Distribuidor
                 objGestor = null;
                 DialogResult = System.Windows.Forms.DialogResult.OK;
             }
-
             else
             {
                 MessageBox.Show("Por favor ingrese todos los datos", "Datos Incompletos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -67,10 +57,6 @@ namespace FacturacionMinisuper.Distribuidor
 
         private void txtNomb_KeyPress(object sender, KeyPressEventArgs e)
         {
-
         }
-
-
-
     }
 }

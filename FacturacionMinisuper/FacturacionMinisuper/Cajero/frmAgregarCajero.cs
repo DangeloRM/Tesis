@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FacturacionMinisuper.Cajero
 {
     public partial class frmAgregarCajero : Form
     {
-
         public frmAgregarCajero()
         {
             InitializeComponent();
@@ -30,7 +22,6 @@ namespace FacturacionMinisuper.Cajero
                 {
                     MessageBox.Show("El Cajero: " + txtNombre.Text + ",se agrego correctamente!", "Cajero Agregado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
                 else
                 {
                     MessageBox.Show("No se pudo Agregar el Cajero", "Error al Agregar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -39,13 +30,12 @@ namespace FacturacionMinisuper.Cajero
                 objGestor = null;
                 DialogResult = System.Windows.Forms.DialogResult.OK;
             }
-
             else
             {
                 MessageBox.Show("Por favor complete todos los espacios", "Espacios en incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        
+
         private void txtIDCajero_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidacionTextBox.SoloNumeros(e);
@@ -77,8 +67,5 @@ namespace FacturacionMinisuper.Cajero
             txtIDCajero.Text = objCajer.IdCajero().ToString();
             txtIDCajero.ReadOnly = true;
         }
-
-
-    
     }
 }
